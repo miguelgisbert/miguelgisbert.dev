@@ -1,0 +1,11 @@
+.container-fluid{
+    background-image: url(/img/background.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%; 
+    padding-top: 3em;
+    padding-left: 5em;
+    min-height: 2245px;
+    font-family: 'Share Tech Mono', monospace;
+}
