@@ -34,8 +34,6 @@
 .header .row img{
     text-align: center;
 }
-.header .row #textName{
-}
 
 @media screen and (min-width: 992px){
     .header .row #logo{
