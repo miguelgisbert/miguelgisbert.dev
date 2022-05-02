@@ -1,7 +1,7 @@
 {
   "name": "miguelgisbert.dev",
   "version": "1.0.0",
-  "description": "",
+  "description": "Miguel Gisbert - Software Engineer",
   "main": "index.html",
   "dependencies": {
     "animate.css": "^4.1.1",
@@ -14,5 +14,9 @@
     "dev": "sergey --watch"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelgisbert/miguelgisbert.dev.git"
+  }
 }
