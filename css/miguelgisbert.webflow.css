@@ -212,10 +212,18 @@
   max-width: none;
 }
 
+.image-4:hover {
+  opacity: 0.7;
+}
+
 .image-5 {
   display: block;
   width: 180px;
   max-width: none;
+}
+
+.image-5:hover {
+  opacity: 0.7;
 }
 
 .image-6 {
@@ -229,9 +237,17 @@
   height: 150px;
 }
 
+.image-7:hover {
+  opacity: 0.7;
+}
+
 .image-8 {
   display: block;
   height: 150px;
+}
+
+.image-8:hover {
+  opacity: 0.7;
 }
 
 .image-9 {
@@ -288,6 +304,10 @@
   height: 150px;
 }
 
+.image-11:hover {
+  opacity: 0.7;
+}
+
 .image-12 {
   display: block;
   width: 130px;
@@ -299,9 +319,17 @@
   height: 120px;
 }
 
+.image-13:hover {
+  opacity: 0.7;
+}
+
 .image-14 {
   display: block;
   width: 120px;
+}
+
+.image-14:hover {
+  opacity: 0.7;
 }
 
 .portfolioblock {
@@ -502,6 +530,10 @@
   cursor: pointer;
 }
 
+.link-block-3:hover {
+  opacity: 0.7;
+}
+
 .link-block-4 {
   cursor: pointer;
 }
@@ -598,6 +630,10 @@
 
 .nav-link.w--current {
   color: #333;
+}
+
+.webflowlogo:hover {
+  opacity: 0.7;
 }
 
 @media screen and (min-width: 1280px) {
