@@ -44,11 +44,25 @@
   position: static;
   z-index: 2;
   display: block;
+  width: auto;
+  font-family: Ubuntu, Helvetica, sans-serif;
   color: #fff;
   font-size: 60px;
   line-height: 70px;
   text-align: left;
   text-shadow: 1px 1px 6px #000;
+}
+
+.heading.initialsname {
+  position: absolute;
+  right: 75px;
+  bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 500;
 }
 
 .image-2 {
@@ -102,8 +116,8 @@
   border: 1px solid #000;
   border-radius: 10px;
   background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, right top, from(#d0d0d0), color-stop(39%, transparent)), url('../images/PathForward-scaled.jpg');
-  background-image: linear-gradient(90deg, #d0d0d0, transparent 39%), url('../images/PathForward-scaled.jpg');
+  background-image: -webkit-gradient(linear, left top, right top, from(hsla(0, 0%, 81.5%, 0.7)), color-stop(58%, transparent), to(hsla(0, 0%, 100%, 0.1))), url('../images/PathForward-scaled.jpg');
+  background-image: linear-gradient(90deg, hsla(0, 0%, 81.5%, 0.7), transparent 58%, hsla(0, 0%, 100%, 0.1)), url('../images/PathForward-scaled.jpg');
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -122,6 +136,13 @@
   background-color: #ebebeb;
   background-image: none;
   box-shadow: 7px 7px 0 0 #000;
+  cursor: pointer;
+}
+
+.div-block.rapidprotoimage:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .div-block.bcpicture {
@@ -130,6 +151,12 @@
   min-height: 300px;
   min-width: 300px;
   margin: 0px;
+}
+
+.div-block.bcpicture:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .body {
@@ -210,20 +237,30 @@
   display: block;
   width: 180px;
   max-width: none;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .image-4:hover {
   opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .image-5 {
   display: block;
   width: 180px;
   max-width: none;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .image-5:hover {
   opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .image-6 {
@@ -232,22 +269,35 @@
 }
 
 .image-7 {
-  display: block;
-  width: auto;
-  height: 150px;
+  display: inline-block;
+  width: 110px;
+  height: auto;
+  max-width: none;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .image-7:hover {
   opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .image-8 {
   display: block;
-  height: 150px;
+  width: 110px;
+  height: auto;
+  max-width: none;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .image-8:hover {
   opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .image-9 {
@@ -300,36 +350,66 @@
 }
 
 .image-11 {
-  display: block;
-  height: 150px;
+  display: inline-block;
+  width: 110px;
+  height: auto;
+  max-width: none;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .image-11:hover {
   opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .image-12 {
   display: block;
   width: 130px;
+  max-width: none;
+  margin-right: 8px;
+  margin-left: 8px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.image-12:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .image-13 {
   display: block;
-  width: auto;
-  height: 120px;
+  width: 100px;
+  height: auto;
+  max-width: none;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .image-13:hover {
   opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .image-14 {
-  display: block;
+  display: inline-block;
   width: 120px;
+  max-width: none;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .image-14:hover {
   opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .portfolioblock {
@@ -360,6 +440,12 @@
   box-shadow: 7px 7px 0 0 #000;
 }
 
+.venturespicture:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
 .talentpicture {
   width: 300px;
   height: 300px;
@@ -370,6 +456,12 @@
   box-shadow: 7px 7px 0 0 #000;
 }
 
+.talentpicture:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
 .royaltypicture {
   width: 300px;
   height: 300px;
@@ -378,6 +470,12 @@
   margin: 0px;
   border-radius: 10px;
   box-shadow: 7px 7px 0 0 #000;
+}
+
+.royaltypicture:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .image-15 {
@@ -618,10 +716,10 @@
 
 .link-block-16 {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
-  width: 40px;
-  height: 40px;
+  right: 15px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
 }
 
 .nav-link {
@@ -634,6 +732,33 @@
 
 .webflowlogo:hover {
   opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.textarea {
+  opacity: 0.6;
+}
+
+.linkedinbutton {
+  background-color: transparent;
+  color: #333;
+}
+
+.linkedinbutton:hover {
+  background-color: transparent;
+  color: #333;
+}
+
+.html-embed-6 {
+  width: 50px;
+  height: 50px;
+}
+
+.html-embed-7 {
+  width: 50px;
+  height: 50px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -646,6 +771,11 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .image-8 {
+    height: auto;
+    max-width: none;
+  }
+
   .portfolioblock {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -807,6 +937,14 @@
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .webflowblock {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

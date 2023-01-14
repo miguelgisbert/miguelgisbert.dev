@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Wed Jan 11 2023 14:58:21 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Sat Jan 14 2023 16:27:22 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="63714fe80d7d56c19e9ea769" data-wf-site="63714fe80d7d56d29d9ea768">
 <head>
   <meta charset="utf-8">
@@ -17,7 +17,7 @@
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/miguelgisbert.webflow.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({  google: {    families: ["PT Sans:400,400italic,700,700italic"]  }});</script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["PT Sans:400,400italic,700,700italic","Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -28,31 +28,38 @@
 	-webkit-text-stroke-width: 3px;
 	-webkit-text-stroke-color: #fff;
 }
+.linkedInBtnSVG {
+	color: white;
+}
+.linkedInBtnSVG:hover {
+	color: blue;
+}
+.PortfolioBlock img {
+	transition: all ease 0.5s;
+}
+.Expertise img {
+	transition: all ease 0.5s;
+}
 </style>
 </head>
 <body class="body">
-  <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="w-nav">
-    <div class="w-container">
-      <a href="#" class="w-nav-brand"></a>
-      <nav role="navigation" class="w-nav-menu">
-        <a href="#main" class="nav-link w-nav-link">Home</a>
-        <a href="#expertise" class="w-nav-link">About</a>
-        <a href="#contact" class="w-nav-link">Contact</a>
-      </nav>
-      <div class="w-nav-button">
-        <div class="w-icon-nav-menu"></div>
-      </div>
-    </div>
-  </div>
   <div id="main" class="section wf-section">
     <div class="container w-container">
       <div class="div-block nameblock"><img src="images/perfil.png" loading="lazy" sizes="(max-width: 479px) 52vw, 206.71876525878906px" srcset="images/perfil-p-500.png 500w, images/perfil-p-800.png 800w, images/perfil.png 944w" alt="" class="image-15">
         <div class="div-block-3">
           <h1 class="heading mainname">Miguel Gisbert Osuna</h1>
-          <h1 class="heading positionname">mgo</h1>
+          <h1 class="heading initialsname">mgo</h1>
         </div>
         <h1 class="heading positionname">Fullstack Web Developer</h1>
-        <a href="https://www.linkedin.com/in/miguel-gisbert-osuna/" target="_blank" class="link-block-16 w-inline-block"><img src="images/linkedin.svg" loading="lazy" alt=""></a>
+        <a href="https://www.linkedin.com/in/miguel-gisbert-osuna/" target="_blank" class="link-block-16 w-inline-block">
+          <div class="html-embed-7 w-embed"><svg version="1.1" id="Capa_1" x="0px" y="0px" width="50" height="50" viewbox="0 0 50 50" xml:space="preserve" class="linkedInBtnSVG" sodipodi:docname="linkedin.svg" inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+              <defs id="defs9">
+              <sodipodi:namedview id="namedview7" pagecolor="#505050" bordercolor="#eeeeee" borderopacity="1" inkscape:pageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" showgrid="false" inkscape:zoom="0.48114635" inkscape:cx="-174.58306" inkscape:cy="-217.18964" inkscape:window-width="1920" inkscape:window-height="1016" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" inkscape:current-layer="Capa_1">
+              <g fill="currentcolor" id="g4" transform="matrix(0.11379432,0,0,0.11379432,0.00265862,0)">
+                <path d="M 414.41,24.123 C 398.333,8.042 378.963,0 356.315,0 H 82.228 C 59.58,0 40.21,8.042 24.126,24.123 8.045,40.207 0.003,59.576 0.003,82.225 v 274.084 c 0,22.647 8.042,42.018 24.123,58.102 16.084,16.084 35.454,24.126 58.102,24.126 h 274.084 c 22.648,0 42.018,-8.042 58.095,-24.126 16.084,-16.084 24.126,-35.454 24.126,-58.102 V 82.225 C 438.532,59.576 430.49,40.204 414.41,24.123 Z M 133.618,367.157 H 67.666 V 169.016 h 65.952 z m -5.992,-234.825 c -6.851,6.567 -15.893,9.851 -27.124,9.851 h -0.288 c -10.848,0 -19.648,-3.284 -26.407,-9.851 -6.76,-6.567 -10.138,-14.703 -10.138,-24.41 0,-9.897 3.476,-18.083 10.421,-24.556 6.95,-6.471 15.942,-9.708 26.98,-9.708 11.039,0 19.89,3.237 26.553,9.708 6.661,6.473 10.088,14.659 10.277,24.556 -0.001,9.703 -3.423,17.839 -10.274,24.41 z m 243.247,234.825 h -65.952 v -105.92 c 0,-29.879 -11.036,-44.823 -33.116,-44.823 -8.374,0 -15.42,2.331 -21.128,6.995 -5.715,4.661 -9.996,10.324 -12.847,16.991 -1.335,3.422 -1.999,8.75 -1.999,15.981 v 110.775 h -65.952 c 0.571,-119.529 0.571,-185.579 0,-198.142 h 65.952 v 27.974 c 13.867,-21.681 33.558,-32.544 59.101,-32.544 22.84,0 41.21,7.52 55.104,22.554 13.895,15.037 20.841,37.214 20.841,66.519 v 113.64 z" id="path2" fill="currentcolor"></path>
+              </g>
+            </sodipodi:namedview></defs></svg></div>
+        </a>
       </div>
     </div>
   </div>
@@ -78,11 +85,11 @@
     <div class="container-2 w-container">
       <h1 class="heading-2">Portfolio</h1>
       <div class="portfolioblock">
-        <a href="#" class="link-block-11 w-inline-block"><img src="images/RapidProto.svg" loading="lazy" width="200" alt="" class="image-2 div-block rapidprotoimage"></a>
-        <a href="#" class="link-block-12 w-inline-block"><img src="images/Screenshot-from-2022-12-10-18-34-15.png" loading="lazy" width="200" sizes="300px" srcset="images/Screenshot-from-2022-12-10-18-34-15-p-500.png 500w, images/Screenshot-from-2022-12-10-18-34-15-p-800.png 800w, images/Screenshot-from-2022-12-10-18-34-15.png 942w" alt="" class="image-2 div-block bcpicture"></a>
-        <a href="#" class="link-block-13 w-inline-block"><img src="images/Screenshot-from-2022-12-10-18-37-39.png" loading="lazy" width="200" sizes="300px" srcset="images/Screenshot-from-2022-12-10-18-37-39-p-500.png 500w, images/Screenshot-from-2022-12-10-18-37-39.png 648w" alt="" class="venturespicture"></a>
-        <a href="#" class="link-block-14 w-inline-block"><img src="images/Screenshot-from-2022-12-10-18-43-06.png" loading="lazy" width="200" alt="" class="talentpicture"></a>
-        <a href="#" class="link-block-15 w-inline-block"><img src="images/Screenshot-from-2022-12-10-18-47-34.png" loading="lazy" width="200" alt="" class="royaltypicture"></a>
+        <a href="https://wearebluecode.com/rapid-prototyping/" target="_blank" class="link-block-11 w-inline-block"><img src="images/RapidProto.svg" loading="lazy" width="200" alt="" class="image-2 div-block rapidprotoimage"></a>
+        <a href="https://wearebluecode.com/" target="_blank" class="link-block-12 w-inline-block"><img src="images/Screenshot-from-2022-12-10-18-34-15.png" loading="lazy" width="200" sizes="300px" srcset="images/Screenshot-from-2022-12-10-18-34-15-p-500.png 500w, images/Screenshot-from-2022-12-10-18-34-15-p-800.png 800w, images/Screenshot-from-2022-12-10-18-34-15.png 942w" alt="" class="image-2 div-block bcpicture"></a>
+        <a href="https://wearebluecode.com/ventures/" target="_blank" class="link-block-13 w-inline-block"><img src="images/Screenshot-from-2022-12-10-18-37-39.png" loading="lazy" width="200" sizes="300px" srcset="images/Screenshot-from-2022-12-10-18-37-39-p-500.png 500w, images/Screenshot-from-2022-12-10-18-37-39.png 648w" alt="" class="venturespicture"></a>
+        <a href="https://wearebluecode.com/talent/ITRecruitment/" target="_blank" class="link-block-14 w-inline-block"><img src="images/Screenshot-from-2022-12-10-18-43-06.png" loading="lazy" width="200" alt="" class="talentpicture"></a>
+        <a href="https://www.thegatewayibiza.com/" target="_blank" class="link-block-15 w-inline-block"><img src="images/Screenshot-from-2022-12-10-18-47-34.png" loading="lazy" width="200" alt="" class="royaltypicture"></a>
       </div>
     </div>
   </div>
@@ -104,7 +111,7 @@
   </div>
   <div id="contact" class="contact wf-section">
     <div class="form-block w-form">
-      <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form"><label for="name" class="field-label">Name</label><input type="text" class="text-field-2 w-input" maxlength="256" name="name" data-name="Name" placeholder="" id="name"><label for="email" class="field-label-2">Email Address</label><input type="email" class="text-field-3 w-input" maxlength="256" name="email" data-name="Email" placeholder="" id="email" required=""><label for="email-2" class="field-label-3">Message</label><input type="email" class="text-field w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="" id="email-2" required=""><input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button"></form>
+      <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form"><label for="name" class="field-label">Name</label><input type="text" class="text-field-2 w-input" maxlength="256" name="name" data-name="Name" placeholder="" id="name"><label for="email" class="field-label-2">Email Address</label><input type="email" class="text-field-3 w-input" maxlength="256" name="email" data-name="Email" placeholder="" id="email" required=""><label for="Message" class="field-label-3">Message</label><textarea id="Message" name="Message" maxlength="5000" data-name="Message" placeholder="Example Text" class="textarea w-input"></textarea><input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button"></form>
       <div class="w-form-done">
         <div>Thank you! Your submission has been received!</div>
       </div>
