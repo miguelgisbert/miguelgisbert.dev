@@ -813,7 +813,7 @@
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 2035px) {
   .logosblock {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
