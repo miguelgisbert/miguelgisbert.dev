@@ -64,13 +64,13 @@
 
 .heading.initialsname {
   position: absolute;
-  right: 75px;
+  right: 170px;
   bottom: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
   font-family: Ubuntu, Helvetica, sans-serif;
   color: #fff;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
 }
 
@@ -733,10 +733,26 @@
 
 .link-block-16 {
   position: absolute;
-  right: 15px;
-  bottom: 15px;
-  width: 50px;
-  height: 50px;
+  right: 125px;
+  bottom: 25px;
+  width: 30px;
+  height: 30px;
+}
+
+.link-block-17 {
+  position: absolute;
+  right: 85px;
+  bottom: 25px;
+  width: 30px;
+  height: 30px;
+}
+
+.link-block-18 {
+  position: absolute;
+  right: 50px;
+  bottom: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .nav-link {
@@ -775,8 +791,8 @@
 
 .html-embed-7 {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width:30px;
+  height: 30px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -1233,10 +1249,10 @@
   }
 
   .link-block-16 {
-    right: 10px;
-    bottom: 10px;
-    width: 40px;
-    height: 40px;
+    right: 30px;
+    bottom: 0px;
+    width: 30px;
+    height: 30px;
   }
 
   .html-embed-7 {
