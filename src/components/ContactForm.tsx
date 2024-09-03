@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
         Contact
       </Typography>
       <TextField
-        label="Nom"
+        label="Name"
         variant="outlined"
         fullWidth
         id="form_name"
@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
         required
       />
       <TextField
-        label="Correu electrònic"
+        label="Email"
         variant="outlined"
         fullWidth
         id="form_email"
@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {
         required
       />
       <TextField
-        label="Missatge"
+        label="Message"
         variant="outlined"
         fullWidth
         id="message"
@@ -54,7 +54,7 @@ const ContactForm: React.FC = () => {
         required
       />
       <Button variant="contained" color="primary" type="submit">
-        Enviar
+        Submit
       </Button>
     </Box>
   )
