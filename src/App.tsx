@@ -1,4 +1,3 @@
-import React from "react"
 import { Box, Typography, IconButton } from "@mui/material"
 import ContactForm from "./components/ContactForm"
 import "./App.css"
