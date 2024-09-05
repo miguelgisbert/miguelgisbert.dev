@@ -1,6 +1,24 @@
 import { Box, Typography, IconButton } from "@mui/material"
 import ContactForm from "./components/ContactForm"
 import "./App.css"
+import profileImg from "/src/assets/images/profile.png"
+import pythonLogo from "/src/assets/images/python.png"
+import flutterLogo from "/src/assets/images/flutter.png"
+import reactLogo from "/src/assets/images/react.svg"
+import javascriptLogo from "/src/assets/images/Javascript.svg"
+import htmlLogo from "/src/assets/images/HTML5.svg"
+import cssLogo from "/src/assets/images/CSS3.svg"
+import phpLogo from "/src/assets/images/PHP-logo.svg"
+import mysqlLogo from "/src/assets/images/mysql.svg"
+import rapidProtoImg from "/src/assets/images/RapidProto.svg"
+import bluecodeImg from "/src/assets/images/Screenshot-from-2022-12-10-18-34-15.png"
+import venturesImg from "/src/assets/images/Screenshot-from-2022-12-10-18-37-39.png"
+import itRecruitmentImg from "/src/assets/images/Screenshot-from-2022-12-10-18-43-06.png"
+import hireplekImg from "/src/assets/images/hireplek.png"
+import hrvenduranceImg from "/src/assets/images/hrvendurance.png"
+import logoUA from "/src/assets/images/logo-ua.jpg"
+import logoEPS from "/src/assets/images/cabecera.jpg"
+import logoCAFD from "/src/assets/images/55fc0e333859ae0799cb2dcb709aaf59_400x400.jpeg"
 
 function App() {
   return (
@@ -9,7 +27,7 @@ function App() {
         <Box className="container w-container">
           <Box className="div-block nameblock">
             <img
-              src="/src/assets/images/profile.png"
+              src={profileImg}
               loading="lazy"
               sizes="(max-width: 479px) 48vw, 218px"
               alt="Miguel Gisbert profile picture"
@@ -78,7 +96,7 @@ function App() {
               className="link-block-4 w-inline-block"
             >
               <img
-                src="/src/assets/images/python.png"
+                src={pythonLogo}
                 loading="lazy"
                 alt="Python logo"
                 className="image-13"
@@ -91,7 +109,7 @@ function App() {
               className="link-block-5 w-inline-block"
             >
               <img
-                src="/src/assets/images/flutter.png"
+                src={flutterLogo}
                 loading="lazy"
                 alt="Flutter logo"
                 className="image-13"
@@ -104,7 +122,7 @@ function App() {
               className="link-block-8 w-inline-block"
             >
               <img
-                src="/src/assets/images/react.svg"
+                src={reactLogo}
                 loading="lazy"
                 alt="React logo"
                 className="image-14"
@@ -117,7 +135,7 @@ function App() {
               className="link-block-8 w-inline-block"
             >
               <img
-                src="/src/assets/images/Javascript.svg"
+                src={javascriptLogo}
                 loading="lazy"
                 alt="Javascript logo"
                 className="image-8"
@@ -130,7 +148,7 @@ function App() {
               className="link-block-6 w-inline-block"
             >
               <img
-                src="/src/assets/images/HTML5.svg"
+                src={htmlLogo}
                 loading="lazy"
                 alt="Html logo"
                 className="image-11"
@@ -143,7 +161,7 @@ function App() {
               className="link-block-7 w-inline-block"
             >
               <img
-                src="/src/assets/images/CSS3.svg"
+                src={cssLogo}
                 loading="lazy"
                 alt="Css logo"
                 className="image-7"
@@ -156,7 +174,7 @@ function App() {
               className="link-block-9 w-inline-block"
             >
               <img
-                src="/src/assets/images/PHP-logo.svg"
+                src={phpLogo}
                 loading="lazy"
                 alt="Php logo"
                 className="image-4"
@@ -169,7 +187,7 @@ function App() {
               className="link-block-10 w-inline-block"
             >
               <img
-                src="/src/assets/images/mysql.svg"
+                src={mysqlLogo}
                 loading="lazy"
                 alt="MySql logo"
                 className="image-5"
@@ -190,7 +208,7 @@ function App() {
               className="link-block-11 w-inline-block"
             >
               <img
-                src="/src/assets/images/RapidProto.svg"
+                src={rapidProtoImg}
                 loading="lazy"
                 width="200"
                 alt="Rapid prototyping preview"
@@ -203,7 +221,7 @@ function App() {
               className="link-block-12 w-inline-block"
             >
               <img
-                src="/src/assets/images/Screenshot-from-2022-12-10-18-34-15.png"
+                src={bluecodeImg}
                 loading="lazy"
                 width="200"
                 sizes="(max-width: 479px) 280px, 300px"
@@ -217,7 +235,7 @@ function App() {
               className="link-block-13 w-inline-block"
             >
               <img
-                src="/src/assets/images/Screenshot-from-2022-12-10-18-37-39.png"
+                src={venturesImg}
                 loading="lazy"
                 width="200"
                 sizes="(max-width: 479px) 280px, 300px"
@@ -231,7 +249,7 @@ function App() {
               className="link-block-14 w-inline-block"
             >
               <img
-                src="/src/assets/images/Screenshot-from-2022-12-10-18-43-06.png"
+                src={itRecruitmentImg}
                 loading="lazy"
                 width="200"
                 alt="IT talent recruitment preview"
@@ -244,7 +262,7 @@ function App() {
               className="link-block-15 w-inline-block"
             >
               <img
-                src="/src/assets/images/hireplek.png"
+                src={hireplekImg}
                 loading="lazy"
                 width="200"
                 alt="Hireplek"
@@ -257,7 +275,7 @@ function App() {
               className="link-block-15 w-inline-block"
             >
               <img
-                src="/src/assets/images/hrvendurance.png"
+                src={hrvenduranceImg}
                 loading="lazy"
                 width="200"
                 alt="HRV Endurance"
@@ -279,7 +297,7 @@ function App() {
               className="uadiv w-inline-block"
             >
               <img
-                src="/src/assets/images/logo-ua.jpg"
+                src={logoUA}
                 loading="lazy"
                 alt="University of Alicante logo"
                 className="image-20"
@@ -293,7 +311,7 @@ function App() {
               className="link-block-2 w-inline-block"
             >
               <img
-                src="/src/assets/images/cabecera.jpg"
+                src={logoEPS}
                 loading="lazy"
                 alt="Polytechnic School logo"
                 className="image-18"
@@ -308,7 +326,7 @@ function App() {
               className="link-block w-inline-block"
             >
               <img
-                src="/src/assets/images/55fc0e333859ae0799cb2dcb709aaf59_400x400.jpeg"
+                src={logoCAFD}
                 loading="lazy"
                 alt="Sport Science logo"
                 className="image-17"

@@ -30,16 +30,16 @@ const ContactForm: React.FC = () => {
         label="Name"
         variant="outlined"
         fullWidth
-        id="form_name"
-        name="form_name"
+        id="from_name"
+        name="from_name"
         required
       />
       <TextField
         label="Email"
         variant="outlined"
         fullWidth
-        id="form_email"
-        name="form_email"
+        id="from_email"
+        name="from_email"
         type="email"
         required
       />
