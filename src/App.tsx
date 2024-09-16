@@ -1,7 +1,7 @@
+import Header from "./components/Header"
 import { Box, Typography, IconButton } from "@mui/material"
 import ContactForm from "./components/ContactForm"
 import "./App.css"
-import profileImg from "/src/assets/images/profile.png"
 import pythonLogo from "/src/assets/images/python.png"
 import flutterLogo from "/src/assets/images/flutter.png"
 import reactLogo from "/src/assets/images/react.svg"
@@ -23,16 +23,10 @@ import logoCAFD from "/src/assets/images/55fc0e333859ae0799cb2dcb709aaf59_400x40
 function App() {
   return (
     <>
+      <Header />
       <Box id="main" className="section wf-section">
         <Box className="container w-container">
           <Box className="div-block nameblock">
-            <img
-              src={profileImg}
-              loading="lazy"
-              sizes="(max-width: 479px) 48vw, 218px"
-              alt="Miguel Gisbert profile picture"
-              className="image-15"
-            />
             <Box className="div-block-3">
               <Typography variant="h1" className="heading mainname">
                 Miguel Gisbert Osuna

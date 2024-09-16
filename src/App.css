@@ -576,18 +576,6 @@
   transform: scale(1.03);
 }
 
-.image-15 {
-  position: absolute;
-  left: -20px;
-  bottom: 0px;
-  z-index: 2;
-  width: 218px;
-  height: 600px;
-  max-height: 400px;
-  margin-left: 0px;
-  padding: 20px 20px 0px 0px;
-}
-
 .image-16 {
   position: absolute;
   left: 0%;
