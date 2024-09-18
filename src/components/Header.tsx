@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Grid, Box } from '@mui/material'
-import profileImg from "/src/assets/images/profile.png"
+import profileImg from "../assets/images/profile.png"
 
 
 
