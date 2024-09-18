@@ -1,4 +1,4 @@
-import {useRef, useEffect, useState, FC} from 'react'
+import { FC } from 'react'
 import { Grid, Box } from '@mui/material'
 import profileImg from "/src/assets/images/profile.png"
 
@@ -7,46 +7,46 @@ import profileImg from "/src/assets/images/profile.png"
 
 const Header: FC = () => {
 
-    const [mainLogoBGopacity, setMainLogoBGopacity] = useState<number>(1)
+    // const [mainLogoBGopacity, setMainLogoBGopacity] = useState<number>(1)
     
-    const group1Ref = useRef<HTMLImageElement>(null)
-    const group2Ref = useRef<HTMLImageElement>(null)
-    useEffect(() => {
-        const handleScroll = () => {  
-          const scrollY = window.scrollY
-          const maxScroll = 500
-          const initialTop = (window.innerHeight * 0.5 + 100)
-          const initialLeft1 = window.innerWidth * 0.2
-          const initialLeft2 = window.innerWidth * 0.2
-          const finalTop1 = 30
-          const finalTop2 = 25
-          const finalLeft1 = 50
-          const finalLeft2 = 190
-          const initialSize = 235
-          const finalSize1 = initialSize / 2
-          const finalSize2 = initialSize / 1.7
-          const size1 = Math.max(finalSize1, initialSize - (scrollY / maxScroll) * initialSize)
-          const size2 = Math.max(finalSize2, initialSize - (scrollY / maxScroll) * initialSize)
-          const top1 = scrollY >= maxScroll ? finalTop1 : initialTop - (scrollY / maxScroll) * (initialTop - finalTop1)
-          const top2 = scrollY >= maxScroll ? finalTop2 : initialTop - (scrollY / maxScroll) * (initialTop - finalTop2)
-          const left1 = scrollY >= maxScroll ? finalLeft1 : initialLeft1 - (scrollY / maxScroll) * (initialLeft1 - finalLeft1)
-          const left2 = scrollY >= maxScroll ? finalLeft2 : initialLeft2 - (scrollY / maxScroll) * (initialLeft2 - finalLeft2)
-          const transformValue = Math.max(0, 100 - (scrollY / maxScroll) * 100)
-          const BGopacity = Math.max(0, 1 -(scrollY / maxScroll))
-          if(group1Ref.current && group2Ref.current) {
-            group1Ref.current.style.top = `${top1}px`
-            group1Ref.current.style.left = `${left1}px`
-            group1Ref.current.style.width = `${size1}px`
-            group1Ref.current.style.transform = `translate(0, calc(-${transformValue}% - 14px))`
-            group2Ref.current.style.top = `${top2}px`
-            group2Ref.current.style.left = `${left2}px`
-            group2Ref.current.style.width = `${size2}px`
-          }
-          setMainLogoBGopacity(BGopacity)
-        }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-      }, [])
+    // const group1Ref = useRef<HTMLImageElement>(null)
+    // const group2Ref = useRef<HTMLImageElement>(null)
+    // useEffect(() => {
+    //     const handleScroll = () => {  
+    //       const scrollY = window.scrollY
+    //       const maxScroll = 500
+    //       const initialTop = (window.innerHeight * 0.5 + 100)
+    //       const initialLeft1 = window.innerWidth * 0.2
+    //       const initialLeft2 = window.innerWidth * 0.2
+    //       const finalTop1 = 30
+    //       const finalTop2 = 25
+    //       const finalLeft1 = 50
+    //       const finalLeft2 = 190
+    //       const initialSize = 235
+    //       const finalSize1 = initialSize / 2
+    //       const finalSize2 = initialSize / 1.7
+    //       const size1 = Math.max(finalSize1, initialSize - (scrollY / maxScroll) * initialSize)
+    //       const size2 = Math.max(finalSize2, initialSize - (scrollY / maxScroll) * initialSize)
+    //       const top1 = scrollY >= maxScroll ? finalTop1 : initialTop - (scrollY / maxScroll) * (initialTop - finalTop1)
+    //       const top2 = scrollY >= maxScroll ? finalTop2 : initialTop - (scrollY / maxScroll) * (initialTop - finalTop2)
+    //       const left1 = scrollY >= maxScroll ? finalLeft1 : initialLeft1 - (scrollY / maxScroll) * (initialLeft1 - finalLeft1)
+    //       const left2 = scrollY >= maxScroll ? finalLeft2 : initialLeft2 - (scrollY / maxScroll) * (initialLeft2 - finalLeft2)
+    //       const transformValue = Math.max(0, 100 - (scrollY / maxScroll) * 100)
+    //       const BGopacity = Math.max(0, 1 -(scrollY / maxScroll))
+    //       if(group1Ref.current && group2Ref.current) {
+    //         group1Ref.current.style.top = `${top1}px`
+    //         group1Ref.current.style.left = `${left1}px`
+    //         group1Ref.current.style.width = `${size1}px`
+    //         group1Ref.current.style.transform = `translate(0, calc(-${transformValue}% - 14px))`
+    //         group2Ref.current.style.top = `${top2}px`
+    //         group2Ref.current.style.left = `${left2}px`
+    //         group2Ref.current.style.width = `${size2}px`
+    //       }
+    //       setMainLogoBGopacity(BGopacity)
+    //     }
+    //     window.addEventListener('scroll', handleScroll)
+    //     return () => window.removeEventListener('scroll', handleScroll)
+    //   }, [])
 
     return (
         <Grid container component="header" zIndex="1000" height="130px" width="100vw" padding="20px 50px"
@@ -108,3 +108,5 @@ const Header: FC = () => {
 }
 
 export default Header
+
+
