@@ -1,7 +1,6 @@
 import { Grid, Box } from '@mui/material'
 import profileImg from "/src/assets/images/profile.png"
 import SocialIcons from './socialIcons'
-import { Height } from '@mui/icons-material'
 
 const Header = ({ opacity }: { opacity: number }) => {
 

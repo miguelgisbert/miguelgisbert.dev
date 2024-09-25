@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import profileImg from "/src/assets/images/profile.png"
 import Header from "./components/Header"
-import { Box, Typography, IconButton } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import ContactForm from "./components/ContactForm"
 import "./App.css"
 import SocialIcons from './components/socialIcons'
@@ -25,7 +25,6 @@ import logoCAFD from "/src/assets/images/55fc0e333859ae0799cb2dcb709aaf59_400x40
 
 function App() {
 
-  const [scrollY, setScrollY] = useState<number>(0)
   const [headerOpacity, setHeaderOpacity] = useState<number>(0)
   const [boxOpacity, setBoxOpacity] = useState<number>(1)
   const boxRef = useRef<HTMLDivElement>(null)
@@ -35,7 +34,6 @@ function App() {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY
-      setScrollY(scrollPosition)
 
       // Header transition
       const newHeaderOpacity = Math.min(scrollPosition / 300, 1) // Visible at 300px scroll
