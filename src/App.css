@@ -1,8 +1,16 @@
 
 #root {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
   text-align: center;
+}
+
+#main {
+  transform: translateY(-28px);
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .mainname {
@@ -198,7 +206,6 @@
 }
 
 .div-block.nameblock {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -804,31 +811,24 @@
   color: #fff;
 }
 
-.link-block-16 {
+.main-linkedin-icon, .main-github-icon, .main-npm-icon {
   position: absolute!important;
-  right: 120px!important;
-  bottom: 0!important;
-  width: 50px!important;
-  height: 50px!important;
-}
-
-.link-block-17 {
-  position: absolute!important;
-  right: 80px;
+  right: 120px;
   bottom: 0;
   width: 50px;
   height: 50px;
 }
 
-.link-block-18 {
-  position: absolute!important;
-  right: 15px;
-  bottom: 0;
-  width: 80px;
-  height: 50px;
+.main-github-icon {
+  right: 80px;
 }
 
-.nav-link {
+.main-npm-icon {
+  right: 15px;
+  width: 80px;
+}
+
+/* .nav-link {
   color: red;
 }
 
@@ -841,7 +841,7 @@
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-}
+} */
 
 .textarea {
   opacity: 0.6;
@@ -1055,25 +1055,18 @@
 }
 
 @media screen and (max-width: 991px) {
-  .heading.mainname {
-    max-width: 500px;
-    font-size: 100px;
+  #main {
+    display: none;
+  }
+
+  header {
+    opacity: 1!important;
   }
 
   .heading.positionname {
     max-width: 350px;
     font-size: 40px;
     text-align: right;
-  }
-
-  .section {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-
-  .section-2.portfolio {
-    padding-right: 20px;
-    padding-left: 20px;
   }
 
   .container-2 {
@@ -1088,9 +1081,9 @@
     justify-content: flex-start;
   }
 
-  .webflowblock {
+  /* .webflowblock {
     padding-bottom: 50px;
-  }
+  } */
 
   .image-15 {
     width: 218px;
@@ -1125,19 +1118,36 @@
 }
 
 @media screen and (max-width: 767px) {
-  .heading.mainname {
-    font-size: 15vw;
-    line-height: 15vw;
+
+  header {
+    width: 100%!important;
+    position: static!important;
+    flex-direction: column!important;
+    height: 250px!important;
+    align-items: center!important;
   }
 
-  .heading.positionname {
-    max-width: 370px;
-    font-size: 5.8vw;
-    line-height: 6vw;
+  header::before {
+    background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1)), 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 1) 50%),
+    url('/src/assets/images/PathForward-scaled-p-2000.jpg')!important;
   }
 
-  .heading.initialsname {
-    bottom: 5px;
+  .portfolio, .section-2 {
+    padding: 0;
+  }
+
+  .linkedInBtnSVG {
+    color: blue;
+  }
+  
+  .githubBtnSVG {
+    color: black;
+  }
+  
+  .npmBtnSVG {
+    color: #CB3837;
   }
 
   .div-block.rapidprotoimage {
@@ -1333,4 +1343,25 @@
     width: 40px;
     height: 40px;
   }
+}
+
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  z-index: 1000;
+}
+
+.box {
+  margin-top: 100px;
+  background-color: #f4f4f4;
+  height: 300px;
+  transition: opacity 0.5s, width 0.5s;
 }
