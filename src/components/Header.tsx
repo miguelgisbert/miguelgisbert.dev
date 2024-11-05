@@ -1,7 +1,7 @@
 import { Grid, Box } from '@mui/material'
 import profileImg from "/src/assets/images/profile.png"
 import SocialIcons from './socialIcons'
-import { Height } from '@mui/icons-material'
+import headerBackground from '/src/assets/images/PathForward-scaled-p-2000.jpg'
 
 const Header = ({ opacity }: { opacity: number }) => {
 
@@ -24,7 +24,7 @@ const Header = ({ opacity }: { opacity: number }) => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundImage: 'url(/src/assets/images/PathForward-scaled-p-2000.jpg)',
+                    backgroundImage: `url(${headerBackground})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
