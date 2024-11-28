@@ -54,7 +54,7 @@
   }
 }
 
-.expertise-container {
+.expertise-container, .tools-container {
   max-width: 100%;
   padding: 50px 0px;
   margin-left: auto;
@@ -68,16 +68,16 @@
   }
 }
 
-.expertise-logos-block {
+.expertise-logos-block, .tools-logos-block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex!important;
   overflow: auto;
   height: 200px;
-  -webkit-justify-content: space-around;
+  -webkit-justify-content: center;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -85,20 +85,67 @@
 }
 
 @media (min-width: 1920px) {
-  .expertise-logos-block {
+  .expertise-logos-block, .tools-logos-block {
       -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
       justify-content: space-around;
   }
 }
 
-@media (max-width: 1320px) {
-  .expertise-logos-block {
+@media (max-width: 1000px) {
+  .expertise-logos-block, .tools-logos-block {
       -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
       justify-content: flex-start;
   }
+}
+
+.expertise-logos-block img, .tools-logos-block img {
+  display: block;
+  height: auto;
+  max-width: none;
+  margin: 20px;
+}
+
+.expertise-logos-block img:hover, .tools-logos-block img:hover {
+  opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.expertise-logos-block .flutter-logo {
+  width: 70px;
+}
+
+.expertise-logos-block .python-logo {
+  width: 100px;
+}
+
+.expertise-logos-block .react-logo {
+  width: 150px;
+}
+
+.expertise-logos-block .css-logo {
+  width: 80px;
+}
+
+.expertise-logos-block .javascript-logo {
+  width: 110px;
+}
+
+.expertise-logos-block .php-logo {
+  width: 115px;
+  margin-left: 17px;
+}
+
+.tools-logos-block .git-logo {
+  width: 100px;
+}	
+
+.tools-logos-block .github-logo {
+  width: 100px;
 }
 
 .container {
@@ -338,21 +385,6 @@
   padding-left: 30px;
 }
 
-.image-4 {
-  display: block;
-  width: 180px;
-  max-width: none;
-  margin-right: 8px;
-  margin-left: 8px;
-}
-
-.image-4:hover {
-  opacity: 0.7;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
 .image-5 {
   display: block;
   width: 180px;
@@ -361,48 +393,9 @@
   margin-left: 8px;
 }
 
-.image-5:hover {
-  opacity: 0.7;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
 .image-6 {
   width: auto;
   height: 150px;
-}
-
-.image-7 {
-  display: inline-block;
-  width: 110px;
-  height: auto;
-  max-width: none;
-  margin-right: 8px;
-  margin-left: 8px;
-}
-
-.image-7:hover {
-  opacity: 0.7;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.image-8 {
-  display: block;
-  width: 110px;
-  height: auto;
-  max-width: none;
-  margin-right: 8px;
-  margin-left: 8px;
-}
-
-.image-8:hover {
-  opacity: 0.7;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .image-9 {
@@ -454,20 +447,8 @@
   grid-template-rows: auto auto;
 }
 
-.image-11 {
-  display: inline-block;
-  width: 110px;
-  height: auto;
-  max-width: none;
-  margin-right: 8px;
-  margin-left: 8px;
-}
-
-.image-11:hover {
-  opacity: 0.7;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+.typescript-logo {
+  width: 90px;
 }
 
 .image-12 {
@@ -481,37 +462,6 @@
 }
 
 .image-12:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.image-13 {
-  display: block;
-  width: 100px;
-  height: auto;
-  max-width: none;
-  margin-right: 8px;
-  margin-left: 8px;
-}
-
-.image-13:hover {
-  opacity: 0.7;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.image-14 {
-  display: inline-block;
-  width: 120px;
-  max-width: none;
-  margin-right: 8px;
-  margin-left: 8px;
-}
-
-.image-14:hover {
-  opacity: 0.7;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -837,10 +787,7 @@
 }
 
 .webflowlogo:hover {
-  opacity: 0.7;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+
 } */
 
 .textarea {
@@ -883,7 +830,7 @@
     padding-left: 0px;
   }
 
-  .image-8 {
+  .javascript-logo {
     height: auto;
     max-width: none;
   }
@@ -1265,39 +1212,43 @@
     font-size: 20px!important;
   }
 
-  .image-4 {
-    width: 160px;
+  .php-logo {
+    width: 90px;
   }
 
   .image-5 {
     width: 160px;
   }
 
-  .image-7 {
-    width: 100px;
+  .css-logo {
+    width: 70px;
   }
 
-  .image-8 {
-    width: 100px;
+  .javascript-logo {
+    width: 90px;
   }
 
-  .webflowblock {
+  /* .webflowblock {
     width: 90%;
-  }
+  } */
 
-  .image-11 {
-    width: 100px;
+  .typescript-logo {
+    width: 80px;
   }
 
   .image-12 {
     width: 120px;
   }
 
-  .image-13 {
-    width: 80px;
+  .flutter-logo {
+    width: 60px;
   }
 
-  .image-14 {
+  .python-logo {
+    width: 90px;
+  }
+
+  .react-logo {
     width: 110px;
   }
 
