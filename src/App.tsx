@@ -1,27 +1,22 @@
 import { useState, useEffect, useRef } from 'react'
 import profileImg from "/src/assets/images/profile.png"
 import Header from "./components/Header"
+import Expertise from './components/Expertise'
+import Tools from './components/Tools'
 import { Box, Typography } from "@mui/material"
 import ContactForm from "./components/ContactForm"
 import "./App.css"
 import SocialIcons from './components/socialIcons'
-import pythonLogo from "/src/assets/images/python.png"
-import flutterLogo from "/src/assets/images/flutter.png"
-import reactLogo from "/src/assets/images/react.svg"
-import javascriptLogo from "/src/assets/images/Javascript.svg"
-import htmlLogo from "/src/assets/images/HTML5.svg"
-import cssLogo from "/src/assets/images/CSS3.svg"
-import phpLogo from "/src/assets/images/PHP-logo.svg"
-import mysqlLogo from "/src/assets/images/mysql.svg"
 import rapidProtoImg from "/src/assets/images/RapidProto.svg"
 import bluecodeImg from "/src/assets/images/Screenshot-from-2022-12-10-18-34-15.png"
 import venturesImg from "/src/assets/images/Screenshot-from-2022-12-10-18-37-39.png"
 import itRecruitmentImg from "/src/assets/images/Screenshot-from-2022-12-10-18-43-06.png"
 import hireplekImg from "/src/assets/images/hireplek.png"
 import hrvenduranceImg from "/src/assets/images/hrvendurance.png"
-import logoUA from "/src/assets/images/logo-ua.jpg"
-import logoEPS from "/src/assets/images/cabecera.jpg"
+import logoInefc from "/src/assets/images/inefc.png"
+import logoEPS from "/src/assets/images/logo-eps.jpg"
 import logoCAFD from "/src/assets/images/55fc0e333859ae0799cb2dcb709aaf59_400x400.jpeg"
+import logoUV from "/src/assets/images/logo-uv.png"
 
 function App() {
 
@@ -96,119 +91,11 @@ function App() {
           </Box>
         </Box>
       </Box>
-      <Box id="expertise" className="expertise wf-section">
-        <Box className="expertise-container">
-          <Typography variant="h1" className="heading-2">
-            Expertise
-          </Typography>
-          <Box className="expertise-logos-block">
-            <a
-              title="Python"
-              href="https://python.org/"
-              target="_blank"
-              className="link-block-4 w-inline-block"
-            >
-              <img
-                src={pythonLogo}
-                loading="lazy"
-                alt="Python logo"
-                className="image-13"
-              />
-            </a>
-            <a
-              title="Flutter"
-              href="https://flutter.dev/"
-              target="_blank"
-              className="link-block-5 w-inline-block"
-            >
-              <img
-                src={flutterLogo}
-                loading="lazy"
-                alt="Flutter logo"
-                className="image-13"
-              />
-            </a>
-            <a
-              title="React"
-              href="https://react.dev/"
-              target="_blank"
-              className="link-block-8 w-inline-block"
-            >
-              <img
-                src={reactLogo}
-                loading="lazy"
-                alt="React logo"
-                className="image-14"
-              />
-            </a>
-            <a
-              title="Javascript"
-              href="https://en.wikipedia.org/wiki/JavaScript"
-              target="_blank"
-              className="link-block-8 w-inline-block"
-            >
-              <img
-                src={javascriptLogo}
-                loading="lazy"
-                alt="Javascript logo"
-                className="image-8"
-              />
-            </a>
-            <a
-              title="html"
-              href="https://en.wikipedia.org/wiki/HTML"
-              target="_blank"
-              className="link-block-6 w-inline-block"
-            >
-              <img
-                src={htmlLogo}
-                loading="lazy"
-                alt="Html logo"
-                className="image-11"
-              />
-            </a>
-            <a
-              title="css"
-              href="https://en.wikipedia.org/wiki/CSS"
-              target="_blank"
-              className="link-block-7 w-inline-block"
-            >
-              <img
-                src={cssLogo}
-                loading="lazy"
-                alt="Css logo"
-                className="image-7"
-              />
-            </a>
-            <a
-              title="php"
-              href="https://php.net"
-              target="_blank"
-              className="link-block-9 w-inline-block"
-            >
-              <img
-                src={phpLogo}
-                loading="lazy"
-                alt="Php logo"
-                className="image-4"
-              />
-            </a>
-            <a
-              title="MySql"
-              href="https://www.mysql.com/"
-              target="_blank"
-              className="link-block-10 w-inline-block"
-            >
-              <img
-                src={mysqlLogo}
-                loading="lazy"
-                alt="MySql logo"
-                className="image-5"
-              />
-            </a>
-          </Box>
-        </Box>
-      </Box>
+      
+      <Expertise />
+
+      <Tools />
+
       <Box id="portfolio" className="section-2 portfolio portfolio wf-section">
         <Box className="container-2 w-container">
           <Typography variant="h1" className="heading-2">
@@ -303,36 +190,7 @@ function App() {
           <Typography variant="h1" className="heading-2">
             Education
           </Typography>
-          <Box className="webflowblock">
-            <a
-              href="https://www.ua.es/en/"
-              target="_blank"
-              className="uadiv w-inline-block"
-            >
-              <img
-                src={logoUA}
-                loading="lazy"
-                alt="University of Alicante logo"
-                className="image-20"
-              />
-            </a>
-          </Box>
           <Box className="educationblock">
-            <a
-              href="https://eps.ua.es/en/"
-              target="_blank"
-              className="link-block-2 w-inline-block"
-            >
-              <img
-                src={logoEPS}
-                loading="lazy"
-                alt="Polytechnic School logo"
-                className="image-18"
-              />
-              <Typography variant="h2" className="heading-3">
-                Computer Science Engineer
-              </Typography>
-            </a>
             <a
               href="https://educacio.ua.es/en/estudios-de-la-facultad-de-educacion/grado-cafd/grado-en-ciencias-de-la-actividad-fisica-y-el-deporte.html"
               target="_blank"
@@ -342,10 +200,57 @@ function App() {
                 src={logoCAFD}
                 loading="lazy"
                 alt="Sport Science logo"
-                className="image-17"
+                className="logo-cafd"
               />
               <Typography variant="h2" className="heading-4">
                 Sport Science
+              </Typography>
+            </a>
+            <a
+              href="https://eps.ua.es/en/"
+              target="_blank"
+              className="link-block-2 w-inline-block"
+            >
+              <img
+                src={logoEPS}
+                loading="lazy"
+                alt="Polytechnic School logo"
+                className="logo-eps"
+              />
+              <Typography variant="h2" className="heading-3">
+                Computer Science Engineer
+              </Typography>
+            </a>
+            
+            <a
+              href="https://il3.ub.edu/master-tecnologia-deporte"
+              target="_blank"
+              className="link-block w-inline-block"
+            >
+              <img
+                src={logoInefc}
+                loading="lazy"
+                alt="Sport Science logo"
+                className="logo-inefc"
+              />
+              <Typography variant="h2" className="heading-4">
+                Sports Technology Master's
+              </Typography>
+            </a>
+
+            <a
+              href="https://www.uv.es/uvweb/universidad/es/estudios-postgrado/titulos-propios-postgrado/oferta-titulos-propios/titulo-propio-uv-1286006703791.html?p5=24113370"
+              target="_blank"
+              className="link-block w-inline-block"
+            >
+              <img
+                src={logoUV}
+                loading="lazy"
+                alt="Sport Science logo"
+                className="logo-inefc"
+              />
+              <Typography variant="h2" className="heading-4">
+                Startup Management Postgraduate
               </Typography>
             </a>
           </Box>
