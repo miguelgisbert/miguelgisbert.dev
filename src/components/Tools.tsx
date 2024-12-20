@@ -1,9 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import gitLogo from "/src/assets/images/Git_icon.svg"
 import githubLogo from "/src/assets/images/github.svg"
+import gitlabLogo from "/src/assets/images/gitlab.png"
 import npmLogo from "/src/assets/images/npm-logo.png"
 import firebaseLogo from "/src/assets/images/firebase-logo.png"
 import expoGoLogo from "/src/assets/images/expoGo-logo.png"
+import vscodeLogo from "/src/assets/images/vscode.png"
+import githubcopilotLogo from "/src/assets/images/github-copilot.png"
 
 function Tools() {
   return (
@@ -37,6 +40,19 @@ function Tools() {
                         loading="lazy"
                         alt="GitHub logo"
                         className="github-logo"
+                    />
+                </a>
+                <a
+                    title="Gitlab"
+                    href="https://about.gitlab.com/"
+                    target="_blank"
+                    className="link-block-4 w-inline-block"
+                >
+                    <img
+                        src={gitlabLogo}
+                        loading="lazy"
+                        alt="Gitlab logo"
+                        className="gitlab-logo"
                     />
                 </a>
                 <a
@@ -76,6 +92,32 @@ function Tools() {
                         loading="lazy"
                         alt="Expo Go logo"
                         className="expogo-logo"
+                    />
+                </a>
+                <a
+                    title="Visual Studio Code"
+                    href="https://code.visualstudio.com/"
+                    target="_blank"
+                    className="link-block-4 w-inline-block"
+                >
+                    <img
+                        src={vscodeLogo}
+                        loading="lazy"
+                        alt="VS Code logo"
+                        className="vscode-logo"
+                    />
+                </a>
+                <a
+                    title="GitHub Copilot"
+                    href="https://github.com/features/copilot"
+                    target="_blank"
+                    className="link-block-4 w-inline-block"
+                >
+                    <img
+                        src={githubcopilotLogo}
+                        loading="lazy"
+                        alt="Github Copilot"
+                        className="gh-copilot-logo"
                     />
                 </a>
             </Box>

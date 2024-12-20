@@ -42,16 +42,22 @@
   color: #CB3837;
 }
 
+.portfolioblock {
+  position: static;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+}
+
 .portfolioblock img {
 	transition: all ease 0.5s;
 }
 .expertise img, .tools img {
 	transition: all ease 0.5s;
-}
-@media (min-width: 2035px) {
-	.portfolioblock {
-  	justify-content: center;
-  }
 }
 
 .expertise-container, .tools-container {
@@ -91,6 +97,24 @@
   margin: 20px;
 }
 
+.tools-logos-block {
+  height: auto;
+  align-items: center;
+  max-width: 100%;
+  gap: 10px; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tools-logos-block a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 10%;
+}
+
 .expertise-logos-block img:hover, .tools-logos-block img:hover {
   opacity: 0.7;
   -webkit-transform: scale(1.1);
@@ -124,7 +148,7 @@
   margin-left: 10px;
 }
 
-.tools-logos-block .git-logo, .tools-logos-block .github-logo {
+.tools-logos-block .git-logo, .tools-logos-block .github-logo, .tools-logos-block .vscode-logo, .tools-logos-block .gitlab-logo, .tools-logos-block .gh-copilot-logo {
   width: 100px;
 }	
 
@@ -492,22 +516,7 @@
   transform: scale(1.1);
 }
 
-.portfolioblock {
-  position: static;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: auto;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
+
 
 .venturespicture {
   width: 300px;
@@ -679,7 +688,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  overflow: scroll;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
@@ -860,18 +868,40 @@
 }
 
 @media (max-width: 1040px) {
-  .expertise-logos-block, .tools-logos-block {
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
+  .tools-logos-block {
+    height: auto;
+    align-items: center;
+    max-width: 100%;
+    gap: 10px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
+
+  .tools-logos-block a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 45%;
+  }
+
+  .expertise-logos-block {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+}
 
   .expertise-logos-block .react-logo-container {
     position: static;
     transform: none;
   }
 
+  .logos-left, .logos-right {
+    align-items: center;
+    max-width: 100%;
+  }
   .expertise-logos-block .logos-left {
     margin-right: 0;
   }
@@ -879,9 +909,13 @@
   .expertise-logos-block .logos-right {
     margin-left: 0;
   }
+
+  .react-logo-container {
+      order: -1; /* Assegura que el logo de React es mostri primer */
+  }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 2100px) {
   .portfolioblock {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -890,13 +924,13 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (max-width: 1440px) {
   .div-block.nameblock {
     padding-bottom: 40px;
     padding-left: 0px;
   }
 
-  .javascript-logo {
+  .expertise-logos-block .javascript-logo {
     height: auto;
     max-width: none;
   }
@@ -913,9 +947,9 @@
     margin-right: 50px;
     padding-bottom: 0px;
   }
-}
+} */
 
-@media screen and (min-width: 2035px) {
+/* @media screen and (min-width: 2035px) {
   .logosblock {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
@@ -1065,7 +1099,7 @@
     -ms-flex-align: center;
     align-items: center;
   }
-}
+} */
 
 @media screen and (max-width: 991px) {
   #main {
@@ -1129,8 +1163,24 @@
   }
 
   .educationblock {
+    height: auto;
+    align-items: center;
+    max-width: 100%;
+    gap: 10px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+
+  .educationblock a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 45%;
   }
 
   .image-20 {
@@ -1239,7 +1289,7 @@
   }
 }
 
-@media screen and (max-width: 479px) {
+@media (max-width: 479px) {
   .heading.initialsname {
     right: 55px;
     font-size: 40px;
@@ -1268,44 +1318,72 @@
     font-size: 20px!important;
   }
 
-  .php-logo {
-    width: 90px;
+  .expertise-logos-block .php-logo {
+    width: 70px;
   }
 
   .image-5 {
     width: 160px;
   }
 
-  .css-logo {
-    width: 70px;
+  .expertise-logos-block img {
+    margin: 10px;
   }
 
-  .javascript-logo {
-    width: 70px;
+  .expertise-logos-block .css-logo {
+    width: 60px;
   }
 
-  /* .webflowblock {
-    width: 90%;
-  } */
+  .expertise-logos-block .javascript-logo {
+    width: 60px;
+  }
 
-  .typescript-logo {
-    width: 70px;
+  .expertise-logos-block .typescript-logo {
+    width: 60px;
   }
 
   .image-12 {
     width: 120px;
   }
 
-  .react-native-logo {
-    width: 90px;
+  .expertise-logos-block .react-native-logo {
+    width: 70px;
   }
 
-  .python-logo {
-    width: 90px;
+  .expertise-logos-block .python-logo {
+    width: 70px;
   }
 
-  .react-logo {
+  .expertise-logos-block .react-logo {
     width: 110px;
+  }
+
+  .tools-logos-block .git-logo, .tools-logos-block .github-logo, .tools-logos-block .vscode-logo, .tools-logos-block .gitlab-logo, .tools-logos-block .gh-copilot-logo {
+    width: 60px;
+  }	
+  
+  .tools-logos-block .npm-logo {
+    width: 70px;
+  }
+  
+  .tools-logos-block .firebase-logo {
+    width: 65px;
+  }
+  
+  .tools-logos-block .expogo-logo {
+    width: 60px;
+  }
+  
+  .educationblock .logo-cafd {
+    width: 80px;
+  }
+  
+  .educationblock .logo-eps {
+    width: 80px;
+  }
+  
+  .educationblock .logo-inefc {
+    width: 80px;
   }
 
   .venturespicture {
