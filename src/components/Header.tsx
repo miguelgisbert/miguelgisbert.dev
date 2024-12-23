@@ -1,4 +1,4 @@
-import { Grid, Box } from '@mui/material'
+import { Grid, Box, Typography } from '@mui/material'
 import profileImg from "/src/assets/images/profile.png"
 import SocialIcons from './socialIcons'
 import headerBackground from '/src/assets/images/PathForward-scaled-p-2000.jpg'
@@ -59,6 +59,19 @@ const Header = ({ opacity }: { opacity: number }) => {
                         }}
                     />
                 </Box>
+                {/* <Box className="names-block">
+                    <Typography variant="h1" className="heading header-mainname">
+                        Miguel Gisbert Osuna
+                    </Typography>
+                    <Box className="positions-names-block">
+                        <Typography variant="h1" className="heading header-position-name">
+                        Software Engineer
+                        </Typography>
+                        <Typography variant="h2" className="heading header-secondary-position-name">
+                        React Frontend Development
+                        </Typography>
+                    </Box>
+                </Box> */}
                 <SocialIcons format = "header" />
         </Grid>
     )

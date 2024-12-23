@@ -74,13 +74,18 @@ function App() {
                   transition: 'transform 0.5s ease, top 0.5s ease, left 0.5s ease'
                 }}
             />
-            <Box className="div-block-3">
+            <Box className="names-block">
               <Typography variant="h1" className="heading mainname">
                 Miguel Gisbert Osuna
               </Typography>
-              <Typography variant="h1" className="heading positionname">
-                Fullstack Web Developer
-              </Typography>
+              <Box className="positions-names-block">
+                <Typography variant="h1" className="heading position-name">
+                  Software Engineer
+                </Typography>
+                <Typography variant="h2" className="heading secondary-position-name">
+                  React Frontend Development
+                </Typography>
+              </Box>
             </Box>
             <Typography variant="h1" className="heading initialsname">
               mgo
