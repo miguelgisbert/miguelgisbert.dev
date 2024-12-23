@@ -1,4 +1,4 @@
-import { Grid, Box, Typography } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 import profileImg from "/src/assets/images/profile.png"
 import SocialIcons from './socialIcons'
 import headerBackground from '/src/assets/images/PathForward-scaled-p-2000.jpg'
