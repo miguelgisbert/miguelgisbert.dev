@@ -148,7 +148,7 @@
   margin-left: 10px;
 }
 
-.tools-logos-block .git-logo, .tools-logos-block .github-logo, .tools-logos-block .vscode-logo, .tools-logos-block .gitlab-logo, .tools-logos-block .gh-copilot-logo {
+.tools-logos-block .git-logo, .tools-logos-block .github-logo, .tools-logos-block .gitlab-logo, .tools-logos-block .gh-copilot-logo {
   width: 100px;
 }	
 
@@ -160,8 +160,8 @@
   width: 95px;
 }
 
-.tools-logos-block .expogo-logo {
-  width: 80px;
+.tools-logos-block .figma-logo, .tools-logos-block .storybook-logo {
+  width: 70px;
 }
 
 .educationblock .logo-cafd {
@@ -1367,7 +1367,7 @@
     width: 110px;
   }
 
-  .tools-logos-block .git-logo, .tools-logos-block .github-logo, .tools-logos-block .vscode-logo, .tools-logos-block .gitlab-logo, .tools-logos-block .gh-copilot-logo {
+  .tools-logos-block .git-logo, .tools-logos-block .github-logo, .tools-logos-block .gitlab-logo, .tools-logos-block .gh-copilot-logo {
     width: 60px;
   }	
   
@@ -1379,8 +1379,8 @@
     width: 65px;
   }
   
-  .tools-logos-block .expogo-logo {
-    width: 60px;
+  .tools-logos-block .figma-logo, .tools-logos-block .storybook-logo {
+    width: 50px;
   }
   
   .educationblock .logo-cafd {

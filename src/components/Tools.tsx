@@ -4,8 +4,8 @@ import githubLogo from "/src/assets/images/github.svg"
 import gitlabLogo from "/src/assets/images/gitlab.png"
 import npmLogo from "/src/assets/images/npm-logo.png"
 import firebaseLogo from "/src/assets/images/firebase-logo.png"
-import expoGoLogo from "/src/assets/images/expoGo-logo.png"
-import vscodeLogo from "/src/assets/images/vscode.png"
+import figmaLogo from "/src/assets/images/figma.png"
+import storybookLogo from "/src/assets/images/storybook.png"
 import githubcopilotLogo from "/src/assets/images/github-copilot.png"
 
 function Tools() {
@@ -82,29 +82,29 @@ function Tools() {
                     />
                 </a>
                 <a
-                    title="Expo Go"
-                    href="https://expo.dev/"
+                    title="Figma"
+                    href="https://www.figma.com/"
                     target="_blank"
                     className="link-block-4 w-inline-block"
                 >
                     <img
-                        src={expoGoLogo}
+                        src={figmaLogo}
                         loading="lazy"
-                        alt="Expo Go logo"
-                        className="expogo-logo"
+                        alt="Figma logo"
+                        className="figma-logo"
                     />
                 </a>
                 <a
-                    title="Visual Studio Code"
-                    href="https://code.visualstudio.com/"
+                    title="Storybook"
+                    href="https://storybook.js.org/"
                     target="_blank"
                     className="link-block-4 w-inline-block"
                 >
                     <img
-                        src={vscodeLogo}
+                        src={storybookLogo}
                         loading="lazy"
-                        alt="VS Code logo"
-                        className="vscode-logo"
+                        alt="Storybook logo"
+                        className="storybook-logo"
                     />
                 </a>
                 <a
