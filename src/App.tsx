@@ -3,8 +3,9 @@ import profileImg from "/src/assets/images/profile.png"
 import Header from "./components/Header"
 import Expertise from './components/Expertise'
 import Tools from './components/Tools'
-import { Box, Typography } from "@mui/material"
+import { Box, Typography, Grid } from "@mui/material"
 import ContactForm from "./components/ContactForm"
+import Footer from "./components/Footer"
 import "./App.css"
 import SocialIcons from './components/socialIcons'
 import rapidProtoImg from "/src/assets/images/RapidProto.svg"
@@ -74,13 +75,18 @@ function App() {
                   transition: 'transform 0.5s ease, top 0.5s ease, left 0.5s ease'
                 }}
             />
-            <Box className="div-block-3">
+            <Box className="names-block">
               <Typography variant="h1" className="heading mainname">
                 Miguel Gisbert Osuna
               </Typography>
-              <Typography variant="h1" className="heading positionname">
-                Fullstack Web Developer
-              </Typography>
+              <Box className="positions-names-block">
+                <Typography variant="h1" className="heading position-name">
+                  Software Engineer
+                </Typography>
+                <Typography variant="h2" className="heading secondary-position-name">
+                  React Frontend Development
+                </Typography>
+              </Box>
             </Box>
             <Typography variant="h1" className="heading initialsname">
               mgo
@@ -257,6 +263,7 @@ function App() {
         </Box>
       </Box>
       <ContactForm />
+      <Footer />
     </>
   )
 }
