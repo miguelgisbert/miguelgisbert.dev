@@ -1,9 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import gitLogo from "/src/assets/images/Git_icon.svg"
 import githubLogo from "/src/assets/images/github.svg"
+import gitlabLogo from "/src/assets/images/gitlab.png"
 import npmLogo from "/src/assets/images/npm-logo.png"
 import firebaseLogo from "/src/assets/images/firebase-logo.png"
-import expoGoLogo from "/src/assets/images/expoGo-logo.png"
+import figmaLogo from "/src/assets/images/figma.png"
+import storybookLogo from "/src/assets/images/storybook.png"
+import githubcopilotLogo from "/src/assets/images/github-copilot.png"
 
 function Tools() {
   return (
@@ -40,6 +43,19 @@ function Tools() {
                     />
                 </a>
                 <a
+                    title="Gitlab"
+                    href="https://about.gitlab.com/"
+                    target="_blank"
+                    className="link-block-4 w-inline-block"
+                >
+                    <img
+                        src={gitlabLogo}
+                        loading="lazy"
+                        alt="Gitlab logo"
+                        className="gitlab-logo"
+                    />
+                </a>
+                <a
                     title="npm package manager"
                     href="https://www.npmjs.com/~miguelgisbert"
                     target="_blank"
@@ -66,16 +82,42 @@ function Tools() {
                     />
                 </a>
                 <a
-                    title="Expo Go"
-                    href="https://expo.dev/"
+                    title="Figma"
+                    href="https://www.figma.com/"
                     target="_blank"
                     className="link-block-4 w-inline-block"
                 >
                     <img
-                        src={expoGoLogo}
+                        src={figmaLogo}
                         loading="lazy"
-                        alt="Expo Go logo"
-                        className="expogo-logo"
+                        alt="Figma logo"
+                        className="figma-logo"
+                    />
+                </a>
+                <a
+                    title="Storybook"
+                    href="https://storybook.js.org/"
+                    target="_blank"
+                    className="link-block-4 w-inline-block"
+                >
+                    <img
+                        src={storybookLogo}
+                        loading="lazy"
+                        alt="Storybook logo"
+                        className="storybook-logo"
+                    />
+                </a>
+                <a
+                    title="GitHub Copilot"
+                    href="https://github.com/features/copilot"
+                    target="_blank"
+                    className="link-block-4 w-inline-block"
+                >
+                    <img
+                        src={githubcopilotLogo}
+                        loading="lazy"
+                        alt="Github Copilot"
+                        className="gh-copilot-logo"
                     />
                 </a>
             </Box>

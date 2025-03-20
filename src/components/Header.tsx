@@ -59,6 +59,19 @@ const Header = ({ opacity }: { opacity: number }) => {
                         }}
                     />
                 </Box>
+                {/* <Box className="names-block">
+                    <Typography variant="h1" className="heading header-mainname">
+                        Miguel Gisbert Osuna
+                    </Typography>
+                    <Box className="positions-names-block">
+                        <Typography variant="h1" className="heading header-position-name">
+                        Software Engineer
+                        </Typography>
+                        <Typography variant="h2" className="heading header-secondary-position-name">
+                        React Frontend Development
+                        </Typography>
+                    </Box>
+                </Box> */}
                 <SocialIcons format = "header" />
         </Grid>
     )
