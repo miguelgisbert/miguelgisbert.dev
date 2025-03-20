@@ -3,8 +3,9 @@ import profileImg from "/src/assets/images/profile.png"
 import Header from "./components/Header"
 import Expertise from './components/Expertise'
 import Tools from './components/Tools'
-import { Box, Typography } from "@mui/material"
+import { Box, Typography, Grid } from "@mui/material"
 import ContactForm from "./components/ContactForm"
+import Footer from "./components/Footer"
 import "./App.css"
 import SocialIcons from './components/socialIcons'
 import rapidProtoImg from "/src/assets/images/RapidProto.svg"
@@ -262,6 +263,7 @@ function App() {
         </Box>
       </Box>
       <ContactForm />
+      <Footer />
     </>
   )
 }
