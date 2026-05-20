@@ -8,7 +8,7 @@ import legalPymeImg from "/src/assets/images/legalPyme.png"
 const projects = [
   {
     name: "CragXchange",
-    description: "Rock climbing route sharing platform with social features and real-time updates.",
+    description: "Rock climbing sharing platform to connect climbers all over the world.",
     image: cragXchangeImg,
     url: "https://cragxchange.com/",
   },
@@ -20,13 +20,13 @@ const projects = [
   },
   {
     name: "Lifonet",
-    description: "Wellness & lifestyle platform with appointment booking and content management.",
+    description: "Waste management platform to allow users open the container and track waste collection in real time.",
     image: lifonetImg,
     url: "https://lifonet.com/",
   },
   {
     name: "Laia Bobe",
-    description: "Personal brand website for a professional coach with blog and booking system.",
+    description: "Personal brand website for a professional coach.",
     image: laiaBobeImg,
     url: "https://laiabobe.com/",
   },
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     name: "LegalPyme",
-    description: "Legal services platform for small businesses with document management and lawyer directory.",
+    description: "Legal services platform (web & mobile app) for small businesses with document management and working hours register.",
     image: legalPymeImg,
     url: "https://www.legalpyme.es/",
   },
