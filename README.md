@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# miguelgisbert.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Software Engineer specialised in React, TypeScript, and Node.js with 8+ years of experience in full-stack development. Computer Science Engineer by the University of Alicante, also holding a Master's in Sports Technology and a Postgraduate in Startup Management.
 
-## Expanding the ESLint configuration
+### Experience
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Freelance Software Engineer** (2025–Present) — React full-stack development for web and mobile projects
+- **Frontend Developer, Video Stream Network S.L.** — React + C# full-stack on a video editing platform
+- **React Frontend Developer, SDG Group** — React + Material UI for CaixaBank; unit testing, SOLID, Agile
+- **Fullstack Developer, Bluecode** — PHP/Symfony, Python/Django backend; React/TypeScript frontend; Webflow, Flutter
+- **Software Developer, Informática Ros** — Visual FoxPro and PHP development
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Framework**: React 19 + TypeScript
+- **Bundler**: Vite 5
+- **UI**: MUI 6, custom CSS with custom properties
+- **Fonts**: Inter, JetBrains Mono
+- **Contact**: EmailJS
+- **Deploy**: GitHub Pages (`gh-pages` branch)
+
+## Development
+
+```bash
+npm install
+npm run dev      # dev server at localhost:5173
+npm run build    # typecheck + build + generate CNAME
+npm run preview  # preview production build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Deploy
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+The site is deployed to **GitHub Pages** with a custom domain (`miguelgisbert.dev`).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+1. Make your changes and commit to `main`
+2. Push to GitHub: `git push origin main`
+3. Build and deploy:
+
+```bash
+npm run build
+npm run deploy
 ```
+
+The `deploy` script runs `gh-pages -d dist`, which pushes the contents of `dist/` to the `gh-pages` branch.
+
+> `miguelgisbert.dev` points to `miguelgisbert.github.io` via a CNAME record. The `CNAME` file is generated automatically during `build` by `create-cname.cjs`.

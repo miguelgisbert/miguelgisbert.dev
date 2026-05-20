@@ -21,7 +21,6 @@ const Expertise = () => (
     <div className="section__inner">
       <div className="section__header">
         <h2 className="section__title">Expertise</h2>
-        <p className="section__subtitle">Technologies I work with daily</p>
       </div>
       <div className="tech-grid">
         {items.map((item) => (

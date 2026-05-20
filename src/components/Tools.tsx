@@ -25,7 +25,6 @@ const Tools = () => (
     <div className="section__inner">
       <div className="section__header">
         <h2 className="section__title">Tools</h2>
-        <p className="section__subtitle">My daily development toolkit</p>
       </div>
       <div className="tech-grid">
         {items.map((item) => (
