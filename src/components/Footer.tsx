@@ -1,22 +1,15 @@
-import { Grid } from '@mui/material'
-
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
-    return (
-        <Grid container component="footer" height="100px" width="100%" padding="20px 50px"
-            sx={{
-                display: 'block',
-                justifyContent: 'center',
-                alignItems: 'center',
-                color: 'black',
-                bottom: 0,
-                left: 0,
-                zIndex: 1000,
-            }}>
-            <p>© {currentYear} Miguel Gisbert Osuna</p>
-            <a href="mailto:info@miguelgisbert.dev" target="_blank">info@miguelgisbert.dev</a>
-        </Grid>
-    )
+  const year = new Date().getFullYear()
+  return (
+    <footer className="footer">
+      <div className="footer__inner">
+        <span>&copy; {year} Miguel Gisbert</span>
+        <div className="footer__links">
+          <a href="mailto:info@miguelgisbert.dev">info@miguelgisbert.dev</a>
+        </div>
+      </div>
+    </footer>
+  )
 }
 
 export default Footer

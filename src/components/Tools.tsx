@@ -1,143 +1,42 @@
-import { Box, Typography } from "@mui/material";
-import gitLogo from "/src/assets/images/Git_icon.svg";
-import githubLogo from "/src/assets/images/github.svg";
-import gitlabLogo from "/src/assets/images/gitlab.png";
-import npmLogo from "/src/assets/images/npm-logo.png";
-import vercelLogo from "/src/assets/images/vercel.svg";
-import supabaseLogo from "/src/assets/images/supabase.svg";
-import figmaLogo from "/src/assets/images/figma.png";
-import storybookLogo from "/src/assets/images/storybook.png";
-import githubcopilotLogo from "/src/assets/images/github-copilot.png";
+import gitLogo from "/src/assets/images/Git_icon.svg"
+import githubLogo from "/src/assets/images/github.svg"
+import gitlabLogo from "/src/assets/images/gitlab.png"
+import npmLogo from "/src/assets/images/npm-logo.png"
+import vercelLogo from "/src/assets/images/vercel.svg"
+import supabaseLogo from "/src/assets/images/supabase.svg"
+import figmaLogo from "/src/assets/images/figma.png"
+import storybookLogo from "/src/assets/images/storybook.png"
+import githubcopilotLogo from "/src/assets/images/github-copilot.png"
 
-function Tools() {
-  return (
-    <Box id="tools" className="tools wf-section">
-      <Box className="tools-container">
-        <Typography variant="h1" className="heading-2">
-          Tools
-        </Typography>
-        <Box className="tools-logos-block">
-          <a
-            title="Git"
-            href="https://git-scm.com/"
-            target="_blank"
-            className="link-block-4 w-inline-block"
-          >
-            <img
-              src={gitLogo}
-              loading="lazy"
-              alt="Git logo"
-              className="git-logo"
-            />
-          </a>
-          <a
-            title="GitHub"
-            href="https://github.com/miguelgisbert/"
-            target="_blank"
-            className="link-block-4 w-inline-block"
-          >
-            <img
-              src={githubLogo}
-              loading="lazy"
-              alt="GitHub logo"
-              className="github-logo"
-            />
-          </a>
-          <a
-            title="Gitlab"
-            href="https://about.gitlab.com/"
-            target="_blank"
-            className="link-block-4 w-inline-block"
-          >
-            <img
-              src={gitlabLogo}
-              loading="lazy"
-              alt="Gitlab logo"
-              className="gitlab-logo"
-            />
-          </a>
-          <a
-            title="npm package manager"
-            href="https://www.npmjs.com/~miguelgisbert"
-            target="_blank"
-            className="link-block-4 w-inline-block"
-          >
-            <img
-              src={npmLogo}
-              loading="lazy"
-              alt="npm logo"
-              className="npm-logo"
-            />
-          </a>
-          <a
-            title="Vercel"
-            href="https://vercel.com/"
-            target="_blank"
-            className="link-block-4 w-inline-block"
-          >
-            <img
-              src={vercelLogo}
-              loading="lazy"
-              alt="Vercel logo"
-              className="vercel-logo"
-            />
-          </a>
-          <a
-            title="Supabase"
-            href="https://supabase.com/"
-            target="_blank"
-            className="link-block-4 w-inline-block"
-          >
-            <img
-              src={supabaseLogo}
-              loading="lazy"
-              alt="Supabase logo"
-              className="supabase-logo"
-            />
-          </a>
-          <a
-            title="Figma"
-            href="https://www.figma.com/"
-            target="_blank"
-            className="link-block-4 w-inline-block"
-          >
-            <img
-              src={figmaLogo}
-              loading="lazy"
-              alt="Figma logo"
-              className="figma-logo"
-            />
-          </a>
-          <a
-            title="Storybook"
-            href="https://storybook.js.org/"
-            target="_blank"
-            className="link-block-4 w-inline-block"
-          >
-            <img
-              src={storybookLogo}
-              loading="lazy"
-              alt="Storybook logo"
-              className="storybook-logo"
-            />
-          </a>
-          <a
-            title="GitHub Copilot"
-            href="https://github.com/features/copilot"
-            target="_blank"
-            className="link-block-4 w-inline-block"
-          >
-            <img
-              src={githubcopilotLogo}
-              loading="lazy"
-              alt="Github Copilot"
-              className="gh-copilot-logo"
-            />
-          </a>
-        </Box>
-      </Box>
-    </Box>
-  );
-}
+const items = [
+  { name: "Git", icon: gitLogo, url: "https://git-scm.com" },
+  { name: "GitHub", icon: githubLogo, url: "https://github.com/miguelgisbert" },
+  { name: "GitLab", icon: gitlabLogo, url: "https://gitlab.com" },
+  { name: "npm", icon: npmLogo, url: "https://www.npmjs.com/~miguelgisbert" },
+  { name: "Vercel", icon: vercelLogo, url: "https://vercel.com" },
+  { name: "Supabase", icon: supabaseLogo, url: "https://supabase.com" },
+  { name: "Figma", icon: figmaLogo, url: "https://figma.com" },
+  { name: "Storybook", icon: storybookLogo, url: "https://storybook.js.org" },
+  { name: "Copilot", icon: githubcopilotLogo, url: "https://github.com/features/copilot" },
+]
 
-export default Tools;
+const Tools = () => (
+  <section id="tools" className="section">
+    <div className="section__inner">
+      <div className="section__header">
+        <h2 className="section__title">Tools</h2>
+        <p className="section__subtitle">My daily development toolkit</p>
+      </div>
+      <div className="tech-grid">
+        {items.map((item) => (
+          <a key={item.name} href={item.url} target="_blank" rel="noopener noreferrer" className="tech-item">
+            <img src={item.icon} alt={item.name} className="tech-item__icon" />
+            <span className="tech-item__name">{item.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)
+
+export default Tools

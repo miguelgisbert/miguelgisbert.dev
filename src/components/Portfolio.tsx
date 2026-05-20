@@ -1,75 +1,71 @@
-import { Box, Typography } from "@mui/material";
-import cragXchangeImg from "/src/assets/images/cragXchange.png";
-import bluecodeImg from "/src/assets/images/Screenshot-from-2022-12-10-18-34-15.png";
-import lifonetImg from "/src/assets/images/lifonet.png";
-import laiaBobeImg from "/src/assets/images/laiabobe.png";
+import cragXchangeImg from "/src/assets/images/cragXchange.png"
+import bluecodeImg from "/src/assets/images/Screenshot-from-2022-12-10-18-34-15.png"
+import lifonetImg from "/src/assets/images/lifonet.png"
+import laiaBobeImg from "/src/assets/images/laiabobe.png"
+import agrovoltImg from "/src/assets/images/agrovolt-mobile.png"
+import legalPymeImg from "/src/assets/images/legalPyme.png"
 
-const Portfolio = () => {
-  return (
-    <Box id="portfolio" className="section-2 portfolio portfolio wf-section">
-      <Box className="container-2 w-container">
-        <Typography variant="h1" className="heading-2">
-          Portfolio
-        </Typography>
-        <Box className="portfolioblock">
-          <a
-            href="https://cragxchange.com/"
-            target="_blank"
-            className="link-block-11 w-inline-block"
-          >
-            <img
-              src={cragXchangeImg}
-              loading="lazy"
-              width="200"
-              alt="CragXchange preview"
-              className="venturespicture"
-            />
-          </a>
-          <a
-            href="https://wearebluecode.com/"
-            target="_blank"
-            className="link-block-12 w-inline-block"
-          >
-            <img
-              src={bluecodeImg}
-              loading="lazy"
-              width="200"
-              sizes="(max-width: 479px) 280px, 300px"
-              alt="wearebluecode preview"
-              className="image-2 div-block bcpicture"
-            />
-          </a>
-          <a
-            href="https://lifonet.com/"
-            target="_blank"
-            className="link-block-13 w-inline-block"
-          >
-            <img
-              src={lifonetImg}
-              loading="lazy"
-              width="200"
-              sizes="(max-width: 479px) 280px, 300px"
-              alt="Lifonet preview"
-              className="venturespicture"
-            />
-          </a>
-          <a
-            href="https://laiabobe.com/"
-            target="_blank"
-            className="link-block-14 w-inline-block"
-          >
-            <img
-              src={laiaBobeImg}
-              loading="lazy"
-              width="200"
-              alt="LaiaBobé preview"
-              className="talentpicture"
-            />
-          </a>
-        </Box>
-      </Box>
-    </Box>
-  );
-};
+const projects = [
+  {
+    name: "CragXchange",
+    description: "Rock climbing route sharing platform with social features and real-time updates.",
+    image: cragXchangeImg,
+    url: "https://cragxchange.com/",
+  },
+  {
+    name: "Bluecode",
+    description: "Software development agency website showcasing services and portfolio work.",
+    image: bluecodeImg,
+    url: "https://wearebluecode.com/",
+  },
+  {
+    name: "Lifonet",
+    description: "Wellness & lifestyle platform with appointment booking and content management.",
+    image: lifonetImg,
+    url: "https://lifonet.com/",
+  },
+  {
+    name: "Laia Bobe",
+    description: "Personal brand website for a professional coach with blog and booking system.",
+    image: laiaBobeImg,
+    url: "https://laiabobe.com/",
+  },
+  {
+    name: "Agrovolt",
+    description: "Solar energy and agricultural technology platform for sustainable farming solutions.",
+    image: agrovoltImg,
+    url: "https://www.agrovolt.es/",
+  },
+  {
+    name: "LegalPyme",
+    description: "Legal services platform for small businesses with document management and lawyer directory.",
+    image: legalPymeImg,
+    url: "https://www.legalpyme.es/",
+  },
+]
 
-export default Portfolio;
+const Portfolio = () => (
+  <section id="portfolio" className="section">
+    <div className="section__inner">
+      <div className="section__header">
+        <h2 className="section__title">Portfolio</h2>
+        <p className="section__subtitle">Selected projects I've built</p>
+      </div>
+      <div className="project-grid">
+        {projects.map((project) => (
+          <a key={project.name} href={project.url} target="_blank" rel="noopener noreferrer" className="project-card">
+            <div className="project-card__image">
+              <img src={project.image} alt={project.name} loading="lazy" />
+            </div>
+            <div className="project-card__content">
+              <h3 className="project-card__title">{project.name}</h3>
+              <p className="project-card__description">{project.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)
+
+export default Portfolio
