@@ -21,6 +21,7 @@ const Header = () => {
         <nav className="header__nav">
           <a href="#expertise">Expertise</a>
           <a href="#portfolio">Portfolio</a>
+          <a href="#reviews">Reviews</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>

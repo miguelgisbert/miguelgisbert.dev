@@ -4,6 +4,7 @@ import Expertise from "./components/Expertise"
 import Tools from "./components/Tools"
 import Portfolio from "./components/Portfolio"
 import Education from "./components/Education"
+import Reviews from "./components/Reviews"
 import ContactForm from "./components/ContactForm"
 import Footer from "./components/Footer"
 import "./App.css"
@@ -17,6 +18,7 @@ function App() {
       <Tools />
       <Portfolio />
       <Education />
+      <Reviews />
       <ContactForm />
       <Footer />
     </>
