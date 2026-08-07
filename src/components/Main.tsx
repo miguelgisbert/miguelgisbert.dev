@@ -155,11 +155,11 @@ const Main = () => (
             <h1 className="hero__title">
               Miguel <span className="accent">Gisbert</span>
             </h1>
-            <p className="hero__subtitle">Software Engineer &middot; Frontend Focus</p>
+            <p className="hero__subtitle">Senior Full-Stack &middot; AI Engineer</p>
           </div>
         </div>
         <p className="hero__description">
-          Fullstack developer specialised in React, TypeScript, and Node.js.
+          8+ Years Experience Building Enterprise Apps & AI Integrations (RAG, Vector DBs, LLMs).
           I build high-performance web and mobile applications with clean, scalable code.
         </p>
         <div className="hero__actions">

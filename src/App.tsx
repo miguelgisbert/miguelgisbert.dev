@@ -2,6 +2,7 @@ import Header from "./components/Header"
 import Main from "./components/Main"
 import Expertise from "./components/Expertise"
 import Tools from "./components/Tools"
+import Skills from "./components/Skills"
 import Portfolio from "./components/Portfolio"
 import Education from "./components/Education"
 import Reviews from "./components/Reviews"
@@ -16,6 +17,7 @@ function App() {
       <Main />
       <Expertise />
       <Tools />
+      <Skills />
       <Portfolio />
       <Education />
       <Reviews />
