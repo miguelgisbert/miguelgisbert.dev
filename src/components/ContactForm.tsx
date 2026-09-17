@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { TextField, Button, Box } from '@mui/material'
+import BookingButton from './BookingButton'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
@@ -31,6 +32,12 @@ const ContactForm = () => {
         <div className="section__header text-center" style={{ textAlign: 'center' }}>
           <h2 className="section__title">Contact</h2>
           <p className="section__subtitle">Have a project in mind? Let's talk</p>
+        </div>
+        <div className="contact-booking">
+          <BookingButton />
+          <div className="contact-booking__divider">
+            <span>or send a message</span>
+          </div>
         </div>
         <Box
           component="form"
