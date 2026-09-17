@@ -302,31 +302,14 @@
 }
 
 .tech-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.tech-grid:has(.tech-item:nth-child(7):last-child) {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-@media (min-width: 1150px) {
-  .tech-grid {
-    grid-template-columns: repeat(9, 1fr);
-  }
-  .tech-grid:has(.tech-item:nth-child(7):last-child) {
-    grid-template-columns: repeat(7, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .tech-grid:has(.tech-item:nth-child(7):last-child) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .tech-item {
+  flex: 0 1 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -355,11 +338,6 @@
   color: var(--text-secondary);
   font-weight: 500;
   text-align: center;
-}
-
-.tech-item__icon[alt="GitHub"],
-.tech-item__icon[alt="Vercel"] {
-  filter: brightness(0) invert(1);
 }
 
 .project-grid {
@@ -737,40 +715,6 @@
   text-decoration: underline;
 }
 
-@supports (grid-template-rows: subgrid) {
-  .reviews-grid {
-    grid-auto-rows: auto auto 1fr auto;
-  }
-
-  .review-card {
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 4;
-    height: auto;
-    padding: 0;
-  }
-
-  .review-card > * {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .review-card__header {
-    padding-top: 18px;
-  }
-
-  .review-card__linkedin {
-    padding-bottom: 18px;
-    margin-top: 0;
-  }
-
-  .review-card__name-row,
-  .review-card__title,
-  .review-card__meta {
-    min-height: 0;
-  }
-}
-
 @media (min-width: 640px) {
   .reviews-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -780,6 +724,42 @@
 @media (min-width: 1024px) {
   .reviews-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  @supports (grid-template-rows: subgrid) {
+    .reviews-grid {
+      grid-auto-rows: auto auto 1fr auto;
+    }
+
+    .review-card {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 4;
+      height: auto;
+      padding: 0;
+    }
+
+    .review-card > * {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .review-card__header {
+      padding-top: 18px;
+    }
+
+    .review-card__linkedin {
+      padding-bottom: 18px;
+      margin-top: 0;
+    }
+
+    .review-card__name-row,
+    .review-card__title,
+    .review-card__meta {
+      min-height: 0;
+    }
   }
 }
 

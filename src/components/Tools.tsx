@@ -1,12 +1,15 @@
-import gitLogo from "/src/assets/images/Git_icon.svg"
+import gitLogo from "/src/assets/images/git.svg"
 import githubLogo from "/src/assets/images/github.svg"
-import gitlabLogo from "/src/assets/images/gitlab.png"
-import npmLogo from "/src/assets/images/npm-logo.png"
+import gitlabLogo from "/src/assets/images/gitlab.svg"
+import npmLogo from "/src/assets/images/npm.svg"
 import vercelLogo from "/src/assets/images/vercel.svg"
+import nextjsLogo from "/src/assets/images/nextdotjs.svg"
 import supabaseLogo from "/src/assets/images/supabase.svg"
-import figmaLogo from "/src/assets/images/figma.png"
-import storybookLogo from "/src/assets/images/storybook.png"
-import githubcopilotLogo from "/src/assets/images/github-copilot.png"
+import dockerLogo from "/src/assets/images/docker.svg"
+import figmaLogo from "/src/assets/images/figma.svg"
+import storybookLogo from "/src/assets/images/storybook.svg"
+import opencodeLogo from "/src/assets/images/opencode.svg"
+import deepseekLogo from "/src/assets/images/deepseek.svg"
 
 const items = [
   { name: "Git", icon: gitLogo, url: "https://git-scm.com" },
@@ -14,10 +17,13 @@ const items = [
   { name: "GitLab", icon: gitlabLogo, url: "https://gitlab.com" },
   { name: "npm", icon: npmLogo, url: "https://www.npmjs.com/~miguelgisbert" },
   { name: "Vercel", icon: vercelLogo, url: "https://vercel.com" },
+  { name: "Next.js", icon: nextjsLogo, url: "https://nextjs.org" },
   { name: "Supabase", icon: supabaseLogo, url: "https://supabase.com" },
+  { name: "Docker", icon: dockerLogo, url: "https://www.docker.com" },
   { name: "Figma", icon: figmaLogo, url: "https://figma.com" },
   { name: "Storybook", icon: storybookLogo, url: "https://storybook.js.org" },
-  { name: "Copilot", icon: githubcopilotLogo, url: "https://github.com/features/copilot" },
+  { name: "OpenCode", icon: opencodeLogo, url: "https://opencode.ai" },
+  { name: "DeepSeek", icon: deepseekLogo, url: "https://www.deepseek.com" },
 ]
 
 const Tools = () => (

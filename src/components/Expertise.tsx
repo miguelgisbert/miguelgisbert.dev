@@ -5,6 +5,7 @@ import javascriptLogo from "/src/assets/images/Unofficial_JavaScript_logo_2.svg"
 import typescriptLogo from "/src/assets/images/Typescript_logo_2020.svg"
 import cssLogo from "/src/assets/images/Official_CSS_Logo.svg"
 import nodejsLogo from "/src/assets/images/nodedotjs.svg"
+import postgresqlLogo from "/src/assets/images/postgresql.svg"
 
 const items = [
   { name: "React", icon: reactLogo, url: "https://react.dev" },
@@ -14,6 +15,7 @@ const items = [
   { name: "CSS", icon: cssLogo, url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
   { name: "Node.js", icon: nodejsLogo, url: "https://nodejs.org" },
   { name: "Python", icon: pythonLogo, url: "https://python.org" },
+  { name: "PostgreSQL", icon: postgresqlLogo, url: "https://www.postgresql.org" },
 ]
 
 const Expertise = () => (
