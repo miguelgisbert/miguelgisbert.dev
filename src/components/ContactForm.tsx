@@ -35,7 +35,7 @@ const ContactForm = () => {
         </div>
         <div className="contact-booking">
           <BookingButton />
-          <div className="contact-booking__divider">
+          <div className="contact-booking__divider" style={{ marginTop: '15px'}}>
             <span>or send a message</span>
           </div>
         </div>
