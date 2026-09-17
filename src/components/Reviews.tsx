@@ -1,8 +1,22 @@
-import { useState } from "react"
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
+
+const MAX_TEXT_LINES = 10
 
 const LINKEDIN_URL = "https://www.linkedin.com/services/page/0541253132b95bb342/"
 
-const reviews = [
+type Review = {
+  name: string
+  photo?: string
+  title: string
+  rating?: number
+  date: string
+  service?: string
+  context?: string
+  verified?: boolean
+  text: string
+}
+
+const reviews: Review[] = [
   {
     name: "Francisco Javier Francoso López",
     photo: "https://media.licdn.com/dms/image/v2/D4D03AQGutDAC7WQxXw/profile-displayphoto-scale_100_100/B4DZolYdfWG8Ag-/0/1761563761247?e=1783555200&v=beta&t=GlA3lOL7LHJdUjmaiAEhQ5WgpkATUhlVtkW7Yxkumh4",
@@ -20,6 +34,23 @@ const reviews = [
     date: "22 de mayo de 2025",
     service: "Desarrollo de software personalizado",
     text: "Seriedad y profesionalidad.",
+  },
+  {
+    name: "Andrea Requena Rubio",
+    title: "Ingeniera de Diseño industrial | Diseño de proyectos de redes FTTH | Diseño gráfico, UI, 3D | Ilustración",
+    rating: 5.0,
+    date: "9 de agosto de 2026",
+    context: "Andrea trabajó con Miguel en el mismo equipo",
+    text: "He tenido la oportunidad de trabajar conjuntamente con Miguel en un proyecto en el que se encarga de todo el desarrollo de una plataforma web, incluyendo funcionalidades más complejas como un mapa interactivo, creación y gestión de perfiles, registros, directorio de miembros, entre otras. Además, también hace muy buen trabajo en lo que respecta a la optimización y adaptación del diseño de la interfaz, consiguiendo una experiencia de usuario mucho más intuitiva, fluida y eficiente.\nComo parte del proyecto, también se encarga de desarrollar las aplicaciones móviles para Android e iOS.\n\nAdemás de sus conocimientos técnicos, también destacaría su forma de trabajar, es una persona resolutiva, ingeniosa, comprometida y muy trabajadora. Siempre busca soluciones ante los problemas y es capaz de encontrar alternativas prácticas en situaciones complejas.\n\nLa experiencia trabajando con él ha sido buenísima y, sin duda, le recomendaría para cualquier proyecto que requiera de capacidad técnica, iniciativa y compromiso.",
+  },
+  {
+    name: "Laia Bobé",
+    verified: true,
+    title: "Especialista en intel·ligència emocional i comunicació empàtica per al benestar. Coach ontològica. Acompanyo persones individualment, centres educatius (alumnat, professorat i famílies) empreses i entitats.",
+    rating: 5.0,
+    date: "27 de junio de 2026",
+    context: "Laia fue cliente de Miguel",
+    text: "He tingut el privilegi de treballar amb en Miguel en la creació de la meva pàgina web professional (www.laiabobe.com) i no podria estar més satisfeta amb el resultat.\n\nDes del primer moment va saber entendre l'essència del meu projecte i captar allò que volia transmetre amb la meva marca personal. Per a mi era molt important que la web reflectís qui soc i la meva manera de treballar, i en Miguel ho va aconseguir amb escreix.\n\nAl llarg de tot el procés ha destacat per la seva professionalitat, la seva capacitat d'escolta i la seva implicació. No es va limitar a desenvolupar una web, sinó que va aportar idees, va cuidar cada detall i va tenir una gran predisposició a fer els ajustos necessaris fins que el resultat encaixés plenament amb el que tenia al cap. En tot moment m'he sentit escoltada, acompanyada i ben assessorada.\n\nEl resultat final no és només una web ben dissenyada i funcional, sinó una web amb la qual em sento plenament representada.\n\nRecomano en Miguel a qualsevol persona o empresa que busqui un professional rigorós, creatiu, compromès i amb una gran qualitat humana. Si algun dia torno a necessitar desenvolupar un projecte web, no tindré cap dubte a tornar a comptar amb ell. Ha estat un autèntic plaer treballar amb ell.",
   },
 ]
 
@@ -42,7 +73,55 @@ const LinkedInIcon = () => (
   </svg>
 )
 
-const ReviewCard = ({ review }: { review: (typeof reviews)[number] }) => {
+const VerifiedIcon = () => (
+  <span className="review-card__verified" aria-label="Verificado">
+    <svg width="14" height="14" viewBox="0 0 24 24">
+      <path d="M12 1l2.4 2.1 3.1-.5.9 3 2.9 1.2-1.2 2.9 1.2 2.9-2.9 1.2-.9 3-3.1-.5L12 23l-2.4-2.1-3.1.5-.9-3L2.7 17l1.2-2.9L2.7 11.2l2.9-1.2.9-3 3.1.5L12 1z" fill="#e7a33e" />
+      <path d="M10.6 15.4l-2.9-2.9 1.1-1.1 1.8 1.8 4.4-4.4 1.1 1.1-5.5 5.5z" fill="#fff" />
+    </svg>
+  </span>
+)
+
+const ReviewText = ({ text }: { text: string }) => {
+  const [expanded, setExpanded] = useState(false)
+  const [overflowing, setOverflowing] = useState(false)
+  const ref = useRef<HTMLParagraphElement>(null)
+
+  const measure = useCallback(() => {
+    const el = ref.current
+    if (!el) return
+    const clamped = el.classList.contains("review-card__text--clamped")
+    if (clamped) el.classList.remove("review-card__text--clamped")
+    const full = el.scrollHeight
+    const lineHeight = parseFloat(getComputedStyle(el).lineHeight) || 0
+    if (clamped) el.classList.add("review-card__text--clamped")
+    setOverflowing(full > lineHeight * MAX_TEXT_LINES + 1)
+  }, [])
+
+  useLayoutEffect(() => {
+    measure()
+  }, [measure, text])
+
+  useEffect(() => {
+    window.addEventListener("resize", measure)
+    return () => window.removeEventListener("resize", measure)
+  }, [measure])
+
+  return (
+    <div className="review-card__text-block">
+      <p ref={ref} className={`review-card__text${expanded ? "" : " review-card__text--clamped"}`}>
+        {text}
+      </p>
+      {overflowing && (
+        <button type="button" className="review-card__more" onClick={() => setExpanded((v) => !v)}>
+          {expanded ? "Read less" : "Read more..."}
+        </button>
+      )}
+    </div>
+  )
+}
+
+const ReviewCard = ({ review }: { review: Review }) => {
   const [imgError, setImgError] = useState(false)
 
   return (
@@ -67,6 +146,7 @@ const ReviewCard = ({ review }: { review: (typeof reviews)[number] }) => {
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="review-card__name-link">
               <h3 className="review-card__name">{review.name}</h3>
             </a>
+            {review.verified && <VerifiedIcon />}
             <span className="review-card__badge" aria-label="1er">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                 <circle cx="12" cy="12" r="12" fill="#0a66c2" />
@@ -76,15 +156,24 @@ const ReviewCard = ({ review }: { review: (typeof reviews)[number] }) => {
             <span className="review-card__degree">· 1er</span>
           </div>
           <p className="review-card__title">{review.title}</p>
-          <p className="review-card__service">Recomendó el servicio: <strong>{review.service}</strong></p>
+          <div className="review-card__meta">
+            {review.service && (
+              <p className="review-card__service">Recomendó el servicio: <strong>{review.service}</strong></p>
+            )}
+            {review.context && <p className="review-card__service">{review.context}</p>}
+          </div>
         </div>
       </div>
       <div className="review-card__rating-row">
-        <Stars rating={review.rating} />
-        <span className="review-card__rating-text">{review.rating.toFixed(1).replace(".", ",")} ·</span>
+        {review.rating != null && (
+          <>
+            <Stars rating={review.rating} />
+            <span className="review-card__rating-text">{review.rating.toFixed(1).replace(".", ",")} ·</span>
+          </>
+        )}
         <span className="review-card__date">{review.date}</span>
       </div>
-      <p className="review-card__text">{review.text}</p>
+      <ReviewText text={review.text} />
       <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="review-card__linkedin">
         <LinkedInIcon />
         Ver en LinkedIn
