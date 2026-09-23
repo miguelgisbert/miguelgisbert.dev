@@ -1,14 +1,16 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
+import Cal from '@calcom/embed-react'
 
-const SCHEDULING_URL =
-  'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3fWffqzzFDcc2AxewuR3nrgPMEcfIN178sAeKECd5Pu6G6U9gqqkUaHU03mlYJ1PYlZN2779cM?gv=true'
+const CAL_NAMESPACE = '30min'
 
 const BookingButton = () => {
   const t = useTranslations('Booking')
+  const locale = useLocale()
   const [open, setOpen] = useState(false)
+  const calLink = `${locale}/miguel-gisbert/30min`
 
   useEffect(() => {
     if (!open) return
@@ -52,25 +54,22 @@ const BookingButton = () => {
           aria-label={t('modalTitle')}
           onClick={() => setOpen(false)}
         >
+          <button
+            type="button"
+            className="booking-modal__close"
+            aria-label={t('close')}
+            onClick={() => setOpen(false)}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+          </button>
           <div className="booking-modal__panel" onClick={(e) => e.stopPropagation()}>
-            <div className="booking-modal__bar">
-              <span className="booking-modal__title">{t('modalTitle')}</span>
-              <button
-                type="button"
-                className="booking-modal__close"
-                aria-label={t('close')}
-                onClick={() => setOpen(false)}
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                </svg>
-              </button>
-            </div>
-            <iframe
+            <Cal
+              namespace={CAL_NAMESPACE}
+              calLink={calLink}
               className="booking-modal__frame"
-              src={SCHEDULING_URL}
-              title={t('iframeTitle')}
-              referrerPolicy="strict-origin-when-cross-origin"
+              config={{ theme: 'dark', layout: 'month_view' }}
             />
           </div>
         </div>
