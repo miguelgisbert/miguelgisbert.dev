@@ -1,0 +1,118 @@
+{
+  "Metadata": {
+    "title": "Miguel Gisbert · Full-Stack Software Engineer (React, TypeScript, Node.js)",
+    "description": "Miguel Gisbert — Full-Stack Software Engineer with 10+ years building web & mobile apps. Remote-friendly, based near Alicante (Spain). React, TypeScript, Node.js, Python & AI/LLM."
+  },
+  "Header": {
+    "home": "Home",
+    "expertise": "Expertise",
+    "portfolio": "Portfolio",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "role": "Senior Full-Stack · Software Engineer",
+    "description": "Full-Stack Software Engineer with 10+ years of experience building enterprise web & mobile apps. Remote-friendly, based near Alicante (Spain) — React, TypeScript, Node.js, Python & AI/LLM.",
+    "viewWork": "View my work",
+    "getInTouch": "Get in touch",
+    "downloadCv": "Download CV",
+    "photoAlt": "Miguel Gisbert, Full-Stack Software Engineer"
+  },
+  "Expertise": {
+    "title": "Expertise"
+  },
+  "Tools": {
+    "title": "Tools"
+  },
+  "Skills": {
+    "title": "Skills",
+    "subtitle": "Full-stack engineering with production-grade AI & LLM pipelines",
+    "groups": {
+      "ai": {
+        "name": "AI & ML Integration",
+        "tags": {
+          "rag": "RAG Pipelines",
+          "llm": "LLM Integration",
+          "vector": "Vector DBs (Chroma, PGVector)",
+          "embeddings": "Text Embeddings",
+          "prompt": "Prompt Engineering",
+          "apis": "OpenAI / Anthropic APIs",
+          "stt": "STT Pipelines"
+        }
+      },
+      "frontend": {
+        "name": "Frontend & Mobile",
+        "tags": {
+          "react": "React",
+          "typescript": "TypeScript",
+          "nextjs": "Next.js",
+          "reactnative": "React Native",
+          "redux": "Redux / Context API",
+          "css": "CSS & Design Systems"
+        }
+      },
+      "backend": {
+        "name": "Backend & Infrastructure",
+        "tags": {
+          "node": "Node.js",
+          "python": "Python (Django)",
+          "postgres": "PostgreSQL / MySQL",
+          "docker": "Docker",
+          "cicd": "CI/CD (GitHub Actions)",
+          "rest": "REST APIs"
+        }
+      }
+    }
+  },
+  "Portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Selected projects I've built",
+    "projects": {
+      "cragxchange": "Rock climbing sharing platform to connect climbers all over the world.",
+      "bluecode": "Software development agency website showcasing services and portfolio work.",
+      "lifonet": "Waste management platform to allow users open the container and track waste collection in real time.",
+      "laiabobe": "Personal brand website for a professional coach.",
+      "agrovolt": "Solar energy and agricultural technology platform for sustainable farming solutions.",
+      "legalpyme": "Legal services platform (web & mobile app) for small businesses with document management and working hours register."
+    }
+  },
+  "Education": {
+    "title": "Education",
+    "subtitle": "Academic background",
+    "items": {
+      "sport": "Sport Science",
+      "cs": "Computer Science Engineer",
+      "master": "Sports Technology Master's",
+      "startup": "Startup Management Postgraduate"
+    }
+  },
+  "Reviews": {
+    "title": "Reviews",
+    "subtitle": "What people say on LinkedIn",
+    "readMore": "Read more...",
+    "readLess": "Read less",
+    "recommendedService": "Recommended the service:",
+    "verified": "Verified",
+    "viewOnLinkedIn": "View on LinkedIn",
+    "starsLabel": "{rating} out of 5 stars"
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Let's talk",
+    "orSendMessage": "or send a message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "Something went wrong. Try again or email me at"
+  },
+  "Booking": {
+    "bookCall": "Book a call",
+    "duration": "30 min · Google Meet",
+    "modalTitle": "Book a call",
+    "close": "Close",
+    "iframeTitle": "Book an appointment"
+  }
+}

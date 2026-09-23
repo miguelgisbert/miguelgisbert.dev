@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build && node create-cname.cjs",
-    "deploy": "gh-pages -d dist",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -16,12 +15,16 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.0.2",
     "@mui/material": "^6.0.2",
+    "@mui/material-nextjs": "^9.4.0",
     "@mui/styled-engine": "^6.0.2",
+    "next": "^16.3.6",
+    "next-intl": "^4.14.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/node": "26.6.2",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.1",

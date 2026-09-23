@@ -1,9 +1,13 @@
+'use client'
+
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 const SCHEDULING_URL =
   'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3fWffqzzFDcc2AxewuR3nrgPMEcfIN178sAeKECd5Pu6G6U9gqqkUaHU03mlYJ1PYlZN2779cM?gv=true'
 
 const BookingButton = () => {
+  const t = useTranslations('Booking')
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -30,8 +34,8 @@ const BookingButton = () => {
           </svg>
         </span>
         <span className="booking-cta__text">
-          <strong>Book a call</strong>
-          <small>30 min &middot; Google Meet</small>
+          <strong>{t('bookCall')}</strong>
+          <small>{t('duration')}</small>
         </span>
         <span className="booking-cta__arrow" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -45,16 +49,16 @@ const BookingButton = () => {
           className="booking-modal"
           role="dialog"
           aria-modal="true"
-          aria-label="Book a call"
+          aria-label={t('modalTitle')}
           onClick={() => setOpen(false)}
         >
           <div className="booking-modal__panel" onClick={(e) => e.stopPropagation()}>
             <div className="booking-modal__bar">
-              <span className="booking-modal__title">Book a call</span>
+              <span className="booking-modal__title">{t('modalTitle')}</span>
               <button
                 type="button"
                 className="booking-modal__close"
-                aria-label="Close"
+                aria-label={t('close')}
                 onClick={() => setOpen(false)}
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
@@ -65,7 +69,7 @@ const BookingButton = () => {
             <iframe
               className="booking-modal__frame"
               src={SCHEDULING_URL}
-              title="Book an appointment"
+              title={t('iframeTitle')}
               referrerPolicy="strict-origin-when-cross-origin"
             />
           </div>

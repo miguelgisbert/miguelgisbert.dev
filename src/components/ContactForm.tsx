@@ -1,11 +1,15 @@
+'use client'
+
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { TextField, Button, Box } from '@mui/material'
+import { useTranslations } from 'next-intl'
 import BookingButton from './BookingButton'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
 const ContactForm = () => {
+  const t = useTranslations('Contact')
   const form = useRef<HTMLFormElement>(null)
   const [status, setStatus] = useState<Status>('idle')
 
@@ -30,13 +34,13 @@ const ContactForm = () => {
     <section id="contact" className="section">
       <div className="section__inner">
         <div className="section__header text-center" style={{ textAlign: 'center' }}>
-          <h2 className="section__title">Contact</h2>
-          <p className="section__subtitle">Have a project in mind? Let's talk</p>
+          <h2 className="section__title">{t('title')}</h2>
+          <p className="section__subtitle">{t('subtitle')}</p>
         </div>
         <div className="contact-booking">
           <BookingButton />
           <div className="contact-booking__divider" style={{ marginTop: '15px'}}>
-            <span>or send a message</span>
+            <span>{t('orSendMessage')}</span>
           </div>
         </div>
         <Box
@@ -47,7 +51,7 @@ const ContactForm = () => {
           sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
         >
           <TextField
-            label="Name"
+            label={t('name')}
             name="from_name"
             required
             fullWidth
@@ -63,7 +67,7 @@ const ContactForm = () => {
             }}
           />
           <TextField
-            label="Email"
+            label={t('email')}
             name="from_email"
             type="email"
             required
@@ -80,7 +84,7 @@ const ContactForm = () => {
             }}
           />
           <TextField
-            label="Message"
+            label={t('message')}
             name="message"
             multiline
             rows={4}
@@ -112,7 +116,7 @@ const ContactForm = () => {
               '&.Mui-disabled': { bgcolor: '#2a2a2a', color: '#555' },
             }}
           >
-            {status === 'sending' ? 'Sending...' : 'Send Message'}
+            {status === 'sending' ? t('sending') : t('send')}
           </Button>
           {status === 'success' && (
             <Box
@@ -134,7 +138,7 @@ const ContactForm = () => {
                 <circle cx="9" cy="9" r="8" stroke="#64ffda" strokeWidth="1.5" />
                 <path d="M5.5 9l2.5 2.5 4.5-5" stroke="#64ffda" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              Message sent successfully! I'll get back to you soon.
+              {t('success')}
             </Box>
           )}
           {status === 'error' && (
@@ -157,7 +161,7 @@ const ContactForm = () => {
                 <circle cx="9" cy="9" r="8" stroke="#ff6b6b" strokeWidth="1.5" />
                 <path d="M6 6l6 6M12 6l-6 6" stroke="#ff6b6b" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
-              Something went wrong. Try again or email me at{' '}
+              {t('error')}{' '}
               <Box component="a" href="mailto:miguelg314@gmail.com" sx={{ color: '#ff6b6b', textDecoration: 'underline', fontWeight: 600 }}>
                 miguelg314@gmail.com
               </Box>

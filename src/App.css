@@ -70,6 +70,54 @@
   color: var(--accent);
 }
 
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.lang__globe {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.lang__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.lang__sep {
+  color: var(--border);
+}
+
+.lang__link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.lang__link:hover {
+  color: var(--accent);
+}
+
+.lang__link--active {
+  color: var(--accent);
+}
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -108,12 +156,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 28px;
   margin-bottom: 20px;
 }
 
 .hero__intro .hero__title {
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .hero__intro .hero__subtitle {
@@ -152,6 +200,7 @@
   line-height: 1.7;
   margin-bottom: 32px;
   max-width: 480px;
+  text-wrap: balance;
 }
 
 .hero__actions {
@@ -993,7 +1042,7 @@
 
   .hero__intro {
     align-items: center;
-    gap: 16px;
+    gap: 22px;
   }
 
   .hero__socials {

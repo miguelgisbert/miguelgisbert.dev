@@ -1,0 +1,118 @@
+{
+  "Metadata": {
+    "title": "Miguel Gisbert · Desenvolupador Full-Stack (React, TypeScript, Node.js)",
+    "description": "Miguel Gisbert — Desenvolupador Full-Stack amb més de 10 anys creant aplicacions web i mòbils. Treballo en remot, a prop d'Alacant (Espanya). React, TypeScript, Node.js, Python i IA/LLM."
+  },
+  "Header": {
+    "home": "Inici",
+    "expertise": "Experiència",
+    "portfolio": "Portafoli",
+    "reviews": "Ressenyes",
+    "contact": "Contacte"
+  },
+  "Hero": {
+    "role": "Enginyer de Programari · Full-Stack Sènior",
+    "description": "Desenvolupador Full-Stack amb més de 10 anys creant aplicacions web i mòbils d'empresa. Treballo en remot, a prop d'Alacant (Espanya) — React, TypeScript, Node.js, Python i IA/LLM.",
+    "viewWork": "Veure el meu treball",
+    "getInTouch": "Contacta",
+    "downloadCv": "Descarregar CV",
+    "photoAlt": "Miguel Gisbert, Desenvolupador Full-Stack"
+  },
+  "Expertise": {
+    "title": "Experiència"
+  },
+  "Tools": {
+    "title": "Eines"
+  },
+  "Skills": {
+    "title": "Habilitats",
+    "subtitle": "Enginyeria full-stack amb pipelines d'IA i LLM de nivell producció",
+    "groups": {
+      "ai": {
+        "name": "Integració d'IA i ML",
+        "tags": {
+          "rag": "Pipelines RAG",
+          "llm": "Integració de LLM",
+          "vector": "Bases de dades vectorials (Chroma, PGVector)",
+          "embeddings": "Embeddings de text",
+          "prompt": "Enginyeria de prompts",
+          "apis": "APIs d'OpenAI / Anthropic",
+          "stt": "Pipelines STT"
+        }
+      },
+      "frontend": {
+        "name": "Frontend i Mòbil",
+        "tags": {
+          "react": "React",
+          "typescript": "TypeScript",
+          "nextjs": "Next.js",
+          "reactnative": "React Native",
+          "redux": "Redux / Context API",
+          "css": "CSS i sistemes de disseny"
+        }
+      },
+      "backend": {
+        "name": "Backend i Infraestructura",
+        "tags": {
+          "node": "Node.js",
+          "python": "Python (Django)",
+          "postgres": "PostgreSQL / MySQL",
+          "docker": "Docker",
+          "cicd": "CI/CD (GitHub Actions)",
+          "rest": "REST APIs"
+        }
+      }
+    }
+  },
+  "Portfolio": {
+    "title": "Portafoli",
+    "subtitle": "Projectes seleccionats que he creat",
+    "projects": {
+      "cragxchange": "Plataforma per compartir escalada i connectar escaladors d'arreu del món.",
+      "bluecode": "Web d'agència de desenvolupament de programari que mostra serveis i projectes.",
+      "lifonet": "Plataforma de gestió de residus que permet obrir el contenidor i seguir la recollida en temps real.",
+      "laiabobe": "Web de marca personal per a una coach professional.",
+      "agrovolt": "Plataforma d'energia solar i tecnologia agrícola per a solucions de conreu sostenible.",
+      "legalpyme": "Plataforma de serveis legals (web i app mòbil) per a pimes amb gestió de documents i registre de jornada."
+    }
+  },
+  "Education": {
+    "title": "Formació",
+    "subtitle": "Formació acadèmica",
+    "items": {
+      "sport": "Ciències de l'Esport",
+      "cs": "Enginyer en Informàtica",
+      "master": "Màster en Tecnologia Esportiva",
+      "startup": "Postgrau en Gestió de Startups"
+    }
+  },
+  "Reviews": {
+    "title": "Ressenyes",
+    "subtitle": "El que diu la gent a LinkedIn",
+    "readMore": "Llegeix més...",
+    "readLess": "Llegeix menys",
+    "recommendedService": "Va recomanar el servei:",
+    "verified": "Verificat",
+    "viewOnLinkedIn": "Veure a LinkedIn",
+    "starsLabel": "{rating} de 5 estrelles"
+  },
+  "Contact": {
+    "title": "Contacte",
+    "subtitle": "Tens un projecte en ment? Parlem-ne",
+    "orSendMessage": "o envia un missatge",
+    "name": "Nom",
+    "email": "Correu electrònic",
+    "message": "Missatge",
+    "sending": "Enviant...",
+    "send": "Enviar missatge",
+    "success": "Missatge enviat! Et respondré aviat.",
+    "error": "Alguna cosa ha fallat. Torna-ho a provar o escriu-me a"
+  },
+  "Booking": {
+    "bookCall": "Reservar una trucada",
+    "duration": "30 min · Google Meet",
+    "modalTitle": "Reservar una trucada",
+    "close": "Tancar",
+    "iframeTitle": "Reservar una cita"
+  }
+}

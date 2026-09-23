@@ -1,3 +1,5 @@
+'use client';
+
 import GitHub from '@mui/icons-material/GitHub'
 import LinkedIn from '@mui/icons-material/LinkedIn'
 

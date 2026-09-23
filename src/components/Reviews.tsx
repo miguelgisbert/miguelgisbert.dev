@@ -1,4 +1,7 @@
+'use client';
+
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
+import { useTranslations } from "next-intl"
 
 const MAX_TEXT_LINES = 10
 
@@ -55,9 +58,10 @@ const reviews: Review[] = [
 ]
 
 function Stars({ rating }: { rating: number }) {
+  const t = useTranslations('Reviews')
   const full = Math.floor(rating)
   return (
-    <span className="review-card__stars" aria-label={`${rating} out of 5 stars`}>
+    <span className="review-card__stars" aria-label={t('starsLabel', { rating })}>
       {Array.from({ length: 5 }, (_, i) => (
         <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill={i < full ? "#f5a623" : "#3d3d3d"}>
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -73,16 +77,20 @@ const LinkedInIcon = () => (
   </svg>
 )
 
-const VerifiedIcon = () => (
-  <span className="review-card__verified" aria-label="Verificado">
+const VerifiedIcon = () => {
+  const t = useTranslations('Reviews')
+  return (
+    <span className="review-card__verified" aria-label={t('verified')}>
     <svg width="14" height="14" viewBox="0 0 24 24">
       <path d="M12 1l2.4 2.1 3.1-.5.9 3 2.9 1.2-1.2 2.9 1.2 2.9-2.9 1.2-.9 3-3.1-.5L12 23l-2.4-2.1-3.1.5-.9-3L2.7 17l1.2-2.9L2.7 11.2l2.9-1.2.9-3 3.1.5L12 1z" fill="#e7a33e" />
       <path d="M10.6 15.4l-2.9-2.9 1.1-1.1 1.8 1.8 4.4-4.4 1.1 1.1-5.5 5.5z" fill="#fff" />
     </svg>
   </span>
-)
+  )
+}
 
 const ReviewText = ({ text }: { text: string }) => {
+  const t = useTranslations('Reviews')
   const [expanded, setExpanded] = useState(false)
   const [overflowing, setOverflowing] = useState(false)
   const ref = useRef<HTMLParagraphElement>(null)
@@ -114,7 +122,7 @@ const ReviewText = ({ text }: { text: string }) => {
       </p>
       {overflowing && (
         <button type="button" className="review-card__more" onClick={() => setExpanded((v) => !v)}>
-          {expanded ? "Read less" : "Read more..."}
+          {expanded ? t('readLess') : t('readMore')}
         </button>
       )}
     </div>
@@ -122,6 +130,7 @@ const ReviewText = ({ text }: { text: string }) => {
 }
 
 const ReviewCard = ({ review }: { review: Review }) => {
+  const t = useTranslations('Reviews')
   const [imgError, setImgError] = useState(false)
 
   return (
@@ -158,7 +167,7 @@ const ReviewCard = ({ review }: { review: Review }) => {
           <p className="review-card__title">{review.title}</p>
           <div className="review-card__meta">
             {review.service && (
-              <p className="review-card__service">Recomendó el servicio: <strong>{review.service}</strong></p>
+              <p className="review-card__service">{t('recommendedService')} <strong>{review.service}</strong></p>
             )}
             {review.context && <p className="review-card__service">{review.context}</p>}
           </div>
@@ -176,26 +185,29 @@ const ReviewCard = ({ review }: { review: Review }) => {
       <ReviewText text={review.text} />
       <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="review-card__linkedin">
         <LinkedInIcon />
-        Ver en LinkedIn
+        {t('viewOnLinkedIn')}
       </a>
     </article>
   )
 }
 
-const Reviews = () => (
-  <section id="reviews" className="section">
-    <div className="section__inner">
-      <div className="section__header">
-        <h2 className="section__title">Reviews</h2>
-        <p className="section__subtitle">What people say on LinkedIn</p>
+const Reviews = () => {
+  const t = useTranslations('Reviews')
+  return (
+    <section id="reviews" className="section">
+      <div className="section__inner">
+        <div className="section__header">
+          <h2 className="section__title">{t('title')}</h2>
+          <p className="section__subtitle">{t('subtitle')}</p>
+        </div>
+        <div className="reviews-grid">
+          {reviews.map((review) => (
+            <ReviewCard key={review.name} review={review} />
+          ))}
+        </div>
       </div>
-      <div className="reviews-grid">
-        {reviews.map((review) => (
-          <ReviewCard key={review.name} review={review} />
-        ))}
-      </div>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 export default Reviews

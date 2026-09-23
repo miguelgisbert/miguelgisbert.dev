@@ -12,6 +12,15 @@ dist-ssr
 .vite
 *.local
 
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Build output
+/dist
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

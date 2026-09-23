@@ -1,5 +1,9 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import SocialIcons from "./socialIcons"
-import profileImg from "/src/assets/images/profile.png"
+
+const profileImg = "/images/profile.png"
 
 const GenericAppScreen = () => (
   <svg viewBox="0 0 390 844" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -143,45 +147,49 @@ const GenericAppScreen = () => (
   </svg>
 )
 
-const Main = () => (
-  <section id="main" className="hero">
-    <div className="hero__inner">
-      <div className="hero__content">
-        <div className="hero__intro">
-          <div className="hero__avatar-frame">
-            <img src={profileImg} alt="Miguel Gisbert" className="hero__avatar" />
+const Main = () => {
+  const t = useTranslations('Hero');
+  return (
+    <section id="main" className="hero">
+      <div className="hero__inner">
+        <div className="hero__content">
+          <div className="hero__intro">
+            <div className="hero__avatar-frame">
+              <img
+                src={profileImg}
+                alt={t('photoAlt')}
+                className="hero__avatar"
+              />
+            </div>
+            <div>
+              <p className="hero__title">
+                Miguel <span className="accent">Gisbert</span>
+              </p>
+              <h1 className="hero__subtitle">{t('role')}</h1>
+            </div>
           </div>
-          <div>
-            <h1 className="hero__title">
-              Miguel <span className="accent">Gisbert</span>
-            </h1>
-            <p className="hero__subtitle">Senior Full-Stack &middot; AI Engineer</p>
+          <p className="hero__description">{t('description')}</p>
+          <div className="hero__actions">
+            <a href="#portfolio" className="btn btn--primary">{t('viewWork')}</a>
+            <a href="#contact" className="btn btn--outline">{t('getInTouch')}</a>
+            <a href="/CVMiguelGisbert.pdf" target="_blank" rel="noopener noreferrer" className="btn btn--outline">{t('downloadCv')}</a>
+          </div>
+          <div className="hero__socials" style={{ display: 'flex', gap: 12 }}>
+            <SocialIcons format="main" />
           </div>
         </div>
-        <p className="hero__description">
-          8+ Years Experience Building Enterprise Apps & AI Integrations (RAG, Vector DBs, LLMs).
-          I build high-performance web and mobile applications with clean, scalable code.
-        </p>
-        <div className="hero__actions">
-          <a href="#portfolio" className="btn btn--primary">View my work</a>
-          <a href="#contact" className="btn btn--outline">Get in touch</a>
-          <a href="/CVMiguelGisbert.pdf" target="_blank" rel="noopener noreferrer" className="btn btn--outline">Download CV</a>
-        </div>
-        <div className="hero__socials" style={{ display: 'flex', gap: 12 }}>
-          <SocialIcons format="main" />
+        <div className="hero__visual">
+          <div className="phone-mockup">
+            <div className="phone-notch" />
+            <div className="phone-screen">
+              <GenericAppScreen />
+            </div>
+            <div className="phone-home-indicator" />
+          </div>
         </div>
       </div>
-      <div className="hero__visual">
-        <div className="phone-mockup">
-          <div className="phone-notch" />
-          <div className="phone-screen">
-            <GenericAppScreen />
-          </div>
-          <div className="phone-home-indicator" />
-        </div>
-      </div>
-    </div>
-  </section>
-)
+    </section>
+  );
+};
 
 export default Main
