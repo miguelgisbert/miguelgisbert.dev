@@ -1,16 +1,15 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import Cal from '@calcom/embed-react'
 
+const CAL_LINK = 'miguel-gisbert/30min'
 const CAL_NAMESPACE = '30min'
 
 const BookingButton = () => {
   const t = useTranslations('Booking')
-  const locale = useLocale()
   const [open, setOpen] = useState(false)
-  const calLink = `${locale}/miguel-gisbert/30min`
 
   useEffect(() => {
     if (!open) return
@@ -67,7 +66,7 @@ const BookingButton = () => {
           <div className="booking-modal__panel" onClick={(e) => e.stopPropagation()}>
             <Cal
               namespace={CAL_NAMESPACE}
-              calLink={calLink}
+              calLink={CAL_LINK}
               className="booking-modal__frame"
               config={{ theme: 'dark', layout: 'month_view' }}
             />
