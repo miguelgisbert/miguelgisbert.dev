@@ -1,10 +1,11 @@
 {
   "Metadata": {
     "title": "Miguel Gisbert · Full-Stack Software Engineer (React, TypeScript, Node.js)",
-    "description": "Miguel Gisbert — Full-Stack Software Engineer with 10+ years building web & mobile apps. Remote-friendly, based near Alicante (Spain). React, TypeScript, Node.js, Python & AI/LLM."
+    "description": "Full-Stack Software Engineer building production web & mobile apps and AI/LLM integrations. 10+ years, remote-friendly, based near Alicante (Spain). React, TypeScript, Node.js & Python."
   },
   "Header": {
     "home": "Home",
+    "services": "Services",
     "expertise": "Expertise",
     "portfolio": "Portfolio",
     "reviews": "Reviews",
@@ -12,11 +13,34 @@
   },
   "Hero": {
     "role": "Senior Full-Stack · Software Engineer",
-    "description": "Full-Stack Software Engineer with 10+ years of experience building enterprise web & mobile apps. Remote-friendly, based near Alicante (Spain) — React, TypeScript, Node.js, Python & AI/LLM.",
+    "description": "I build web and mobile applications end-to-end, from idea to production. 10+ years helping startups and enterprises ship reliable software.",
+    "availability": "Available for new projects · Remote (CET)",
     "viewWork": "View my work",
     "getInTouch": "Get in touch",
     "downloadCv": "Download CV",
     "photoAlt": "Miguel Gisbert, Full-Stack Software Engineer"
+  },
+  "Services": {
+    "title": "Services",
+    "subtitle": "How I can help your product",
+    "items": {
+      "web": {
+        "title": "Web App Development",
+        "text": "Full-stack web apps built to scale — from MVP to production. React, Next.js, Node.js and PostgreSQL, with clean, maintainable code."
+      },
+      "mobile": {
+        "title": "Mobile Apps",
+        "text": "Cross-platform iOS and Android apps built with React Native."
+      },
+      "ai": {
+        "title": "AI & LLM Integration",
+        "text": "RAG pipelines, chatbots and automations connected to your product and your data."
+      },
+      "rescue": {
+        "title": "App Rescue & Scaling",
+        "text": "I take over, fix and scale existing codebases: performance, refactors, CI/CD and reliability."
+      }
+    }
   },
   "Expertise": {
     "title": "Expertise"
@@ -66,14 +90,68 @@
   },
   "Portfolio": {
     "title": "Portfolio",
-    "subtitle": "Selected projects I've built",
+    "subtitle": "Selected projects and what I did",
+    "roleLabel": "Role",
+    "stackLabel": "Stack",
     "projects": {
-      "cragxchange": "Rock climbing sharing platform to connect climbers all over the world.",
-      "bluecode": "Software development agency website showcasing services and portfolio work.",
-      "lifonet": "Waste management platform to allow users open the container and track waste collection in real time.",
-      "laiabobe": "Personal brand website for a professional coach.",
-      "agrovolt": "Solar energy and agricultural technology platform for sustainable farming solutions.",
-      "legalpyme": "Legal services platform (web & mobile app) for small businesses with document management and working hours register."
+      "cragxchange": {
+        "description": "Rock climbing community platform connecting climbers worldwide.",
+        "result": "Interactive crag map, member profiles and iOS/Android apps.",
+        "role": "Full-stack & mobile developer",
+        "stack": "React · React Native · Node.js · PostgreSQL"
+      },
+      "bluecode": {
+        "description": "Website for a software development agency.",
+        "result": "Marketing site showcasing services and portfolio work.",
+        "role": "Frontend developer",
+        "stack": "React · TypeScript"
+      },
+      "lifonet": {
+        "description": "Waste management platform for real-time collection tracking.",
+        "result": "Users open containers and follow collections in real time.",
+        "role": "Full-stack developer",
+        "stack": "React · Node.js"
+      },
+      "laiabobe": {
+        "description": "Personal brand website for a professional coach.",
+        "result": "Clear personal brand with a simple, elegant presence.",
+        "role": "Web developer",
+        "stack": "React"
+      },
+      "agrovolt": {
+        "description": "Solar energy and agri-tech platform for sustainable farming.",
+        "result": "Mobile app for sustainable farming solutions.",
+        "role": "Mobile developer",
+        "stack": "React Native"
+      },
+      "legalpyme": {
+        "description": "Legal services platform (web & mobile) for small businesses.",
+        "result": "Document management and working-hours register for SMEs.",
+        "role": "Full-stack developer",
+        "stack": "React · Node.js · PostgreSQL"
+      }
+    }
+  },
+  "Process": {
+    "title": "How I work",
+    "subtitle": "A simple, low-risk process",
+    "steps": {
+      "call": {
+        "title": "Discovery call",
+        "text": "A free 30-minute call to understand your goals, scope and constraints."
+      },
+      "proposal": {
+        "title": "Proposal & plan",
+        "text": "Clear scope, timeline and pricing — fixed price or weekly rate, no surprises."
+      },
+      "build": {
+        "title": "Build in the open",
+        "text": "Weekly demos and a shared board, so you always see progress and can give feedback early."
+      },
+      "launch": {
+        "title": "Launch & support",
+        "text": "Deploy, handover and support. I reply within 24 hours on business days."
+      }
     }
   },
   "Education": {
@@ -94,7 +172,43 @@
     "recommendedService": "Recommended the service:",
     "verified": "Verified",
     "viewOnLinkedIn": "View on LinkedIn",
-    "starsLabel": "{rating} out of 5 stars"
+    "starsLabel": "{rating} out of 5 stars",
+    "translatedFrom": "Translated from {language}",
+    "languages": {
+      "es": "Spanish",
+      "ca": "Catalan"
+    },
+    "items": {
+      "francisco": {
+        "title": "General Manager | Operations & major events | P&L, ×3.9 scaling and 28% EBITDA | UEFA · Vuelta España · Live Nation",
+        "date": "June 15, 2026",
+        "service": "Custom software development",
+        "text": "Working with Miguel on the development of LegalPyme has been a very positive experience. Beyond his technical skills, I would highlight his ability to understand business needs and turn them into practical, functional solutions. Throughout the project he showed commitment, flexibility and a strong results orientation. Thank you, Miguel, for your dedication and professionalism throughout this journey."
+      },
+      "sergio": {
+        "title": "Smart City Expert",
+        "date": "May 22, 2025",
+        "service": "Custom software development",
+        "text": "Seriousness and professionalism."
+      },
+      "andrea": {
+        "title": "Industrial Design Engineer | FTTH network project design | Graphic design, UI, 3D | Illustration",
+        "date": "August 9, 2026",
+        "context": "Andrea worked with Miguel in the same team",
+        "text": "I had the opportunity to work alongside Miguel on a project where he was responsible for the entire development of a web platform, including more complex features such as an interactive map, profile creation and management, registrations and a member directory, among others. He also does very good work on optimising and adapting the interface design, achieving a much more intuitive, fluid and efficient user experience.\nAs part of the project, he was also responsible for developing the mobile apps for Android and iOS.\n\nBeyond his technical skills, I would also highlight the way he works: he is resourceful, ingenious, committed and very hard-working. He always looks for solutions to problems and is able to find practical alternatives in complex situations.\n\nThe experience of working with him has been excellent and I would undoubtedly recommend him for any project that requires technical ability, initiative and commitment."
+      },
+      "laia": {
+        "title": "Emotional intelligence and empathetic communication specialist for wellbeing. Ontological coach. I support individuals, schools (students, teachers and families), companies and organisations.",
+        "date": "June 27, 2026",
+        "context": "Laia was a client of Miguel",
+        "text": "I have had the privilege of working with Miguel on the creation of my professional website (www.laiabobe.com) and I could not be happier with the result.\n\nFrom the very first moment he understood the essence of my project and captured what I wanted to convey with my personal brand. It was very important to me that the website reflected who I am and the way I work, and Miguel achieved this beyond my expectations.\n\nThroughout the whole process he stood out for his professionalism, his ability to listen and his commitment. He didn't just build a website: he contributed ideas, took care of every detail and was very willing to make the necessary adjustments until the result fully matched what I had in mind. At all times I felt heard, supported and well advised.\n\nThe final result is not only a well-designed and functional website, but one I feel fully represented by.\n\nI recommend Miguel to any person or company looking for a rigorous, creative, committed professional with great human quality. If I ever need to develop another web project, I will not hesitate to work with him again. It has been a real pleasure to work with him."
+      }
+    }
+  },
+  "Cta": {
+    "title": "Have a project in mind?",
+    "text": "Tell me what you're building.",
+    "primary": "Book a call"
   },
   "Contact": {
     "title": "Contact",

@@ -25,6 +25,7 @@ const Header = () => {
         </a>
         <div className="header__right">
           <nav className="header__nav">
+            <a href="#services">{t('services')}</a>
             <a href="#expertise">{t('expertise')}</a>
             <a href="#portfolio">{t('portfolio')}</a>
             <a href="#reviews">{t('reviews')}</a>

@@ -58,7 +58,18 @@ const Portfolio = () => {
               </div>
               <div className="project-card__content">
                 <h3 className="project-card__title">{project.name}</h3>
-                <p className="project-card__description">{t(`projects.${project.key}`)}</p>
+                <p className="project-card__description">{t(`projects.${project.key}.description`)}</p>
+                <p className="project-card__highlight">{t(`projects.${project.key}.result`)}</p>
+                <div className="project-card__meta">
+                  <div className="project-card__meta-row">
+                    <span className="project-card__meta-label">{t('roleLabel')}</span>
+                    <span className="project-card__meta-value">{t(`projects.${project.key}.role`)}</span>
+                  </div>
+                  <div className="project-card__meta-row">
+                    <span className="project-card__meta-label">{t('stackLabel')}</span>
+                    <span className="project-card__meta-value">{t(`projects.${project.key}.stack`)}</span>
+                  </div>
+                </div>
               </div>
             </a>
           ))}

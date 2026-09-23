@@ -166,12 +166,16 @@ const Main = () => {
                 Miguel <span className="accent">Gisbert</span>
               </p>
               <h1 className="hero__subtitle">{t('role')}</h1>
+              <span className="hero__badge">
+                <span className="hero__badge-dot" aria-hidden="true" />
+                {t('availability')}
+              </span>
             </div>
           </div>
           <p className="hero__description">{t('description')}</p>
           <div className="hero__actions">
-            <a href="#portfolio" className="btn btn--primary">{t('viewWork')}</a>
-            <a href="#contact" className="btn btn--outline">{t('getInTouch')}</a>
+            <a href="#contact" className="btn btn--primary">{t('getInTouch')}</a>
+            <a href="#portfolio" className="btn btn--outline">{t('viewWork')}</a>
             <a href="/CVMiguelGisbert.pdf" target="_blank" rel="noopener noreferrer" className="btn btn--outline">{t('downloadCv')}</a>
           </div>
           <div className="hero__socials" style={{ display: 'flex', gap: 12 }}>

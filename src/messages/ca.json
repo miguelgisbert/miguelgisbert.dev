@@ -1,10 +1,11 @@
 {
   "Metadata": {
     "title": "Miguel Gisbert · Desenvolupador Full-Stack (React, TypeScript, Node.js)",
-    "description": "Miguel Gisbert — Desenvolupador Full-Stack amb més de 10 anys creant aplicacions web i mòbils. Treballo en remot, a prop d'Alacant (Espanya). React, TypeScript, Node.js, Python i IA/LLM."
+    "description": "Desenvolupador Full-Stack d'aplicacions web i mòbils de producció i integracions d'IA/LLM. Més de 10 anys, treballo en remot, a prop d'Alacant (Espanya). React, TypeScript, Node.js i Python."
   },
   "Header": {
     "home": "Inici",
+    "services": "Serveis",
     "expertise": "Experiència",
     "portfolio": "Portafoli",
     "reviews": "Ressenyes",
@@ -12,11 +13,34 @@
   },
   "Hero": {
     "role": "Enginyer de Programari · Full-Stack Sènior",
-    "description": "Desenvolupador Full-Stack amb més de 10 anys creant aplicacions web i mòbils d'empresa. Treballo en remot, a prop d'Alacant (Espanya) — React, TypeScript, Node.js, Python i IA/LLM.",
+    "description": "Construeixo aplicacions web i mòbils de principi a fi, de la idea a producció. Més de 10 anys ajudant startups i empreses a llançar programari fiable.",
+    "availability": "Disponible per a nous projectes · Remot (CET)",
     "viewWork": "Veure el meu treball",
     "getInTouch": "Contacta",
     "downloadCv": "Descarregar CV",
     "photoAlt": "Miguel Gisbert, Desenvolupador Full-Stack"
+  },
+  "Services": {
+    "title": "Serveis",
+    "subtitle": "Com puc ajudar el teu producte",
+    "items": {
+      "web": {
+        "title": "Desenvolupament d'aplicacions web",
+        "text": "Aplicacions web full-stack preparades per escalar — de l'MVP a producció. React, Next.js, Node.js i PostgreSQL, amb codi net i mantenible."
+      },
+      "mobile": {
+        "title": "Aplicacions mòbils",
+        "text": "Aplicacions iOS i Android multiplataforma amb React Native."
+      },
+      "ai": {
+        "title": "Integració d'IA i LLM",
+        "text": "Pipelines RAG, xatbots i automatitzacions connectats al teu producte i a les teves dades."
+      },
+      "rescue": {
+        "title": "Rescat i escalat d'apps",
+        "text": "Assumeixo, arreglo i escalo codi existent: rendiment, refactors, CI/CD i fiabilitat."
+      }
+    }
   },
   "Expertise": {
     "title": "Experiència"
@@ -66,14 +90,68 @@
   },
   "Portfolio": {
     "title": "Portafoli",
-    "subtitle": "Projectes seleccionats que he creat",
+    "subtitle": "Projectes seleccionats i què hi vaig fer",
+    "roleLabel": "Rol",
+    "stackLabel": "Stack",
     "projects": {
-      "cragxchange": "Plataforma per compartir escalada i connectar escaladors d'arreu del món.",
-      "bluecode": "Web d'agència de desenvolupament de programari que mostra serveis i projectes.",
-      "lifonet": "Plataforma de gestió de residus que permet obrir el contenidor i seguir la recollida en temps real.",
-      "laiabobe": "Web de marca personal per a una coach professional.",
-      "agrovolt": "Plataforma d'energia solar i tecnologia agrícola per a solucions de conreu sostenible.",
-      "legalpyme": "Plataforma de serveis legals (web i app mòbil) per a pimes amb gestió de documents i registre de jornada."
+      "cragxchange": {
+        "description": "Plataforma per a la comunitat d'escalada que connecta escaladors d'arreu del món.",
+        "result": "Mapa interactiu de zones, perfils de membres i apps iOS/Android.",
+        "role": "Desenvolupador full-stack i mòbil",
+        "stack": "React · React Native · Node.js · PostgreSQL"
+      },
+      "bluecode": {
+        "description": "Web per a una agència de desenvolupament de programari.",
+        "result": "Lloc de màrqueting que mostra serveis i projectes.",
+        "role": "Desenvolupador frontend",
+        "stack": "React · TypeScript"
+      },
+      "lifonet": {
+        "description": "Plataforma de gestió de residus amb seguiment en temps real.",
+        "result": "Els usuaris obren contenidors i segueixen les recollides en temps real.",
+        "role": "Desenvolupador full-stack",
+        "stack": "React · Node.js"
+      },
+      "laiabobe": {
+        "description": "Web de marca personal per a una coach professional.",
+        "result": "Marca personal clara amb una presència senzilla i elegant.",
+        "role": "Desenvolupador web",
+        "stack": "React"
+      },
+      "agrovolt": {
+        "description": "Plataforma d'energia solar i agritech per a conreu sostenible.",
+        "result": "App mòbil per a solucions de conreu sostenible.",
+        "role": "Desenvolupador mòbil",
+        "stack": "React Native"
+      },
+      "legalpyme": {
+        "description": "Plataforma de serveis legals (web i mòbil) per a pimes.",
+        "result": "Gestió de documents i registre de jornada per a pimes.",
+        "role": "Desenvolupador full-stack",
+        "stack": "React · Node.js · PostgreSQL"
+      }
+    }
+  },
+  "Process": {
+    "title": "Com treballo",
+    "subtitle": "Un procés simple i sense risc",
+    "steps": {
+      "call": {
+        "title": "Trucada inicial",
+        "text": "Una trucada gratuïta de 30 minuts per entendre els teus objectius, abast i limitacions."
+      },
+      "proposal": {
+        "title": "Proposta i pla",
+        "text": "Abast, terminis i preu clars — preu fix o tarifa setmanal, sense sorpreses."
+      },
+      "build": {
+        "title": "Construcció transparent",
+        "text": "Demos setmanals i un tauler compartit, perquè vegis el progrés i donis feedback aviat."
+      },
+      "launch": {
+        "title": "Llançament i suport",
+        "text": "Deploy, lliurament i suport. Responc en menys de 24 hores en dies laborables."
+      }
     }
   },
   "Education": {
@@ -94,7 +172,43 @@
     "recommendedService": "Va recomanar el servei:",
     "verified": "Verificat",
     "viewOnLinkedIn": "Veure a LinkedIn",
-    "starsLabel": "{rating} de 5 estrelles"
+    "starsLabel": "{rating} de 5 estrelles",
+    "translatedFrom": "Traduït del {language}",
+    "languages": {
+      "es": "castellà",
+      "ca": "català"
+    },
+    "items": {
+      "francisco": {
+        "title": "Director General | Operacions i grans esdeveniments | P&L, escalat ×3,9 i EBITDA 28% | UEFA · Vuelta España · Live Nation",
+        "date": "15 de juny de 2026",
+        "service": "Desenvolupament de programari a mida",
+        "text": "Treballar amb en Miguel en el desenvolupament de LegalPyme ha estat una experiència molt positiva. Més enllà dels seus coneixements tècnics, destacaria la seva capacitat per entendre les necessitats del negoci i transformar-les en solucions pràctiques i funcionals. Durant tot el projecte ha demostrat compromís, flexibilitat i una gran orientació a resultats. Gràcies, Miguel, per la teva implicació i professionalitat durant tot aquest camí."
+      },
+      "sergio": {
+        "title": "Smart City Expert",
+        "date": "22 de maig de 2025",
+        "service": "Desenvolupament de programari a mida",
+        "text": "Serietat i professionalitat."
+      },
+      "andrea": {
+        "title": "Enginyera de Disseny industrial | Disseny de projectes de xarxes FTTH | Disseny gràfic, UI, 3D | Il·lustració",
+        "date": "9 d'agost de 2026",
+        "context": "L'Andrea va treballar amb en Miguel en el mateix equip",
+        "text": "He tingut l'oportunitat de treballar conjuntament amb en Miguel en un projecte en què s'encarrega de tot el desenvolupament d'una plataforma web, incloent-hi funcionalitats més complexes com un mapa interactiu, creació i gestió de perfils, registres, directori de membres, entre d'altres. A més, també fa molt bona feina pel que fa a l'optimització i l'adaptació del disseny de la interfície, aconseguint una experiència d'usuari molt més intuïtiva, fluida i eficient.\nCom a part del projecte, també s'encarrega de desenvolupar les aplicacions mòbils per a Android i iOS.\n\nA més dels seus coneixements tècnics, també destacaria la seva manera de treballar: és una persona resolutiva, enginyosa, compromesa i molt treballadora. Sempre busca solucions davant dels problemes i és capaç de trobar alternatives pràctiques en situacions complexes.\n\nL'experiència de treballar amb ell ha estat boníssima i, sens dubte, el recomanaria per a qualsevol projecte que requereixi capacitat tècnica, iniciativa i compromís."
+      },
+      "laia": {
+        "title": "Especialista en intel·ligència emocional i comunicació empàtica per al benestar. Coach ontològica. Acompanyo persones individualment, centres educatius (alumnat, professorat i famílies) empreses i entitats.",
+        "date": "27 de juny de 2026",
+        "context": "La Laia va ser client d'en Miguel",
+        "text": "He tingut el privilegi de treballar amb en Miguel en la creació de la meva pàgina web professional (www.laiabobe.com) i no podria estar més satisfeta amb el resultat.\n\nDes del primer moment va saber entendre l'essència del meu projecte i captar allò que volia transmetre amb la meva marca personal. Per a mi era molt important que la web reflectís qui soc i la meva manera de treballar, i en Miguel ho va aconseguir amb escreix.\n\nAl llarg de tot el procés ha destacat per la seva professionalitat, la seva capacitat d'escolta i la seva implicació. No es va limitar a desenvolupar una web, sinó que va aportar idees, va cuidar cada detall i va tenir una gran predisposició a fer els ajustos necessaris fins que el resultat encaixés plenament amb el que tenia al cap. En tot moment m'he sentit escoltada, acompanyada i ben assessorada.\n\nEl resultat final no és només una web ben dissenyada i funcional, sinó una web amb la qual em sento plenament representada.\n\nRecomano en Miguel a qualsevol persona o empresa que busqui un professional rigorós, creatiu, compromès i amb una gran qualitat humana. Si algun dia torno a necessitar desenvolupar un projecte web, no tindré cap dubte a tornar a comptar amb ell. Ha estat un autèntic plaer treballar amb ell."
+      }
+    }
+  },
+  "Cta": {
+    "title": "Tens un projecte en ment?",
+    "text": "Explica'm què vols construir.",
+    "primary": "Reservar una trucada"
   },
   "Contact": {
     "title": "Contacte",

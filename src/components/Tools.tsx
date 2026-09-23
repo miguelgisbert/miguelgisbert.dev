@@ -7,15 +7,10 @@ const items = [
   { name: "GitHub", icon: "/images/github.svg", url: "https://github.com/miguelgisbert" },
   { name: "GitLab", icon: "/images/gitlab.svg", url: "https://gitlab.com" },
   { name: "npm", icon: "/images/npm.svg", url: "https://www.npmjs.com/~miguelgisbert" },
-  { name: "Vercel", icon: "/images/vercel.svg", url: "https://vercel.com" },
   { name: "Next.js", icon: "/images/nextdotjs.svg", url: "https://nextjs.org" },
-  { name: "Supabase", icon: "/images/supabase.svg", url: "https://supabase.com" },
   { name: "Docker", icon: "/images/docker.svg", url: "https://www.docker.com" },
   { name: "CI/CD", icon: "/images/githubactions.svg", url: "https://github.com/features/actions" },
   { name: "Figma", icon: "/images/figma.svg", url: "https://figma.com" },
-  { name: "Storybook", icon: "/images/storybook.svg", url: "https://storybook.js.org" },
-  { name: "OpenCode", icon: "/images/opencode.svg", url: "https://opencode.ai" },
-  { name: "DeepSeek", icon: "/images/deepseek.svg", url: "https://www.deepseek.com" },
 ]
 
 const Tools = () => {

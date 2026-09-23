@@ -1,59 +1,54 @@
 'use client';
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 const MAX_TEXT_LINES = 10
 
 const LINKEDIN_URL = "https://www.linkedin.com/services/page/0541253132b95bb342/"
 
 type Review = {
+  key: string
   name: string
   photo?: string
-  title: string
   rating?: number
-  date: string
-  service?: string
-  context?: string
   verified?: boolean
-  text: string
+  originalLang: 'es' | 'ca'
+  hasService?: boolean
+  hasContext?: boolean
 }
 
 const reviews: Review[] = [
   {
+    key: 'francisco',
     name: "Francisco Javier Francoso López",
     photo: "https://media.licdn.com/dms/image/v2/D4D03AQGutDAC7WQxXw/profile-displayphoto-scale_100_100/B4DZolYdfWG8Ag-/0/1761563761247?e=1783555200&v=beta&t=GlA3lOL7LHJdUjmaiAEhQ5WgpkATUhlVtkW7Yxkumh4",
-    title: "Director General | Operaciones y grandes eventos | P&L, escalado ×3,9 y EBITDA 28% | UEFA · Vuelta España · Live Nation",
     rating: 5.0,
-    date: "15 de junio de 2026",
-    service: "Desarrollo de software personalizado",
-    text: "Trabajar con Miguel en el desarrollo de LegalPyme ha sido una experiencia muy positiva. Más allá de sus conocimientos técnicos, destacaría su capacidad para entender las necesidades del negocio y transformarlas en soluciones prácticas y funcionales. Durante todo el proyecto ha demostrado compromiso, flexibilidad y una gran orientación a resultados. Gracias, Miguel, por tu implicación y profesionalidad durante todo este camino.",
+    originalLang: 'es',
+    hasService: true,
   },
   {
+    key: 'sergio',
     name: "Sergio Alcántara Segura",
     photo: "https://media.licdn.com/dms/image/v2/D4E03AQF9LNOqDK_CSg/profile-displayphoto-scale_100_100/B4EZ0R2TA3HUAc-/0/1774120941948?e=1783555200&v=beta&t=ZBhmbA0xw_sbhTRq4BzTlgs-JZSvh1QW6mc7zHnJlpw",
-    title: "Smart City Expert",
     rating: 4.8,
-    date: "22 de mayo de 2025",
-    service: "Desarrollo de software personalizado",
-    text: "Seriedad y profesionalidad.",
+    originalLang: 'es',
+    hasService: true,
   },
   {
+    key: 'andrea',
     name: "Andrea Requena Rubio",
-    title: "Ingeniera de Diseño industrial | Diseño de proyectos de redes FTTH | Diseño gráfico, UI, 3D | Ilustración",
     rating: 5.0,
-    date: "9 de agosto de 2026",
-    context: "Andrea trabajó con Miguel en el mismo equipo",
-    text: "He tenido la oportunidad de trabajar conjuntamente con Miguel en un proyecto en el que se encarga de todo el desarrollo de una plataforma web, incluyendo funcionalidades más complejas como un mapa interactivo, creación y gestión de perfiles, registros, directorio de miembros, entre otras. Además, también hace muy buen trabajo en lo que respecta a la optimización y adaptación del diseño de la interfaz, consiguiendo una experiencia de usuario mucho más intuitiva, fluida y eficiente.\nComo parte del proyecto, también se encarga de desarrollar las aplicaciones móviles para Android e iOS.\n\nAdemás de sus conocimientos técnicos, también destacaría su forma de trabajar, es una persona resolutiva, ingeniosa, comprometida y muy trabajadora. Siempre busca soluciones ante los problemas y es capaz de encontrar alternativas prácticas en situaciones complejas.\n\nLa experiencia trabajando con él ha sido buenísima y, sin duda, le recomendaría para cualquier proyecto que requiera de capacidad técnica, iniciativa y compromiso.",
+    originalLang: 'es',
+    hasContext: true,
   },
   {
+    key: 'laia',
     name: "Laia Bobé",
     verified: true,
-    title: "Especialista en intel·ligència emocional i comunicació empàtica per al benestar. Coach ontològica. Acompanyo persones individualment, centres educatius (alumnat, professorat i famílies) empreses i entitats.",
     rating: 5.0,
-    date: "27 de junio de 2026",
-    context: "Laia fue cliente de Miguel",
-    text: "He tingut el privilegi de treballar amb en Miguel en la creació de la meva pàgina web professional (www.laiabobe.com) i no podria estar més satisfeta amb el resultat.\n\nDes del primer moment va saber entendre l'essència del meu projecte i captar allò que volia transmetre amb la meva marca personal. Per a mi era molt important que la web reflectís qui soc i la meva manera de treballar, i en Miguel ho va aconseguir amb escreix.\n\nAl llarg de tot el procés ha destacat per la seva professionalitat, la seva capacitat d'escolta i la seva implicació. No es va limitar a desenvolupar una web, sinó que va aportar idees, va cuidar cada detall i va tenir una gran predisposició a fer els ajustos necessaris fins que el resultat encaixés plenament amb el que tenia al cap. En tot moment m'he sentit escoltada, acompanyada i ben assessorada.\n\nEl resultat final no és només una web ben dissenyada i funcional, sinó una web amb la qual em sento plenament representada.\n\nRecomano en Miguel a qualsevol persona o empresa que busqui un professional rigorós, creatiu, compromès i amb una gran qualitat humana. Si algun dia torno a necessitar desenvolupar un projecte web, no tindré cap dubte a tornar a comptar amb ell. Ha estat un autèntic plaer treballar amb ell.",
+    originalLang: 'ca',
+    hasContext: true,
   },
 ]
 
@@ -131,7 +126,11 @@ const ReviewText = ({ text }: { text: string }) => {
 
 const ReviewCard = ({ review }: { review: Review }) => {
   const t = useTranslations('Reviews')
+  const locale = useLocale()
   const [imgError, setImgError] = useState(false)
+  const ratingText = review.rating != null
+    ? new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(review.rating)
+    : null
 
   return (
     <article className="review-card">
@@ -164,12 +163,12 @@ const ReviewCard = ({ review }: { review: Review }) => {
             </span>
             <span className="review-card__degree">· 1er</span>
           </div>
-          <p className="review-card__title">{review.title}</p>
+          <p className="review-card__title">{t(`items.${review.key}.title`)}</p>
           <div className="review-card__meta">
-            {review.service && (
-              <p className="review-card__service">{t('recommendedService')} <strong>{review.service}</strong></p>
+            {review.hasService && (
+              <p className="review-card__service">{t('recommendedService')} <strong>{t(`items.${review.key}.service`)}</strong></p>
             )}
-            {review.context && <p className="review-card__service">{review.context}</p>}
+            {review.hasContext && <p className="review-card__service">{t(`items.${review.key}.context`)}</p>}
           </div>
         </div>
       </div>
@@ -177,16 +176,23 @@ const ReviewCard = ({ review }: { review: Review }) => {
         {review.rating != null && (
           <>
             <Stars rating={review.rating} />
-            <span className="review-card__rating-text">{review.rating.toFixed(1).replace(".", ",")} ·</span>
+            <span className="review-card__rating-text">{ratingText} ·</span>
           </>
         )}
-        <span className="review-card__date">{review.date}</span>
+        <span className="review-card__date">{t(`items.${review.key}.date`)}</span>
       </div>
-      <ReviewText text={review.text} />
-      <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="review-card__linkedin">
-        <LinkedInIcon />
-        {t('viewOnLinkedIn')}
-      </a>
+      <ReviewText text={t(`items.${review.key}.text`)} />
+      <div className="review-card__footer">
+        {review.originalLang !== locale && (
+          <p className="review-card__translated">
+            {t('translatedFrom', { language: t(`languages.${review.originalLang}`) })}
+          </p>
+        )}
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="review-card__linkedin">
+          <LinkedInIcon />
+          {t('viewOnLinkedIn')}
+        </a>
+      </div>
     </article>
   )
 }
@@ -202,7 +208,7 @@ const Reviews = () => {
         </div>
         <div className="reviews-grid">
           {reviews.map((review) => (
-            <ReviewCard key={review.name} review={review} />
+            <ReviewCard key={review.key} review={review} />
           ))}
         </div>
       </div>

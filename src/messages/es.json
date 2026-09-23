@@ -1,10 +1,11 @@
 {
   "Metadata": {
     "title": "Miguel Gisbert · Desarrollador Full-Stack (React, TypeScript, Node.js)",
-    "description": "Miguel Gisbert — Desarrollador Full-Stack con más de 10 años creando aplicaciones web y móviles. Trabajo en remoto, cerca de Alicante (España). React, TypeScript, Node.js, Python e IA/LLM."
+    "description": "Desarrollador Full-Stack de aplicaciones web y móviles de producción e integraciones de IA/LLM. Más de 10 años, trabajo en remoto, cerca de Alicante (España). React, TypeScript, Node.js y Python."
   },
   "Header": {
     "home": "Inicio",
+    "services": "Servicios",
     "expertise": "Experiencia",
     "portfolio": "Portafolio",
     "reviews": "Reseñas",
@@ -12,11 +13,34 @@
   },
   "Hero": {
     "role": "Ingeniero de Software · Full-Stack Sénior",
-    "description": "Desarrollador Full-Stack con más de 10 años creando aplicaciones web y móviles de empresa. Trabajo en remoto, cerca de Alicante (España) — React, TypeScript, Node.js, Python e IA/LLM.",
+    "description": "Construyo aplicaciones web y móviles de principio a fin, de la idea a producción. Más de 10 años ayudando a startups y empresas a lanzar software fiable.",
+    "availability": "Disponible para nuevos proyectos · Remoto (CET)",
     "viewWork": "Ver mi trabajo",
     "getInTouch": "Contactar",
     "downloadCv": "Descargar CV",
     "photoAlt": "Miguel Gisbert, Desarrollador Full-Stack"
+  },
+  "Services": {
+    "title": "Servicios",
+    "subtitle": "Cómo puedo ayudar a tu producto",
+    "items": {
+      "web": {
+        "title": "Desarrollo de aplicaciones web",
+        "text": "Aplicaciones web full-stack preparadas para escalar — del MVP a producción. React, Next.js, Node.js y PostgreSQL, con código limpio y mantenible."
+      },
+      "mobile": {
+        "title": "Aplicaciones móviles",
+        "text": "Aplicaciones iOS y Android multiplataforma con React Native."
+      },
+      "ai": {
+        "title": "Integración de IA y LLM",
+        "text": "Pipelines RAG, chatbots y automatizaciones conectados a tu producto y a tus datos."
+      },
+      "rescue": {
+        "title": "Rescate y escalado de apps",
+        "text": "Asumo, arreglo y escalo código existente: rendimiento, refactors, CI/CD y fiabilidad."
+      }
+    }
   },
   "Expertise": {
     "title": "Experiencia"
@@ -66,14 +90,68 @@
   },
   "Portfolio": {
     "title": "Portafolio",
-    "subtitle": "Proyectos seleccionados que he creado",
+    "subtitle": "Proyectos seleccionados y qué hice",
+    "roleLabel": "Rol",
+    "stackLabel": "Stack",
     "projects": {
-      "cragxchange": "Plataforma para compartir escalada y conectar escaladores de todo el mundo.",
-      "bluecode": "Web de agencia de desarrollo de software que muestra servicios y proyectos.",
-      "lifonet": "Plataforma de gestión de residuos que permite abrir el contenedor y seguir la recogida en tiempo real.",
-      "laiabobe": "Web de marca personal para una coach profesional.",
-      "agrovolt": "Plataforma de energía solar y tecnología agrícola para soluciones de cultivo sostenible.",
-      "legalpyme": "Plataforma de servicios legales (web y app móvil) para pymes con gestión de documentos y registro de jornada."
+      "cragxchange": {
+        "description": "Plataforma para la comunidad de escalada que conecta escaladores de todo el mundo.",
+        "result": "Mapa interactivo de zonas, perfiles de miembros y apps iOS/Android.",
+        "role": "Desarrollador full-stack y móvil",
+        "stack": "React · React Native · Node.js · PostgreSQL"
+      },
+      "bluecode": {
+        "description": "Web para una agencia de desarrollo de software.",
+        "result": "Sitio de marketing que muestra servicios y proyectos.",
+        "role": "Desarrollador frontend",
+        "stack": "React · TypeScript"
+      },
+      "lifonet": {
+        "description": "Plataforma de gestión de residuos con seguimiento en tiempo real.",
+        "result": "Los usuarios abren contenedores y siguen las recogidas en tiempo real.",
+        "role": "Desarrollador full-stack",
+        "stack": "React · Node.js"
+      },
+      "laiabobe": {
+        "description": "Web de marca personal para una coach profesional.",
+        "result": "Marca personal clara con una presencia sencilla y elegante.",
+        "role": "Desarrollador web",
+        "stack": "React"
+      },
+      "agrovolt": {
+        "description": "Plataforma de energía solar y agritech para cultivo sostenible.",
+        "result": "App móvil para soluciones de cultivo sostenible.",
+        "role": "Desarrollador móvil",
+        "stack": "React Native"
+      },
+      "legalpyme": {
+        "description": "Plataforma de servicios legales (web y móvil) para pymes.",
+        "result": "Gestión de documentos y registro de jornada para pymes.",
+        "role": "Desarrollador full-stack",
+        "stack": "React · Node.js · PostgreSQL"
+      }
+    }
+  },
+  "Process": {
+    "title": "Cómo trabajo",
+    "subtitle": "Un proceso simple y sin riesgo",
+    "steps": {
+      "call": {
+        "title": "Llamada inicial",
+        "text": "Una llamada gratuita de 30 minutos para entender tus objetivos, alcance y limitaciones."
+      },
+      "proposal": {
+        "title": "Propuesta y plan",
+        "text": "Alcance, plazos y precio claros — precio fijo o tarifa semanal, sin sorpresas."
+      },
+      "build": {
+        "title": "Construcción transparente",
+        "text": "Demos semanales y un tablero compartido, para que veas el progreso y des feedback pronto."
+      },
+      "launch": {
+        "title": "Lanzamiento y soporte",
+        "text": "Deploy, entrega y soporte. Respondo en menos de 24 horas en días laborables."
+      }
     }
   },
   "Education": {
@@ -94,7 +172,43 @@
     "recommendedService": "Recomendó el servicio:",
     "verified": "Verificado",
     "viewOnLinkedIn": "Ver en LinkedIn",
-    "starsLabel": "{rating} de 5 estrellas"
+    "starsLabel": "{rating} de 5 estrellas",
+    "translatedFrom": "Traducido del {language}",
+    "languages": {
+      "es": "español",
+      "ca": "catalán"
+    },
+    "items": {
+      "francisco": {
+        "title": "Director General | Operaciones y grandes eventos | P&L, escalado ×3,9 y EBITDA 28% | UEFA · Vuelta España · Live Nation",
+        "date": "15 de junio de 2026",
+        "service": "Desarrollo de software personalizado",
+        "text": "Trabajar con Miguel en el desarrollo de LegalPyme ha sido una experiencia muy positiva. Más allá de sus conocimientos técnicos, destacaría su capacidad para entender las necesidades del negocio y transformarlas en soluciones prácticas y funcionales. Durante todo el proyecto ha demostrado compromiso, flexibilidad y una gran orientación a resultados. Gracias, Miguel, por tu implicación y profesionalidad durante todo este camino."
+      },
+      "sergio": {
+        "title": "Smart City Expert",
+        "date": "22 de mayo de 2025",
+        "service": "Desarrollo de software personalizado",
+        "text": "Seriedad y profesionalidad."
+      },
+      "andrea": {
+        "title": "Ingeniera de Diseño industrial | Diseño de proyectos de redes FTTH | Diseño gráfico, UI, 3D | Ilustración",
+        "date": "9 de agosto de 2026",
+        "context": "Andrea trabajó con Miguel en el mismo equipo",
+        "text": "He tenido la oportunidad de trabajar conjuntamente con Miguel en un proyecto en el que se encarga de todo el desarrollo de una plataforma web, incluyendo funcionalidades más complejas como un mapa interactivo, creación y gestión de perfiles, registros, directorio de miembros, entre otras. Además, también hace muy buen trabajo en lo que respecta a la optimización y adaptación del diseño de la interfaz, consiguiendo una experiencia de usuario mucho más intuitiva, fluida y eficiente.\nComo parte del proyecto, también se encarga de desarrollar las aplicaciones móviles para Android e iOS.\n\nAdemás de sus conocimientos técnicos, también destacaría su forma de trabajar, es una persona resolutiva, ingeniosa, comprometida y muy trabajadora. Siempre busca soluciones ante los problemas y es capaz de encontrar alternativas prácticas en situaciones complejas.\n\nLa experiencia trabajando con él ha sido buenísima y, sin duda, le recomendaría para cualquier proyecto que requiera de capacidad técnica, iniciativa y compromiso."
+      },
+      "laia": {
+        "title": "Especialista en inteligencia emocional y comunicación empática para el bienestar. Coach ontológica. Acompaño a personas individualmente, centros educativos (alumnado, profesorado y familias), empresas y entidades.",
+        "date": "27 de junio de 2026",
+        "context": "Laia fue cliente de Miguel",
+        "text": "He tenido el privilegio de trabajar con Miguel en la creación de mi página web profesional (www.laiabobe.com) y no podría estar más satisfecha con el resultado.\n\nDesde el primer momento supo entender la esencia de mi proyecto y captar lo que quería transmitir con mi marca personal. Para mí era muy importante que la web reflejara quién soy y mi manera de trabajar, y Miguel lo consiguió con creces.\n\nA lo largo de todo el proceso ha destacado por su profesionalidad, su capacidad de escucha y su implicación. No se limitó a desarrollar una web, sino que aportó ideas, cuidó cada detalle y tuvo una gran predisposición a hacer los ajustes necesarios hasta que el resultado encajara plenamente con lo que tenía en mente. En todo momento me he sentido escuchada, acompañada y bien asesorada.\n\nEl resultado final no es solo una web bien diseñada y funcional, sino una web con la que me siento plenamente representada.\n\nRecomiendo a Miguel a cualquier persona o empresa que busque un profesional riguroso, creativo, comprometido y con una gran calidad humana. Si algún día vuelvo a necesitar desarrollar un proyecto web, no tendré ninguna duda en volver a contar con él. Ha sido un auténtico placer trabajar con él."
+      }
+    }
+  },
+  "Cta": {
+    "title": "¿Tienes un proyecto en mente?",
+    "text": "Cuéntame qué quieres construir.",
+    "primary": "Reservar una llamada"
   },
   "Contact": {
     "title": "Contacto",
