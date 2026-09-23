@@ -10,7 +10,7 @@ const items = [
   { name: "CSS", icon: "/images/Official_CSS_Logo.svg", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
   { name: "Node.js", icon: "/images/nodedotjs.svg", url: "https://nodejs.org" },
   { name: "Python", icon: "/images/python.png", url: "https://python.org" },
-  { name: "Golang", icon: "/images/golang.svg", url: "https://go.dev" },
+  { name: "PostgreSQL", icon: "/images/postgresql.svg", url: "https://www.postgresql.org" },
 ]
 
 const Expertise = () => {
