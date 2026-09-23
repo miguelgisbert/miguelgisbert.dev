@@ -1,10 +1,10 @@
 # miguelgisbert.dev
 
-Personal portfolio website built with React, TypeScript, and Vite.
+Personal portfolio website built with Next.js (App Router), TypeScript and next-intl.
 
 ## About
 
-Software Engineer specialised in React, TypeScript, and Node.js with 8+ years of experience in full-stack development. Computer Science Engineer by the University of Alicante, also holding a Master's in Sports Technology and a Postgraduate in Startup Management.
+Software Engineer specialised in React, TypeScript, and Node.js with 10+ years of experience in full-stack development. Computer Science Engineer by the University of Alicante, also holding a Master's in Sports Technology and a Postgraduate in Startup Management.
 
 ### Experience
 
@@ -16,35 +16,41 @@ Software Engineer specialised in React, TypeScript, and Node.js with 8+ years of
 
 ## Tech Stack
 
-- **Framework**: React 19 + TypeScript
-- **Bundler**: Vite 5
+- **Framework**: Next.js 16 (App Router) + React 19 + TypeScript
+- **i18n**: next-intl (English, Spanish, Catalan) with locale-prefixed routes
 - **UI**: MUI 6, custom CSS with custom properties
-- **Fonts**: Inter, JetBrains Mono
+- **Fonts**: Inter
 - **Contact**: EmailJS
-- **Deploy**: GitHub Pages (`gh-pages` branch)
+- **Deploy**: Vercel
 
 ## Development
 
 ```bash
 npm install
-npm run dev      # dev server at localhost:5173
-npm run build    # typecheck + build + generate CNAME
-npm run preview  # preview production build
+npm run dev      # dev server at localhost:3000
+npm run build    # production build
+npm run start    # serve the production build
+npm run lint     # eslint
+```
+
+## Structure
+
+```
+src/
+  app/[locale]/    # layout + page per locale (en, es, ca)
+  components/      # UI sections
+  i18n/            # next-intl routing/navigation/request config
+  messages/        # en.json, es.json, ca.json
+  proxy.ts         # locale detection & redirect
+public/
+  images/          # static assets
+  og-image.png     # social sharing image
 ```
 
 ## Deploy
 
-The site is deployed to **GitHub Pages** with a custom domain (`miguelgisbert.dev`).
+Deployed to **Vercel** with the custom domain `miguelgisbert.dev`.
 
-1. Make your changes and commit to `main`
-2. Push to GitHub: `git push origin main`
-3. Build and deploy:
-
-```bash
-npm run build
-npm run deploy
-```
-
-The `deploy` script runs `gh-pages -d dist`, which pushes the contents of `dist/` to the `gh-pages` branch.
-
-> `miguelgisbert.dev` points to `miguelgisbert.github.io` via a CNAME record. The `CNAME` file is generated automatically during `build` by `create-cname.cjs`.
+1. Push to `main` — Vercel builds and deploys automatically (production).
+2. Other branches generate preview deployments.
+3. Configure the domain in the Vercel dashboard (Settings → Domains).
