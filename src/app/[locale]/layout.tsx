@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -6,6 +6,16 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
 import { routing } from '@/i18n/routing';
 import '../../index.css';
 import '../../App.css';
+
+const OG_LOCALES: Record<string, string> = {
+  en: 'en_US',
+  es: 'es_ES',
+  ca: 'ca_ES',
+};
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a0a',
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -66,7 +76,10 @@ export async function generateMetadata({
           alt: 'Miguel Gisbert — Full-Stack Software Engineer',
         },
       ],
-      locale,
+      locale: OG_LOCALES[locale] ?? OG_LOCALES.en,
+      alternateLocale: routing.locales
+        .filter((l) => l !== locale)
+        .map((l) => OG_LOCALES[l]),
     },
     twitter: {
       card: 'summary_large_image',
@@ -82,47 +95,88 @@ export async function generateMetadata({
   };
 }
 
-const personSchema = {
+const siteUrl = 'https://miguelgisbert.dev';
+const socialProfiles = [
+  'https://www.linkedin.com/in/miguel-gisbert-osuna/',
+  'https://github.com/miguelgisbert/',
+  'https://www.npmjs.com/~miguelgisbert',
+];
+const knowsAbout = [
+  'Full-Stack Development',
+  'React',
+  'TypeScript',
+  'JavaScript',
+  'Node.js',
+  'React Native',
+  'Python',
+  'Django',
+  'PostgreSQL',
+  'Docker',
+  'CI/CD',
+  'AI Integration',
+  'LLM Integration',
+  'RAG Pipelines',
+  'Software Engineering',
+];
+const postalAddress = {
+  '@type': 'PostalAddress',
+  addressLocality: 'Alicante',
+  addressRegion: 'Valencian Community',
+  addressCountry: 'ES',
+};
+const description =
+  'Full-Stack Software Engineer with 10+ years of experience building high-performance web and mobile applications with React, TypeScript, Node.js and Python, specialized in AI/LLM integration.';
+
+const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Miguel Gisbert',
-  givenName: 'Miguel',
-  familyName: 'Gisbert',
-  url: 'https://miguelgisbert.dev/',
-  image: 'https://miguelgisbert.dev/og-image.png',
-  jobTitle: 'Full-Stack Software Engineer',
-  description:
-    'Full-Stack Software Engineer with 10+ years of experience building high-performance web and mobile applications with React, TypeScript, Node.js and Python, specialized in AI/LLM integration.',
-  email: 'mailto:info@miguelgisbert.dev',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Alicante',
-    addressRegion: 'Valencian Community',
-    addressCountry: 'ES',
-  },
-  areaServed: 'Worldwide',
-  knowsLanguage: ['en', 'es', 'ca'],
-  knowsAbout: [
-    'Full-Stack Development',
-    'React',
-    'TypeScript',
-    'JavaScript',
-    'Node.js',
-    'React Native',
-    'Python',
-    'Django',
-    'PostgreSQL',
-    'Docker',
-    'CI/CD',
-    'AI Integration',
-    'LLM Integration',
-    'RAG Pipelines',
-    'Software Engineering',
-  ],
-  sameAs: [
-    'https://www.linkedin.com/in/miguel-gisbert-osuna/',
-    'https://github.com/miguelgisbert/',
-    'https://www.npmjs.com/~miguelgisbert',
+  '@graph': [
+    {
+      '@type': 'Person',
+      name: 'Miguel Gisbert',
+      givenName: 'Miguel',
+      familyName: 'Gisbert',
+      url: `${siteUrl}/`,
+      image: `${siteUrl}/og-image.png`,
+      jobTitle: 'Full-Stack Software Engineer',
+      description,
+      email: 'mailto:info@miguelgisbert.dev',
+      address: postalAddress,
+      areaServed: 'Worldwide',
+      knowsLanguage: ['en', 'es', 'ca'],
+      knowsAbout,
+      sameAs: socialProfiles,
+    },
+    {
+      '@type': 'WebSite',
+      name: 'Miguel Gisbert',
+      url: `${siteUrl}/`,
+      inLanguage: routing.locales,
+    },
+    {
+      '@type': 'ProfessionalService',
+      name: 'Miguel Gisbert — Full-Stack Software Engineer',
+      url: `${siteUrl}/`,
+      image: `${siteUrl}/og-image.png`,
+      description,
+      email: 'mailto:info@miguelgisbert.dev',
+      address: postalAddress,
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 38.3452,
+        longitude: -0.481,
+      },
+      areaServed: { '@type': 'Place', name: 'Worldwide' },
+      priceRange: '$$',
+      founder: { '@type': 'Person', name: 'Miguel Gisbert' },
+      serviceType: [
+        'Web Application Development',
+        'Mobile App Development',
+        'AI & LLM Integration',
+        'Software Consulting',
+      ],
+      knowsAbout,
+      sameAs: socialProfiles,
+    },
   ],
 };
 
@@ -151,7 +205,7 @@ export default async function LocaleLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <AppRouterCacheProvider>
           <NextIntlClientProvider>{children}</NextIntlClientProvider>
