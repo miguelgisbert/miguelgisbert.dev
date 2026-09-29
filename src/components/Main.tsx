@@ -3,10 +3,10 @@
 import { useTranslations } from 'next-intl';
 import SocialIcons from "./socialIcons"
 
-const profileImg = "/images/profile.png"
+const profileImg = "/images/profile.webp"
 
 const GenericAppScreen = () => (
-  <svg viewBox="0 0 390 844" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 390 844" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stopColor="#64ffda" stopOpacity="0.18" />
@@ -158,14 +158,20 @@ const Main = () => {
               <img
                 src={profileImg}
                 alt={t('photoAlt')}
+                width={480}
+                height={925}
+                fetchPriority="high"
+                decoding="async"
                 className="hero__avatar"
               />
             </div>
             <div>
-              <p className="hero__title">
-                Miguel <span className="accent">Gisbert</span>
-              </p>
-              <h1 className="hero__subtitle">{t('role')}</h1>
+              <h1 className="hero__heading">
+                <span className="hero__title">
+                  Miguel <span className="accent">Gisbert</span>
+                </span>
+                <span className="hero__subtitle">{t('role')}</span>
+              </h1>
               <span className="hero__badge">
                 <span className="hero__badge-dot" aria-hidden="true" />
                 {t('availability')}

@@ -1,7 +1,8 @@
 {
   "Metadata": {
-    "title": "Miguel Gisbert · Full-Stack Software Engineer (React, TypeScript, Node.js)",
-    "description": "Full-Stack Software Engineer building production web & mobile apps and AI/LLM integrations. 10+ years, remote-friendly, based near Alicante (Spain). React, TypeScript, Node.js & Python."
+    "title": "Freelance React & Node.js Developer (US/UK) · Miguel Gisbert",
+    "description": "Freelance full-stack developer building web, mobile and AI/LLM products with React, TypeScript and Node.js for US & UK teams. 10+ years, remote from Spain (CET).",
+    "skipToContent": "Skip to content"
   },
   "Header": {
     "home": "Home",
@@ -172,6 +173,7 @@
     "recommendedService": "Recommended the service:",
     "verified": "Verified",
     "viewOnLinkedIn": "View on LinkedIn",
+    "degree": "1st",
     "starsLabel": "{rating} out of 5 stars",
     "translatedFrom": "Translated from {language}",
     "languages": {
@@ -202,6 +204,93 @@
         "date": "June 27, 2026",
         "context": "Laia was a client of Miguel",
         "text": "I have had the privilege of working with Miguel on the creation of my professional website (www.laiabobe.com) and I could not be happier with the result.\n\nFrom the very first moment he understood the essence of my project and captured what I wanted to convey with my personal brand. It was very important to me that the website reflected who I am and the way I work, and Miguel achieved this beyond my expectations.\n\nThroughout the whole process he stood out for his professionalism, his ability to listen and his commitment. He didn't just build a website: he contributed ideas, took care of every detail and was very willing to make the necessary adjustments until the result fully matched what I had in mind. At all times I felt heard, supported and well advised.\n\nThe final result is not only a well-designed and functional website, but one I feel fully represented by.\n\nI recommend Miguel to any person or company looking for a rigorous, creative, committed professional with great human quality. If I ever need to develop another web project, I will not hesitate to work with him again. It has been a real pleasure to work with him."
+      }
+    }
+  },
+  "Faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything clients usually ask before we start",
+    "items": {
+      "pricing": {
+        "q": "How much does a project cost?",
+        "a": "It depends on scope. I offer fixed-price projects for well-defined work and a weekly rate for ongoing development. The free 30-minute call is where we agree scope, timeline and price, so there are no surprises afterwards."
+      },
+      "usuk": {
+        "q": "Do you work with clients in the US and the UK?",
+        "a": "Yes. I work remotely with teams in the US and the UK. I'm based in Spain (CET), which gives full-day overlap with the UK and about four hours of overlap with US Eastern time."
+      },
+      "availability": {
+        "q": "What is your availability?",
+        "a": "I'm available for new projects and take on a limited number of clients at a time. You get a reply within 24 hours on business days."
+      },
+      "start": {
+        "q": "How do we start working together?",
+        "a": "Book a free 30-minute call or send a message through the contact form. We talk about your goals and constraints, and I come back with a proposal covering scope, timeline and price."
+      },
+      "codebase": {
+        "q": "Can you take over an existing codebase?",
+        "a": "Yes. App rescue and scaling is one of my services: performance work, refactors, CI/CD and reliability for products that already have users."
+      },
+      "ai": {
+        "q": "What does AI & LLM integration include?",
+        "a": "RAG pipelines, chatbots, automations and speech features connected to your product and your data, using OpenAI or Anthropic APIs with vector databases such as PGVector or Chroma."
+      },
+      "stack": {
+        "q": "Which technologies do you work with?",
+        "a": "React, Next.js, TypeScript, Node.js, React Native, PostgreSQL and Python, delivered with Docker and CI/CD."
+      }
+    }
+  },
+  "Work": {
+    "back": "Back to portfolio",
+    "challenge": "The challenge",
+    "approach": "How I approached it",
+    "outcome": "The result",
+    "visitSite": "Visit live site",
+    "breadcrumbHome": "Home",
+    "breadcrumbWork": "Portfolio",
+    "projects": {
+      "cragxchange": {
+        "title": "CragXchange — a global rock-climbing community platform",
+        "description": "Full-stack and mobile development of CragXchange: interactive crag map, member profiles, a directory and native iOS and Android apps built with React, React Native, Node.js and PostgreSQL.",
+        "challenge": "CragXchange set out to connect climbers worldwide, but a directory alone was not enough. Climbers needed to find crags on a map, keep their own profile up to date and reach the community from a phone as well as from a laptop.",
+        "approach": "I built the web platform end-to-end with React, Node.js and PostgreSQL: an interactive crag map, registration and profile management, and a member directory. I then extended the same product to iOS and Android with React Native, so one codebase powers both apps.",
+        "outcome": "Climbers can open the app, find a crag, see who is around and share their own routes, while the client keeps a single web platform and a pair of native apps to maintain."
+      },
+      "bluecode": {
+        "title": "Bluecode — website for a software agency",
+        "description": "Frontend development with React and TypeScript for the Bluecode marketing site, presenting the agency's services and portfolio work.",
+        "challenge": "Bluecode needed a marketing site that presented its services and previous work clearly to prospective clients, without a heavy CMS or a long maintenance burden behind it.",
+        "approach": "I built the frontend in React with TypeScript, translating the design into reusable, strongly typed components and structuring the content so pages could be updated without touching the code.",
+        "outcome": "A fast, maintainable agency site the team can keep up to date themselves, presenting Bluecode's services and case studies to the companies that evaluate them."
+      },
+      "lifonet": {
+        "title": "Lifonet — real-time waste collection tracking",
+        "description": "Waste management platform built with React and Node.js: users open containers and follow their collections in real time.",
+        "challenge": "Waste collection only works when operators and residents see the same state: which container is open, which collection is under way and what has already been emptied. That state changes constantly, out in the field.",
+        "approach": "As full-stack developer I built the platform with React and Node.js, wiring live events from the field into the interface so containers and collections update as they happen instead of on a schedule.",
+        "outcome": "Residents open containers and follow collections in real time, and the operator gets an accurate picture of the service without chasing phone calls or spreadsheets."
+      },
+      "laiabobe": {
+        "title": "Laia Bobe — personal brand website",
+        "description": "Personal brand website for an ontological coach and wellbeing specialist, built with React: a clear, simple and elegant online presence.",
+        "challenge": "The website had to carry a personal brand built on listening and trust. It needed to feel clear, calm and credible, and to be simple enough to update without help.",
+        "approach": "I built a clean React site with a simple structure — services, about and contact — and went through several rounds of feedback until the tone, the copy and the design matched the brand.",
+        "outcome": "A site the client feels represented by: simple to navigate, quick on mobile and easy to extend as the practice grows."
+      },
+      "agrovolt": {
+        "title": "Agrovolt — mobile app for sustainable farming",
+        "description": "React Native mobile app for Agrovolt's solar energy and agri-tech platform, bringing sustainable farming tools to iOS and Android.",
+        "challenge": "Agrovolt's platform combines solar energy and agri-tech, and its users need those features in the field: on a phone, outdoors and away from a desk.",
+        "approach": "I developed the mobile app in React Native, reusing the platform's existing APIs so the app and the web product stay in sync and features ship to both stores at once.",
+        "outcome": "A cross-platform iOS and Android app that puts Agrovolt's sustainable farming tools in the hands of users where the work actually happens."
+      },
+      "legalpyme": {
+        "title": "LegalPyme — legal services platform for small businesses",
+        "description": "Web and mobile platform for small businesses with document management and working-hours records, built with React, Node.js and PostgreSQL.",
+        "challenge": "Small businesses have to manage legal documents and working-hours records, usually in spreadsheets or on paper, with no easy way to prove what happened and when.",
+        "approach": "I built the platform full-stack with React, Node.js and PostgreSQL, covering document management and the working-hours register across web and mobile so both stay in the same source of truth.",
+        "outcome": "SMEs manage documents and working hours in one place, with a reliable record they can go back to whenever they need it."
       }
     }
   },

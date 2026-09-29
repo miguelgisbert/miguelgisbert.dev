@@ -6,25 +6,33 @@ const items = [
   {
     key: 'sport',
     meta: "UA",
-    icon: "/images/55fc0e333859ae0799cb2dcb709aaf59_400x400.jpeg",
+    icon: "/images/55fc0e333859ae0799cb2dcb709aaf59_400x400.webp",
+    width: 192,
+    height: 192,
     url: "https://web.ua.es/en/grados/grado-en-ciencias-de-la-actividad-fisica-y-del-deporte/undergraduate-degree-in-science-of-physical-activity-and-sports.html",
   },
   {
     key: 'cs',
     meta: "EPS, UA",
-    icon: "/images/logo-eps.jpg",
+    icon: "/images/logo-eps.webp",
+    width: 128,
+    height: 101,
     url: "https://eps.ua.es/en/",
   },
   {
     key: 'master',
     meta: "INEFC, UB",
-    icon: "/images/inefc.png",
+    icon: "/images/inefc.webp",
+    width: 108,
+    height: 107,
     url: "https://www.il3.ub.edu/master-tecnologia-deporte",
   },
   {
     key: 'startup',
     meta: "UV",
-    icon: "/images/logo-uv.png",
+    icon: "/images/logo-uv.webp",
+    width: 192,
+    height: 186,
     url: "https://www.uv.es/",
   },
 ]
@@ -41,7 +49,15 @@ const Education = () => {
         <div className="edu-grid">
           {items.map((item) => (
             <a key={item.key} href={item.url} target="_blank" rel="noopener noreferrer" className="edu-item">
-              <img src={item.icon} alt={t(`items.${item.key}`)} className="edu-item__icon" />
+              <img
+                src={item.icon}
+                alt=""
+                width={item.width}
+                height={item.height}
+                loading="lazy"
+                decoding="async"
+                className="edu-item__icon"
+              />
               <span className="edu-item__name">{t(`items.${item.key}`)}</span>
               <span className="edu-item__meta">{item.meta}</span>
             </a>

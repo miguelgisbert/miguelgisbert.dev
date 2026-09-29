@@ -1,45 +1,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-
-const projects = [
-  {
-    key: 'cragxchange',
-    name: "CragXchange",
-    image: "/images/cragXchange.png",
-    url: "https://cragxchange.com/",
-  },
-  {
-    key: 'bluecode',
-    name: "Bluecode",
-    image: "/images/Screenshot-from-2022-12-10-18-34-15.png",
-    url: "https://wearebluecode.com/",
-  },
-  {
-    key: 'lifonet',
-    name: "Lifonet",
-    image: "/images/lifonet.png",
-    url: "https://lifonet.com/",
-  },
-  {
-    key: 'laiabobe',
-    name: "Laia Bobe",
-    image: "/images/laiabobe.png",
-    url: "https://laiabobe.com/",
-  },
-  {
-    key: 'agrovolt',
-    name: "Agrovolt",
-    image: "/images/agrovolt-mobile.png",
-    url: "https://www.agrovolt.es/",
-  },
-  {
-    key: 'legalpyme',
-    name: "LegalPyme",
-    image: "/images/legalPyme.png",
-    url: "https://www.legalpyme.es/",
-  },
-]
+import { Link } from '@/i18n/navigation';
+import { projects } from '@/content/projects';
 
 const Portfolio = () => {
   const t = useTranslations('Portfolio');
@@ -52,9 +15,16 @@ const Portfolio = () => {
         </div>
         <div className="project-grid">
           {projects.map((project) => (
-            <a key={project.key} href={project.url} target="_blank" rel="noopener noreferrer" className="project-card">
+            <Link key={project.key} href={`/work/${project.key}`} className="project-card">
               <div className="project-card__image">
-                <img src={project.image} alt={project.name} loading="lazy" />
+                <img
+                  src={project.image}
+                  alt=""
+                  width={project.width}
+                  height={project.height}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div className="project-card__content">
                 <h3 className="project-card__title">{project.name}</h3>
@@ -71,7 +41,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -60,7 +60,7 @@ const ContactForm = () => {
               '& .MuiOutlinedInput-root': { background: '#1a1a1a', borderRadius: '8px' },
               '& .MuiOutlinedInput-notchedOutline': { borderColor: '#2a2a2a !important' },
               '& .Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#64ffda !important', borderWidth: '1px !important' },
-              '& .MuiInputLabel-root': { color: '#555 !important' },
+              '& .MuiInputLabel-root': { color: '#9a9a9a !important' },
               '& .MuiInputLabel-root.Mui-focused': { color: '#64ffda !important' },
               '& .MuiInputBase-input': { color: '#fafafa !important' },
               '& .MuiInputBase-input:-webkit-autofill': { WebkitBoxShadow: '0 0 0 100px #1a1a1a inset', WebkitTextFillColor: '#fafafa' },
@@ -77,7 +77,7 @@ const ContactForm = () => {
               '& .MuiOutlinedInput-root': { background: '#1a1a1a', borderRadius: '8px' },
               '& .MuiOutlinedInput-notchedOutline': { borderColor: '#2a2a2a !important' },
               '& .Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#64ffda !important', borderWidth: '1px !important' },
-              '& .MuiInputLabel-root': { color: '#555 !important' },
+              '& .MuiInputLabel-root': { color: '#9a9a9a !important' },
               '& .MuiInputLabel-root.Mui-focused': { color: '#64ffda !important' },
               '& .MuiInputBase-input': { color: '#fafafa !important' },
               '& .MuiInputBase-input:-webkit-autofill': { WebkitBoxShadow: '0 0 0 100px #1a1a1a inset', WebkitTextFillColor: '#fafafa' },
@@ -95,7 +95,7 @@ const ContactForm = () => {
               '& .MuiOutlinedInput-root': { background: '#1a1a1a', borderRadius: '8px' },
               '& .MuiOutlinedInput-notchedOutline': { borderColor: '#2a2a2a !important' },
               '& .Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#64ffda !important', borderWidth: '1px !important' },
-              '& .MuiInputLabel-root': { color: '#555 !important' },
+              '& .MuiInputLabel-root': { color: '#9a9a9a !important' },
               '& .MuiInputLabel-root.Mui-focused': { color: '#64ffda !important' },
               '& .MuiInputBase-input': { color: '#fafafa !important' },
             }}
@@ -113,7 +113,7 @@ const ContactForm = () => {
               fontSize: '14px',
               textTransform: 'none',
               '&:hover': { bgcolor: '#45e0be' },
-              '&.Mui-disabled': { bgcolor: '#2a2a2a', color: '#555' },
+              '&.Mui-disabled': { bgcolor: '#2a2a2a', color: '#8a8a8a' },
             }}
           >
             {status === 'sending' ? t('sending') : t('send')}
@@ -162,8 +162,8 @@ const ContactForm = () => {
                 <path d="M6 6l6 6M12 6l-6 6" stroke="#ff6b6b" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
               {t('error')}{' '}
-              <Box component="a" href="mailto:miguelg314@gmail.com" sx={{ color: '#ff6b6b', textDecoration: 'underline', fontWeight: 600 }}>
-                miguelg314@gmail.com
+              <Box component="a" href="mailto:info@miguelgisbert.dev" sx={{ color: '#ff6b6b', textDecoration: 'underline', fontWeight: 600 }}>
+                info@miguelgisbert.dev
               </Box>
             </Box>
           )}

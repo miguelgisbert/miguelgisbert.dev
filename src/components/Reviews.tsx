@@ -56,9 +56,9 @@ function Stars({ rating }: { rating: number }) {
   const t = useTranslations('Reviews')
   const full = Math.floor(rating)
   return (
-    <span className="review-card__stars" aria-label={t('starsLabel', { rating })}>
+    <span className="review-card__stars" role="img" aria-label={t('starsLabel', { rating })}>
       {Array.from({ length: 5 }, (_, i) => (
-        <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill={i < full ? "#f5a623" : "#3d3d3d"}>
+        <svg key={i} aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill={i < full ? "#f5a623" : "#3d3d3d"}>
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ))}
@@ -67,7 +67,7 @@ function Stars({ rating }: { rating: number }) {
 }
 
 const LinkedInIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
     <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.38-1.86c3.61 0 4.28 2.38 4.28 5.47v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.1 20.45H3.57V9H7.1v11.45zM22.22 0H1.78C.8 0 0 .77 0 1.73v20.54C0 23.23.8 24 1.78 24h20.44c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
   </svg>
 )
@@ -75,8 +75,8 @@ const LinkedInIcon = () => (
 const VerifiedIcon = () => {
   const t = useTranslations('Reviews')
   return (
-    <span className="review-card__verified" aria-label={t('verified')}>
-    <svg width="14" height="14" viewBox="0 0 24 24">
+    <span className="review-card__verified" role="img" aria-label={t('verified')}>
+    <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path d="M12 1l2.4 2.1 3.1-.5.9 3 2.9 1.2-1.2 2.9 1.2 2.9-2.9 1.2-.9 3-3.1-.5L12 23l-2.4-2.1-3.1.5-.9-3L2.7 17l1.2-2.9L2.7 11.2l2.9-1.2.9-3 3.1.5L12 1z" fill="#e7a33e" />
       <path d="M10.6 15.4l-2.9-2.9 1.1-1.1 1.8 1.8 4.4-4.4 1.1 1.1-5.5 5.5z" fill="#fff" />
     </svg>
@@ -141,6 +141,10 @@ const ReviewCard = ({ review }: { review: Review }) => {
               src={review.photo}
               alt={review.name}
               className="review-card__avatar-img"
+              width={44}
+              height={44}
+              loading="lazy"
+              decoding="async"
               onError={() => setImgError(true)}
             />
           ) : (
@@ -155,13 +159,13 @@ const ReviewCard = ({ review }: { review: Review }) => {
               <h3 className="review-card__name">{review.name}</h3>
             </a>
             {review.verified && <VerifiedIcon />}
-            <span className="review-card__badge" aria-label="1er">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <span className="review-card__badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <circle cx="12" cy="12" r="12" fill="#0a66c2" />
                 <path d="M12 6l1.24 3.92L17 9.97l-3.06 2.57L15.09 17 12 14.31 8.91 17l1.15-4.46L7 9.97l3.76-.05L12 6z" fill="#fff" />
               </svg>
             </span>
-            <span className="review-card__degree">· 1er</span>
+            <span className="review-card__degree">· {t('degree')}</span>
           </div>
           <p className="review-card__title">{t(`items.${review.key}.title`)}</p>
           <div className="review-card__meta">

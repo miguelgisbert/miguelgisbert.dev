@@ -1,17 +1,25 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import TechIcon from './TechIcon';
 
-const items = [
-  { name: "React", icon: "/images/react.svg", url: "https://react.dev" },
-  { name: "JavaScript", icon: "/images/Unofficial_JavaScript_logo_2.svg", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-  { name: "TypeScript", icon: "/images/Typescript_logo_2020.svg", url: "https://typescriptlang.org" },
-  { name: "React Native", icon: "/images/reactNative.png", url: "https://reactnative.dev" },
-  { name: "CSS", icon: "/images/Official_CSS_Logo.svg", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-  { name: "Node.js", icon: "/images/nodedotjs.svg", url: "https://nodejs.org" },
-  { name: "Python", icon: "/images/python.png", url: "https://python.org" },
-  { name: "PostgreSQL", icon: "/images/postgresql.svg", url: "https://www.postgresql.org" },
-]
+type Item = {
+  name: string;
+  url: string;
+  sprite?: string;
+  image?: { src: string; width: number; height: number };
+};
+
+const items: Item[] = [
+  { name: "React", sprite: "react", url: "https://react.dev" },
+  { name: "JavaScript", sprite: "javascript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { name: "TypeScript", sprite: "typescript", url: "https://typescriptlang.org" },
+  { name: "React Native", image: { src: "/images/reactNative.webp", width: 144, height: 146 }, url: "https://reactnative.dev" },
+  { name: "CSS", sprite: "css", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { name: "Node.js", sprite: "node", url: "https://nodejs.org" },
+  { name: "Python", image: { src: "/images/python.webp", width: 144, height: 143 }, url: "https://python.org" },
+  { name: "PostgreSQL", sprite: "postgres", url: "https://www.postgresql.org" },
+];
 
 const Expertise = () => {
   const t = useTranslations('Expertise');
@@ -24,7 +32,19 @@ const Expertise = () => {
         <div className="tech-grid">
           {items.map((item) => (
             <a key={item.name} href={item.url} target="_blank" rel="noopener noreferrer" className="tech-item">
-              <img src={item.icon} alt={item.name} className="tech-item__icon" />
+              {item.sprite ? (
+                <TechIcon icon={item.sprite} />
+              ) : (
+                <img
+                  src={item.image!.src}
+                  alt=""
+                  width={item.image!.width}
+                  height={item.image!.height}
+                  loading="lazy"
+                  decoding="async"
+                  className="tech-item__icon"
+                />
+              )}
               <span className="tech-item__name">{item.name}</span>
             </a>
           ))}

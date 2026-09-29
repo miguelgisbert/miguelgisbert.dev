@@ -2,10 +2,19 @@ import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
 import { routing } from '@/i18n/routing';
 import '../../index.css';
 import '../../App.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 const OG_LOCALES: Record<string, string> = {
   en: 'en_US',
@@ -34,23 +43,6 @@ export async function generateMetadata({
     metadataBase: new URL('https://miguelgisbert.dev'),
     title: t('title'),
     description: t('description'),
-    keywords: [
-      'Miguel Gisbert',
-      'full-stack developer',
-      'software engineer',
-      'React developer',
-      'TypeScript',
-      'Node.js',
-      'React Native',
-      'Python',
-      'AI integration',
-      'LLM',
-      'RAG',
-      'programador',
-      'desarrollador full-stack',
-      'programador Alicante',
-      'remote developer',
-    ],
     authors: [{ name: 'Miguel Gisbert' }],
     icons: { icon: '/favicon.svg' },
     alternates: {
@@ -73,7 +65,7 @@ export async function generateMetadata({
           url: '/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'Miguel Gisbert — Full-Stack Software Engineer',
+          alt: 'Miguel Gisbert — Freelance Full-Stack Software Engineer',
         },
       ],
       locale: OG_LOCALES[locale] ?? OG_LOCALES.en,
@@ -96,6 +88,7 @@ export async function generateMetadata({
 }
 
 const siteUrl = 'https://miguelgisbert.dev';
+const personId = `${siteUrl}/#miguel-gisbert`;
 const socialProfiles = [
   'https://www.linkedin.com/in/miguel-gisbert-osuna/',
   'https://github.com/miguelgisbert/',
@@ -126,12 +119,25 @@ const postalAddress = {
 };
 const description =
   'Full-Stack Software Engineer with 10+ years of experience building high-performance web and mobile applications with React, TypeScript, Node.js and Python, specialized in AI/LLM integration.';
+const serviceTypes = [
+  'Web Application Development',
+  'Mobile App Development',
+  'AI & LLM Integration',
+  'Software Consulting',
+];
+const targetMarkets = [
+  { '@type': 'Country', name: 'United States' },
+  { '@type': 'Country', name: 'United Kingdom' },
+  { '@type': 'Country', name: 'Spain' },
+  { '@type': 'Place', name: 'Worldwide' },
+];
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'Person',
+      '@id': personId,
       name: 'Miguel Gisbert',
       givenName: 'Miguel',
       familyName: 'Gisbert',
@@ -141,7 +147,7 @@ const structuredData = {
       description,
       email: 'mailto:info@miguelgisbert.dev',
       address: postalAddress,
-      areaServed: 'Worldwide',
+      areaServed: targetMarkets,
       knowsLanguage: ['en', 'es', 'ca'],
       knowsAbout,
       sameAs: socialProfiles,
@@ -165,17 +171,24 @@ const structuredData = {
         latitude: 38.3452,
         longitude: -0.481,
       },
-      areaServed: { '@type': 'Place', name: 'Worldwide' },
+      areaServed: targetMarkets,
       priceRange: '$$',
-      founder: { '@type': 'Person', name: 'Miguel Gisbert' },
-      serviceType: [
-        'Web Application Development',
-        'Mobile App Development',
-        'AI & LLM Integration',
-        'Software Consulting',
-      ],
+      founder: { '@type': 'Person', '@id': personId, name: 'Miguel Gisbert' },
+      serviceType: serviceTypes,
       knowsAbout,
       sameAs: socialProfiles,
+    },
+    {
+      '@type': 'Service',
+      name: 'Freelance full-stack software development',
+      description,
+      serviceType: serviceTypes,
+      provider: { '@type': 'Person', '@id': personId },
+      areaServed: targetMarkets,
+      availableChannel: {
+        '@type': 'ServiceChannel',
+        serviceUrl: `${siteUrl}/en#contact`,
+      },
     },
   ],
 };
@@ -194,15 +207,14 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
   return (
-    <html lang={locale}>
+    <html lang={locale} className={inter.variable} data-scroll-behavior="smooth">
       <body suppressHydrationWarning>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
+        <a href="#main" className="skip-link">
+          {t('skipToContent')}
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -210,6 +222,8 @@ export default async function LocaleLayout({
         <AppRouterCacheProvider>
           <NextIntlClientProvider>{children}</NextIntlClientProvider>
         </AppRouterCacheProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
