@@ -150,13 +150,15 @@ const GenericAppScreen = () => (
 const Main = () => {
   const t = useTranslations('Hero');
   return (
-    <section id="main" className="hero">
+    <section className="hero">
       <div className="hero__inner">
         <div className="hero__content">
           <div className="hero__intro">
             <div className="hero__avatar-frame">
               <img
                 src={profileImg}
+                srcSet="/images/profile-160.webp 160w, /images/profile-320.webp 320w, /images/profile.webp 480w"
+                sizes="144px"
                 alt={t('photoAlt')}
                 width={480}
                 height={925}

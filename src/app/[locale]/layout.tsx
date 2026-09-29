@@ -211,6 +211,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={inter.variable} data-scroll-behavior="smooth">
+      <head>
+        <link rel="describedby" href="/llms.txt" />
+      </head>
       <body suppressHydrationWarning>
         <a href="#main" className="skip-link">
           {t('skipToContent')}

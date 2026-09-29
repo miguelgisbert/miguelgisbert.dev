@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
       <div className="header__inner">
-        <a href={homeHref} className="header__logo" aria-label={t('home')}>
+        <a href={homeHref} className="header__logo" aria-label={`MG — ${t('home')}`}>
           <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
             <circle cx="18" cy="18" r="18" fill="#64ffda" />
             <text x="18" y="23" textAnchor="middle" fill="#0a0a0a" fontWeight="700" fontSize="14" fontFamily="Inter, sans-serif">MG</text>

@@ -1,0 +1,32 @@
+# Miguel Gisbert — Full-Stack Software Engineer (Freelance)
+
+> Freelance full-stack engineer based in Catalonia (CET), working remotely with teams in the United States and the United Kingdom. 10+ years shipping web, mobile and AI products with React, TypeScript, Node.js and Python — from architecture and APIs to CI/CD and monitoring. Contact: info@miguelgisbert.dev
+
+## Case studies
+
+- [CragXchange](https://miguelgisbert.dev/en/work/cragxchange): Global rock-climbing community platform with interactive crag map and native iOS/Android apps — React, React Native, Node.js, PostgreSQL
+- [Bluecode](https://miguelgisbert.dev/en/work/bluecode): Website for a software agency, designed for easy maintenance — React, TypeScript
+- [Lifonet](https://miguelgisbert.dev/en/work/lifonet): Real-time waste collection tracking platform for operators and residents — React, Node.js
+- [Laia Bobe](https://miguelgisbert.dev/en/work/laiabobe): Personal brand website for a coach and wellbeing specialist — React
+- [Agrovolt](https://miguelgisbert.dev/en/work/agrovolt): Mobile app for a solar energy and agri-tech platform — React Native, iOS and Android
+- [LegalPyme](https://miguelgisbert.dev/en/work/legalpyme): Document management and working-hours platform for small businesses — React, Node.js, PostgreSQL
+
+## Services
+
+- [Services and availability](https://miguelgisbert.dev/en): Full-stack web and mobile development, AI and LLM integration, technical SEO and freelance engagements (remote, CET timezone)
+
+## Curriculum
+
+- [CV (PDF, 3 pages)](https://miguelgisbert.dev/CVMiguelGisbert.pdf): Work history, technical skills, education and contact details
+
+## Contact
+
+- [Contact form](https://miguelgisbert.dev/en#contact): Email and calendar links, replies within 24 hours
+- [LinkedIn](https://www.linkedin.com/in/miguel-gisbert-osuna/): Professional profile
+- [GitHub](https://github.com/miguelgisbert): Source code and contributions
+- [npm](https://www.npmjs.com/~miguelgisbert): Published packages
+
+## Optional
+
+- [Pàgina principal en català](https://miguelgisbert.dev/ca): Idioma català
+- [Página principal en español](https://miguelgisbert.dev/es): Idioma español

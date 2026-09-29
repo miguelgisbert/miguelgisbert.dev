@@ -19,6 +19,8 @@ const Portfolio = () => {
               <div className="project-card__image">
                 <img
                   src={project.image}
+                  srcSet={project.imageSrcSet}
+                  sizes="(max-width: 760px) calc(100vw - 48px), 460px"
                   alt=""
                   width={project.width}
                   height={project.height}

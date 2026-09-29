@@ -135,11 +135,11 @@ const ReviewCard = ({ review }: { review: Review }) => {
   return (
     <article className="review-card">
       <div className="review-card__header">
-        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="review-card__avatar-link">
+        <div className="review-card__avatar-link">
           {review.photo && !imgError ? (
             <img
               src={review.photo}
-              alt={review.name}
+              alt=""
               className="review-card__avatar-img"
               width={44}
               height={44}
@@ -152,7 +152,7 @@ const ReviewCard = ({ review }: { review: Review }) => {
               {review.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
             </div>
           )}
-        </a>
+        </div>
         <div className="review-card__info">
           <div className="review-card__name-row">
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="review-card__name-link">

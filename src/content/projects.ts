@@ -10,6 +10,7 @@ export type Project = {
   key: ProjectKey;
   name: string;
   image: string;
+  imageSrcSet?: string;
   width: number;
   height: number;
   url: string;
@@ -28,6 +29,8 @@ export const projects: Project[] = [
     key: 'bluecode',
     name: 'Bluecode',
     image: '/images/Screenshot-from-2022-12-10-18-34-15.webp',
+    imageSrcSet:
+      '/images/Screenshot-from-2022-12-10-18-34-15-720.webp 720w, /images/Screenshot-from-2022-12-10-18-34-15.webp 942w',
     width: 942,
     height: 853,
     url: 'https://wearebluecode.com/',
@@ -36,6 +39,7 @@ export const projects: Project[] = [
     key: 'lifonet',
     name: 'Lifonet',
     image: '/images/lifonet.webp',
+    imageSrcSet: '/images/lifonet-720.webp 720w, /images/lifonet.webp 1200w',
     width: 1200,
     height: 742,
     url: 'https://lifonet.com/',

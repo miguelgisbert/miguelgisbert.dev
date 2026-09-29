@@ -948,14 +948,14 @@
   align-items: center;
   gap: 6px;
   font-size: 0.8rem;
-  color: #0a66c2;
+  color: #4c9aff;
   font-weight: 500;
   text-decoration: none;
   transition: opacity var(--transition);
 }
 
 .review-card__linkedin:hover {
-  opacity: 0.7;
+  color: #7db4ff;
   text-decoration: underline;
 }
 

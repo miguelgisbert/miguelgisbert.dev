@@ -55,19 +55,20 @@ export default async function HomePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Header />
-      <Main />
-      <Services />
-      <Portfolio />
-      <CtaBand />
-      <Skills />
-      <Expertise />
-      <Tools />
-      <Process />
-      <CtaBand />
-      <Education />
-      <Reviews />
-      <Faq />
-      <ContactForm />
+      <main id="main">
+        <Main />
+        <Services />
+        <Portfolio />
+        <CtaBand />
+        <Skills />
+        <Expertise />
+        <Tools />
+        <Process />
+        <Education />
+        <Reviews />
+        <Faq />
+        <ContactForm />
+      </main>
       <FloatingCta />
       <Footer />
     </>
