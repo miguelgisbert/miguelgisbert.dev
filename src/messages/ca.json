@@ -101,11 +101,11 @@
         "role": "Desenvolupador full-stack i mòbil",
         "stack": "React · React Native · Node.js · PostgreSQL"
       },
-      "bluecode": {
-        "description": "Web per a una agència de desenvolupament de programari.",
-        "result": "Lloc de màrqueting que mostra serveis i projectes.",
-        "role": "Desenvolupador frontend",
-        "stack": "React · TypeScript"
+      "plegohr": {
+        "description": "Plataforma de RRHH i control horari per a equips: fitxatge, documents i vacances, amb panells per a rols per a empreses i empleats.",
+        "result": "Panells d'empresa i empleat, control horari, gestió documental i gestió de vacances.",
+        "role": "Desenvolupador full-stack",
+        "stack": "React · Vite · Supabase"
       },
       "lifonet": {
         "description": "Plataforma de gestió de residus amb seguiment en temps real.",
@@ -238,59 +238,6 @@
       "stack": {
         "q": "Amb quines tecnologies treballes?",
         "a": "React, Next.js, TypeScript, Node.js, React Native, PostgreSQL i Python, amb Docker i CI/CD per a l'entrega."
-      }
-    }
-  },
-  "Work": {
-    "back": "Tornar al portafoli",
-    "challenge": "El repte",
-    "approach": "Com ho vaig abordar",
-    "outcome": "El resultat",
-    "visitSite": "Veure el lloc en viu",
-    "breadcrumbHome": "Inici",
-    "breadcrumbWork": "Portafoli",
-    "projects": {
-      "cragxchange": {
-        "title": "CragXchange — plataforma global de comunitat per a escaladors",
-        "description": "Desenvolupament full-stack i mòbil de CragXchange: mapa interactiu de vies, perfils de membre, directori i apps natives per a iOS i Android amb React, React Native, Node.js i PostgreSQL.",
-        "challenge": "CragXchange volia connectar escaladors de tot el món, però un directori no era suficient. Els escaladors necessitaven trobar vies en un mapa, mantenir el seu perfil al dia i arribar a la comunitat des del mòbil tant com des de l'ordinador.",
-        "approach": "Vaig construir la plataforma web de cap a peus amb React, Node.js i PostgreSQL: mapa interactiu de vies, registre i gestió de perfils i directori de membres. Després vaig estendre el mateix producte a iOS i Android amb React Native, de manera que una única base de codi alimenta totes dues apps.",
-        "outcome": "Els escaladors obren l'app, troben una via, veuen qui hi és i comparteixen les seues rutes, mentre el client manté una plataforma web i dues apps natives."
-      },
-      "bluecode": {
-        "title": "Bluecode — web per a una agència de programari",
-        "description": "Desenvolupament frontend amb React i TypeScript per a la web de màrqueting de Bluecode, presentant els serveis i la feina prèvia de l'agència.",
-        "challenge": "Bluecode necessitava una web de màrqueting que presentara els seus serveis i treballs anteriors amb claredat a clients potencials, sense un CMS pesat ni una càrrega de manteniment important.",
-        "approach": "Vaig construir el frontend en React amb TypeScript, traduint el disseny a components reutilitzables i fortament tipats i estructurant el contingut per poder actualitzar-lo sense tocar el codi.",
-        "outcome": "Una web d'agència ràpida i mantenible que l'equip pot actualitzar pel seu compte, presentant serveis i casos a les empreses que els avaluen."
-      },
-      "lifonet": {
-        "title": "Lifonet — seguiment de recollides de residus en temps real",
-        "description": "Plataforma de gestió de residus construïda amb React i Node.js: els usuaris obren contenidors i segueixen les seues recollides en temps real.",
-        "challenge": "La recollida de residus només funciona si operadors i residents veuen el mateix estat: quin contenidor està obert, quina recollida està en curs i què ja s'ha buidat. Eixe estat canvia constantment, al carrer.",
-        "approach": "Com a desenvolupador full-stack vaig construir la plataforma amb React i Node.js, connectant els esdeveniments en viu del camp a la interfície perquè contenidors i recollides s'actualitzen segons passen i no segons un calendari.",
-        "outcome": "Els residents obren contenidors i segueixen les recollides en temps real, i l'operador té una imatge fiable del servei sense perseguir trucades ni fulls de càlcul."
-      },
-      "laiabobe": {
-        "title": "Laia Bobe — web de marca personal",
-        "description": "Web de marca personal per a una coach ontològica i especialista en benestar, construïda amb React: una presència en línia clara, senzilla i elegant.",
-        "challenge": "La web havia de transmetre una marca personal construïda sobre l'escolta i la confiança. Havia de resultar clara, tranquil·la i creïble, i prou senzilla per poder actualitzar-la sense ajuda.",
-        "approach": "Vaig construir una web neta en React amb una estructura simple —serveis, qui sóc i contacte— i vam fer diverses rondes de fins fins que el to, els textos i el disseny encaixaven amb la marca.",
-        "outcome": "Una web amb la qual la clienta se sent representada: fàcil de navegar, ràpida en mòbil i senzilla d'ampliar a mesura que creix el projecte."
-      },
-      "agrovolt": {
-        "title": "Agrovolt — app mòbil per a agricultura sostenible",
-        "description": "App mòbil en React Native per a la plataforma d'energia solar i agri-tech d'Agrovolt, portant les seues eines d'agricultura sostenible a iOS i Android.",
-        "challenge": "La plataforma d'Agrovolt combina energia solar i agri-tech, i els seus usuaris necessiten eixes funcions al camp: en el mòbil, a l'aire lliure i lluny d'un escriptori.",
-        "approach": "Vaig desenvolupar l'app mòbil en React Native reutilitzant les APIs existents de la plataforma, de manera que l'app i el producte web es mantenen sincronitzats i les funcions es publiquen a les dues botigues alhora.",
-        "outcome": "Una app multiplataforma per a iOS i Android que posa les eines d'agricultura sostenible d'Agrovolt en mans dels usuaris on realment passa la feina."
-      },
-      "legalpyme": {
-        "title": "LegalPyme — plataforma de serveis legals per a pimes",
-        "description": "Plataforma web i mòbil per a pimes amb gestió documental i registre de jornada, construïda amb React, Node.js i PostgreSQL.",
-        "challenge": "Les pimes han de gestionar documents legals i el registre de jornada, normalment en fulls de càlcul o en paper, sense forma fàcil de demostrar què va passar i quan.",
-        "approach": "Vaig construir la plataforma full-stack amb React, Node.js i PostgreSQL, cobrint la gestió documental i el registre de jornada en web i mòbil perquè ambdós utilitzen la mateixa font de veritat.",
-        "outcome": "Les pimes gestionen documents i jornada en un sol lloc, amb un registre fiable al qual poden tornar quan el necessiten."
       }
     }
   },

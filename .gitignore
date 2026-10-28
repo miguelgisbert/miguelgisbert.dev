@@ -10,6 +10,13 @@ lerna-debug.log*
 node_modules
 *.local
 
+# Secrets
+.env
+.env.*
+
+# Agent outputs
+tools/**/output/
+
 # Next.js
 /.next/
 /out/
@@ -29,3 +36,5 @@ next-env.d.ts
 *.njsproj
 *.sln
 *.sw?
+.vercel
+.env*

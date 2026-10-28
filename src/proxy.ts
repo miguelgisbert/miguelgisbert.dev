@@ -16,5 +16,5 @@ export default function middleware(req: Parameters<typeof intl>[0]) {
 }
 
 export const config = {
-  matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)',
+  matcher: '/((?!api|admin|trpc|_next|_vercel|.*\\..*).*)',
 };

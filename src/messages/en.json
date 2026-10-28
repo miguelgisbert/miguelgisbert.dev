@@ -101,11 +101,11 @@
         "role": "Full-stack & mobile developer",
         "stack": "React · React Native · Node.js · PostgreSQL"
       },
-      "bluecode": {
-        "description": "Website for a software development agency.",
-        "result": "Marketing site showcasing services and portfolio work.",
-        "role": "Frontend developer",
-        "stack": "React · TypeScript"
+      "plegohr": {
+        "description": "HR and time-tracking platform for teams: time clock, documents and leave requests, with role-based dashboards for companies and employees.",
+        "result": "Company and employee dashboards, time control, document workflows and vacation management.",
+        "role": "Full-stack developer",
+        "stack": "React · Vite · Supabase"
       },
       "lifonet": {
         "description": "Waste management platform for real-time collection tracking.",
@@ -238,59 +238,6 @@
       "stack": {
         "q": "Which technologies do you work with?",
         "a": "React, Next.js, TypeScript, Node.js, React Native, PostgreSQL and Python, delivered with Docker and CI/CD."
-      }
-    }
-  },
-  "Work": {
-    "back": "Back to portfolio",
-    "challenge": "The challenge",
-    "approach": "How I approached it",
-    "outcome": "The result",
-    "visitSite": "Visit live site",
-    "breadcrumbHome": "Home",
-    "breadcrumbWork": "Portfolio",
-    "projects": {
-      "cragxchange": {
-        "title": "CragXchange — a global rock-climbing community platform",
-        "description": "Full-stack and mobile development of CragXchange: interactive crag map, member profiles, a directory and native iOS and Android apps built with React, React Native, Node.js and PostgreSQL.",
-        "challenge": "CragXchange set out to connect climbers worldwide, but a directory alone was not enough. Climbers needed to find crags on a map, keep their own profile up to date and reach the community from a phone as well as from a laptop.",
-        "approach": "I built the web platform end-to-end with React, Node.js and PostgreSQL: an interactive crag map, registration and profile management, and a member directory. I then extended the same product to iOS and Android with React Native, so one codebase powers both apps.",
-        "outcome": "Climbers can open the app, find a crag, see who is around and share their own routes, while the client keeps a single web platform and a pair of native apps to maintain."
-      },
-      "bluecode": {
-        "title": "Bluecode — website for a software agency",
-        "description": "Frontend development with React and TypeScript for the Bluecode marketing site, presenting the agency's services and portfolio work.",
-        "challenge": "Bluecode needed a marketing site that presented its services and previous work clearly to prospective clients, without a heavy CMS or a long maintenance burden behind it.",
-        "approach": "I built the frontend in React with TypeScript, translating the design into reusable, strongly typed components and structuring the content so pages could be updated without touching the code.",
-        "outcome": "A fast, maintainable agency site the team can keep up to date themselves, presenting Bluecode's services and case studies to the companies that evaluate them."
-      },
-      "lifonet": {
-        "title": "Lifonet — real-time waste collection tracking",
-        "description": "Waste management platform built with React and Node.js: users open containers and follow their collections in real time.",
-        "challenge": "Waste collection only works when operators and residents see the same state: which container is open, which collection is under way and what has already been emptied. That state changes constantly, out in the field.",
-        "approach": "As full-stack developer I built the platform with React and Node.js, wiring live events from the field into the interface so containers and collections update as they happen instead of on a schedule.",
-        "outcome": "Residents open containers and follow collections in real time, and the operator gets an accurate picture of the service without chasing phone calls or spreadsheets."
-      },
-      "laiabobe": {
-        "title": "Laia Bobe — personal brand website",
-        "description": "Personal brand website for an ontological coach and wellbeing specialist, built with React: a clear, simple and elegant online presence.",
-        "challenge": "The website had to carry a personal brand built on listening and trust. It needed to feel clear, calm and credible, and to be simple enough to update without help.",
-        "approach": "I built a clean React site with a simple structure — services, about and contact — and went through several rounds of feedback until the tone, the copy and the design matched the brand.",
-        "outcome": "A site the client feels represented by: simple to navigate, quick on mobile and easy to extend as the practice grows."
-      },
-      "agrovolt": {
-        "title": "Agrovolt — mobile app for sustainable farming",
-        "description": "React Native mobile app for Agrovolt's solar energy and agri-tech platform, bringing sustainable farming tools to iOS and Android.",
-        "challenge": "Agrovolt's platform combines solar energy and agri-tech, and its users need those features in the field: on a phone, outdoors and away from a desk.",
-        "approach": "I developed the mobile app in React Native, reusing the platform's existing APIs so the app and the web product stay in sync and features ship to both stores at once.",
-        "outcome": "A cross-platform iOS and Android app that puts Agrovolt's sustainable farming tools in the hands of users where the work actually happens."
-      },
-      "legalpyme": {
-        "title": "LegalPyme — legal services platform for small businesses",
-        "description": "Web and mobile platform for small businesses with document management and working-hours records, built with React, Node.js and PostgreSQL.",
-        "challenge": "Small businesses have to manage legal documents and working-hours records, usually in spreadsheets or on paper, with no easy way to prove what happened and when.",
-        "approach": "I built the platform full-stack with React, Node.js and PostgreSQL, covering document management and the working-hours register across web and mobile so both stay in the same source of truth.",
-        "outcome": "SMEs manage documents and working hours in one place, with a reliable record they can go back to whenever they need it."
       }
     }
   },

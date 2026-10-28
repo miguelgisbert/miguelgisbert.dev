@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser'
 import { TextField, Button, Box } from '@mui/material'
 import { useTranslations } from 'next-intl'
 import BookingButton from './BookingButton'
+import { trackContactForm, trackEmailClick } from '@/lib/analytics'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
@@ -22,10 +23,12 @@ const ContactForm = () => {
       .then(
         () => {
           setStatus('success')
+          trackContactForm('success')
           form.current?.reset()
         },
         () => {
           setStatus('error')
+          trackContactForm('error')
         },
       )
   }
@@ -162,7 +165,12 @@ const ContactForm = () => {
                 <path d="M6 6l6 6M12 6l-6 6" stroke="#ff6b6b" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
               {t('error')}{' '}
-              <Box component="a" href="mailto:info@miguelgisbert.dev" sx={{ color: '#ff6b6b', textDecoration: 'underline', fontWeight: 600 }}>
+              <Box
+                component="a"
+                href="mailto:info@miguelgisbert.dev"
+                onClick={() => trackEmailClick('form_error')}
+                sx={{ color: '#ff6b6b', textDecoration: 'underline', fontWeight: 600 }}
+              >
                 info@miguelgisbert.dev
               </Box>
             </Box>

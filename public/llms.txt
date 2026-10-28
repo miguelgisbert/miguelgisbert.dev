@@ -1,15 +1,15 @@
 # Miguel Gisbert — Full-Stack Software Engineer (Freelance)
 
-> Freelance full-stack engineer based in Catalonia (CET), working remotely with teams in the United States and the United Kingdom. 10+ years shipping web, mobile and AI products with React, TypeScript, Node.js and Python — from architecture and APIs to CI/CD and monitoring. Contact: info@miguelgisbert.dev
+> Freelance full-stack engineer based in Alicante, Spain (CET), working remotely with teams in the United States and the United Kingdom. 10+ years shipping web, mobile and AI products with React, TypeScript, Node.js and Python — from architecture and APIs to CI/CD and monitoring. Contact: info@miguelgisbert.dev
 
-## Case studies
+## Selected projects
 
-- [CragXchange](https://miguelgisbert.dev/en/work/cragxchange): Global rock-climbing community platform with interactive crag map and native iOS/Android apps — React, React Native, Node.js, PostgreSQL
-- [Bluecode](https://miguelgisbert.dev/en/work/bluecode): Website for a software agency, designed for easy maintenance — React, TypeScript
-- [Lifonet](https://miguelgisbert.dev/en/work/lifonet): Real-time waste collection tracking platform for operators and residents — React, Node.js
-- [Laia Bobe](https://miguelgisbert.dev/en/work/laiabobe): Personal brand website for a coach and wellbeing specialist — React
-- [Agrovolt](https://miguelgisbert.dev/en/work/agrovolt): Mobile app for a solar energy and agri-tech platform — React Native, iOS and Android
-- [LegalPyme](https://miguelgisbert.dev/en/work/legalpyme): Document management and working-hours platform for small businesses — React, Node.js, PostgreSQL
+- [CragXchange](https://cragxchange.com/): Global rock-climbing community platform with interactive crag map and native iOS/Android apps — React, React Native, Node.js, PostgreSQL
+- [PlegoHR](https://plegohr.vercel.app/): HR and time-tracking platform for teams — time control, documents, leave requests — React, Vite, Supabase
+- [Lifonet](https://lifonet.com/): Real-time waste collection tracking platform for operators and residents — React, Node.js
+- [Laia Bobe](https://laiabobe.com/): Personal brand website for a coach and wellbeing specialist — React
+- [Agrovolt](https://www.agrovolt.es/): Mobile app for a solar energy and agri-tech platform — React Native, iOS and Android
+- [LegalPyme](https://www.legalpyme.es/): Document management and working-hours platform for small businesses — React, Node.js, PostgreSQL
 
 ## Services
 

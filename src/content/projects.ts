@@ -1,6 +1,6 @@
 export type ProjectKey =
   | 'cragxchange'
-  | 'bluecode'
+  | 'plegohr'
   | 'lifonet'
   | 'laiabobe'
   | 'agrovolt'
@@ -26,14 +26,13 @@ export const projects: Project[] = [
     url: 'https://cragxchange.com/',
   },
   {
-    key: 'bluecode',
-    name: 'Bluecode',
-    image: '/images/Screenshot-from-2022-12-10-18-34-15.webp',
-    imageSrcSet:
-      '/images/Screenshot-from-2022-12-10-18-34-15-720.webp 720w, /images/Screenshot-from-2022-12-10-18-34-15.webp 942w',
-    width: 942,
-    height: 853,
-    url: 'https://wearebluecode.com/',
+    key: 'plegohr',
+    name: 'PlegoHR',
+    image: '/images/plegohr.webp',
+    imageSrcSet: '/images/plegohr-720.webp 720w, /images/plegohr.webp 1200w',
+    width: 1200,
+    height: 833,
+    url: 'https://plegohr.vercel.app/',
   },
   {
     key: 'lifonet',
@@ -69,6 +68,3 @@ export const projects: Project[] = [
     url: 'https://www.legalpyme.es/',
   },
 ];
-
-export const getProject = (key: string): Project | undefined =>
-  projects.find((project) => project.key === key);

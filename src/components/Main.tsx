@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import SocialIcons from "./socialIcons"
+import { trackCtaClick, trackCvDownload } from '@/lib/analytics';
 
 const profileImg = "/images/profile.webp"
 
@@ -182,9 +183,19 @@ const Main = () => {
           </div>
           <p className="hero__description">{t('description')}</p>
           <div className="hero__actions">
-            <a href="#contact" className="btn btn--primary">{t('getInTouch')}</a>
+            <a href="#contact" className="btn btn--primary" onClick={() => trackCtaClick('hero')}>
+              {t('getInTouch')}
+            </a>
             <a href="#portfolio" className="btn btn--outline">{t('viewWork')}</a>
-            <a href="/CVMiguelGisbert.pdf" target="_blank" rel="noopener noreferrer" className="btn btn--outline">{t('downloadCv')}</a>
+            <a
+              href="/CVMiguelGisbert.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--outline"
+              onClick={() => trackCvDownload('hero')}
+            >
+              {t('downloadCv')}
+            </a>
           </div>
           <div className="hero__socials" style={{ display: 'flex', gap: 12 }}>
             <SocialIcons format="main" />

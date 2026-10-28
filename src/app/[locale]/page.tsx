@@ -58,11 +58,11 @@ export default async function HomePage({
       <main id="main">
         <Main />
         <Services />
-        <Portfolio />
         <CtaBand />
         <Skills />
         <Expertise />
         <Tools />
+        <Portfolio />
         <Process />
         <Education />
         <Reviews />

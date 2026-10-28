@@ -459,9 +459,22 @@
 }
 
 .project-card__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 6px;
+}
+
+.project-card__external {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.project-card:hover .project-card__external {
+  color: var(--accent);
 }
 
 .project-card__description {

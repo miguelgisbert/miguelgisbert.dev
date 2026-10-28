@@ -2,7 +2,6 @@ import { statSync } from 'node:fs';
 import { join } from 'node:path';
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
-import { projects } from '@/content/projects';
 
 const baseUrl = 'https://miguelgisbert.dev';
 
@@ -26,19 +25,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: { languages: homeAlternates },
   }));
 
-  const workEntries: MetadataRoute.Sitemap = routing.locales.flatMap((locale) =>
-    projects.map((project) => ({
-      url: `${baseUrl}/${locale}/work/${project.key}`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-      alternates: {
-        languages: Object.fromEntries(
-          routing.locales.map((l) => [l, `${baseUrl}/${l}/work/${project.key}`]),
-        ),
-      },
-    })),
-  );
-
-  return [...homeEntries, ...workEntries];
+  return homeEntries;
 }

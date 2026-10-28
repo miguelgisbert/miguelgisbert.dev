@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { trackCtaClick } from '@/lib/analytics';
 
 const FloatingCta = () => {
   const t = useTranslations('Cta');
@@ -24,6 +25,7 @@ const FloatingCta = () => {
       className={`floating-cta${visible ? ' floating-cta--visible' : ''}`}
       aria-hidden={!visible}
       tabIndex={visible ? 0 : -1}
+      onClick={() => trackCtaClick('floating')}
     >
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
         <rect x="3" y="4.5" width="18" height="16.5" rx="3" />

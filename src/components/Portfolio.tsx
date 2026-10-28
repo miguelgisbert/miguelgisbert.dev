@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 import { projects } from '@/content/projects';
 
 const Portfolio = () => {
@@ -15,7 +14,13 @@ const Portfolio = () => {
         </div>
         <div className="project-grid">
           {projects.map((project) => (
-            <Link key={project.key} href={`/work/${project.key}`} className="project-card">
+            <a
+              key={project.key}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card"
+            >
               <div className="project-card__image">
                 <img
                   src={project.image}
@@ -29,7 +34,25 @@ const Portfolio = () => {
                 />
               </div>
               <div className="project-card__content">
-                <h3 className="project-card__title">{project.name}</h3>
+                <h3 className="project-card__title">
+                  {project.name}
+                  <svg
+                    className="project-card__external"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </h3>
                 <p className="project-card__description">{t(`projects.${project.key}.description`)}</p>
                 <p className="project-card__highlight">{t(`projects.${project.key}.result`)}</p>
                 <div className="project-card__meta">
@@ -43,7 +66,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

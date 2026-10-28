@@ -1,15 +1,110 @@
 Plataformes noves (EUA/UK) — recomanades, per ordre:
 
 ☐ 1. Contra — 0% comissió, molts clients US, perfil ràpid.
+    No m'ha agradat, sembla poc professional. 
 ☐ 2. Upwork — el volum més gran de clients US; 20% de comissió el primer any, però és on més inbound n'hi ha.
+    He actualitzat el perfil que estava molt molt antic, però no em fa tampoc sensació de professional ni de que puga obtindre bons clients i projectes ací. 
 ☐ 3. Gun.io — clients US, només amb invitació/vetting, bé pagat.
+    -> Fa bona pinta, però no m'ha deixat crear experiències, els he enviat un email amb l'error. No hi ha projectes públics que buscar o als que aplicar, només el meu perfil. 
 ☐ 4. Lemon.io i Arc.dev — vetted, startups US.
+    He actualitzat el meu perfil que ja tenia a les dos i m'he presentat a algunes ofertes a arc.dev, però no em sembla que hi haja massa moviment ni que siga fàcil obtenir projectes.
 ☐ 5. Turing — tests tècnics, empresa US, treball llarg.
+    Ací també tenia un perfil i no he rebut mai cap contacte.
 ☐ 6. PeoplePerHour — el gran d'UK (equivalent a Malt).
+    Sembla que és de pagament, els preus no estan malament si realment hi ha clients, però diu "12 months commitment". Pagar un mes per veure si funciona pot ser una opció, però tot un any no perquè no sé si realment obtindré clients. 
 ☐ 7. Fiverr Pro — secció "Pro" per a professionals verificats, compradors US/UK.
+    En Fiverr estic des de fa 5 anys i no he rebut cap missatge, em sembla molt generalista i poc professional. 
 ☐ 8. Codementor / CodementorX — ingressos mentre resols dubtes així.
+    No sembla estar funcionant correctament això i no em sembla interesant.
 ☐ 9. Wellfound (abans AngelList Talent) — startups, contractes remots.
+    -> Perfil completat, sembla interessant. Em queda completar una entrevista amb IA. 
 ☐ 10. RemoteOK / We Work Remotely — anuncis de contract/freelance, públic US.
+    He pagat la prova de 2,95 € aproximadament i no he vist cap avantatge ni he rebut cap contacte. 
 ☐ 11. Clutch.co / GoodFirms / TechBehemoths — directoris que fan servir els compradors US per buscar "react development company"; pots posar-te com a professional independent.
+    No he vist opcions per registrar-me com a freelance, m'ha registrat automàticament com a empresa. 
 ☐ 12. Google Business Profile — serveis remots a "Alicante/Spain": et dona visibilitat local + pack de mapes per a "desarrollador freelance".
+    He seguit els pasos per crear un perfil a business profile, però tot sembla orientat a ficar-me al mapa. De fet, al final em demana obligatòriament una adreça. 
 ☐ Toptal: sí, es pot tornar a provar passats ~4 mesos. Mentrestant puja el teu GitHub (activitat recent) i publica en anglès — són els dos punts que pesen al vetting.
+
+================================================================================
+PLA D'ACCIÓ (revisat 14/10/2026)
+================================================================================
+
+DIAGNÒSTIC: les 13 plataformes són canals PASSIUS ("pull"). Cap ha generat
+inbound i el patró és consistent — el problema no és la plataforma, és que
+falta la peça activa (outbound + xarxa). La web és un bon "sala de tancament"
+però un mal canal de captació primari: un fulletó sense tràfic no genera leads.
+
+Prioritat 1 — MESURAR (sense dades no es pot millorar res)
+☒ Afegir tracking de conversions a la web: clicks "Book a call" (Cal.com),
+  enviament del formulari (EmailJS), clic email al footer. Vercel Analytics `track()`.
+  Events: cta_click, booking_open, booking_success, contact_form, cv_download,
+  email_click. Veure'ls a Vercel → Analytics → Custom Events.
+☐ Revisar el dashboard de Vercel (en ~2 setmanes de dades):
+    < 50 visites/mes → el problema és DISTRIBUCIÓ, no conversió.
+    > 200 visites/mes i 0 conversions → el problema és CONVERSIÓ (copy/oferta).
+
+Prioritat 2 — EIXIDA ACTIVA (outbound): la peça que falta
+  Plantilles llestes a docs/outbound.md (xarxa personal, agències UK/US,
+  connexions LinkedIn, HN, full de seguiment).
+☐ XARXA PERSONAL (canal de conversió més alt que existeix):
+  Llistar antics companys/clients (Video Stream Network, SDG Group/CaixaBank,
+  Bluecode, Informática Ros, Laia Bobe...) i escriure'ls 1 a 1:
+  "M'he posat com a freelance. Si coneixes algú que necessite React/Node, avisa'm."
+  Sense vendre, recordant qui ets + 1 línia del que fas ara.
+☐ AGÈNCIES US/UK (subcontractació white-label): el canal més fàcil de tancar
+  per email fred. Les agències sempre necessiten capacitat extra de React/Node.
+  Cercar agències (Clutch "react development agency"), trobar el founder/CTO a
+  LinkedIn, email directe: stack, disponibilitat hores/setmana, timezone CET,
+  2 referències. Pitch diferent al de client final: "puc absorbir el teu overflow".
+☐ LINKEDIN com a motor principal (20 min/dia):
+  - Perfil optimitzat per a l'ICP: titular "Senior Full-Stack Dev · React/Node ·
+    helping US/UK startups ship faster" (no "freelance disponible")
+  - Connectar amb CTOs/founders de companyies objectiu; comentar els seus posts
+  - Publicar en anglès 1-2 vegades/semana (reels dels case studies, lliçons)
+  - Secció "Featured" amb els links als case studies de la web
+☐ THREADS PÚBLICS: HN "Who wants to be hired" + thread mensual de freelancers
+  (primer dimecres de cada mes), r/forhire, r/ExperiencedDevs (sense spam).
+☐ PRIORITZAR UK SOBRE US: CET = solapament total amb UK, US-East ~4-6h.
+  UK és la porta d'entrada més fàcil; després US-East (async-first).
+
+Prioritat 3 — OFERTA D'ENTRADA DE BAIX RISC
+☐ Paquet "Discovery + auditoria" de 2 setmanes a preu tancat (p.ex. 800-1500€)
+  → entrega un pla concret + proposta de desenvolupament en 48h.
+  El client arrisca poc; tu demostres abans de comprometre's a un projecte gran.
+☐ Resposta garantida a la FAQ: proposta en 48h després de la call gratuïta.
+
+Prioritat 4 — NETEJA DE PLATAFORMES (deixar de gastar temps ací)
+☒ TANCAR/DESCARTAR (la dada ja és clara):
+  - PeoplePerHour: commitment 12 mesos = trampa, no arriscar-hi un any.
+  - Codementor: no funciona, no interesting.
+  - RemoteOK / WWR: ja pagat, 0 resultat → no renovar res.
+  - Google Business Profile: exigeix adreça física real (violitar ToS = ban);
+    inútil per a clients remots US/UK. Descartar del tot.
+  - Fiverr: 5 anys, 0 missatges → dada prou clara, no invertir-hi més temps.
+☐ COMPLETAR BLOCKERS (són 15-30 min cadascun):
+  - Wellfound: fer l'entrevista amb IA (estàs a mig camí, és el més barat).
+  - Gun.io: fer seguiment de l'email de l'error; si no responen en 1 setmana, descartar.
+  - Toptal: en 4 mesos, amb GitHub actiu i contingut en anglès publicat.
+☐ MANTINDRE passivament (respondre ràpid si arriba algo, 0 temps proactiu):
+  Upwork, Contra, Lemon.io, Arc.dev.
+
+Prioritat 5 — CONTINGUT (actiu, rendiment a 3-6 mesos)
+☐ 1 article/mes en anglès al blog a partir dels case studies reals:
+  "How I cut X's load time by 60%", "RAG chatbots in production: 5 lessons",
+  "Rescuing a legacy Next.js app". Cada article alimenta:
+  LinkedIn (tràfic) → outbound (credibilitat: "vaig escriure exactament del teu problema")
+  → SEO long-tail ("next.js performance consultant").
+
+Prioritat 6 — MILLORES CONCRETES A LA WEB
+☒ Inconsistència: public/llms.txt deia "based in Catalonia", el JSON-LD diu
+  Alicante. Arreglat: "based in Alicante, Spain (CET)".
+☒ Secció About: provada i descartada (no agradava; treu mencions com CaixaBank).
+  No tornar a afegir-la sense demanar-ho expressament.
+☒ Portafoli: les targetes obren directament la web del projecte (target _blank).
+  S'han eliminat les pàgines de detall /work/* (contingut poc precís) i s'han
+  deixat redirects 301 a /{locale}#portfolio. Textos curts dels projectes
+  (description/result al Portfolio) són els que es mostren a les targetes.
+☐ xifres quantificades als textos curts del portafoli (si n'hi ha de correctes).
+☐ Clarificar disponibilitat real ("X hores/setmana" o "1 projecte alhora").
+☐ Proposta "Discovery + auditoria" publicada a la web com a servei d'entrada.

@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import Cal from '@calcom/embed-react'
+import Cal, { getCalApi } from '@calcom/embed-react'
+import { trackBookingOpen, trackBookingSuccess } from '@/lib/analytics'
 
 const CAL_LINK = 'miguel-gisbert/30min'
 const CAL_NAMESPACE = '30min'
@@ -10,6 +11,16 @@ const CAL_NAMESPACE = '30min'
 const BookingButton = () => {
   const t = useTranslations('Booking')
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    ;(async () => {
+      const cal = await getCalApi({ namespace: CAL_NAMESPACE })
+      cal('on', {
+        action: 'bookingSuccessfulV2',
+        callback: () => trackBookingSuccess(),
+      })
+    })()
+  }, [])
 
   useEffect(() => {
     if (!open) return
@@ -27,7 +38,14 @@ const BookingButton = () => {
 
   return (
     <>
-      <button type="button" className="booking-cta" onClick={() => setOpen(true)}>
+      <button
+        type="button"
+        className="booking-cta"
+        onClick={() => {
+          trackBookingOpen()
+          setOpen(true)
+        }}
+      >
         <span className="booking-cta__icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <rect x="3" y="4.5" width="18" height="16.5" rx="3" stroke="currentColor" strokeWidth="1.6" />

@@ -101,11 +101,11 @@
         "role": "Desarrollador full-stack y móvil",
         "stack": "React · React Native · Node.js · PostgreSQL"
       },
-      "bluecode": {
-        "description": "Web para una agencia de desarrollo de software.",
-        "result": "Sitio de marketing que muestra servicios y proyectos.",
-        "role": "Desarrollador frontend",
-        "stack": "React · TypeScript"
+      "plegohr": {
+        "description": "Plataforma de RRHH y control horario para equipos: fichaje, documentos y vacaciones, con paneles por roles para empresas y empleados.",
+        "result": "Paneles de empresa y empleado, control horario, gestión documental y gestión de vacaciones.",
+        "role": "Desarrollador full-stack",
+        "stack": "React · Vite · Supabase"
       },
       "lifonet": {
         "description": "Plataforma de gestión de residuos con seguimiento en tiempo real.",
@@ -238,59 +238,6 @@
       "stack": {
         "q": "¿Con qué tecnologías trabajas?",
         "a": "React, Next.js, TypeScript, Node.js, React Native, PostgreSQL y Python, con Docker y CI/CD para la entrega."
-      }
-    }
-  },
-  "Work": {
-    "back": "Volver al portafolio",
-    "challenge": "El reto",
-    "approach": "Cómo lo abordé",
-    "outcome": "El resultado",
-    "visitSite": "Ver sitio en vivo",
-    "breadcrumbHome": "Inicio",
-    "breadcrumbWork": "Portafolio",
-    "projects": {
-      "cragxchange": {
-        "title": "CragXchange — plataforma global de comunidad para escaladores",
-        "description": "Desarrollo full-stack y móvil de CragXchange: mapa interactivo de vías, perfiles de miembro, directorio y apps nativas para iOS y Android con React, React Native, Node.js y PostgreSQL.",
-        "challenge": "CragXchange quería conectar a escaladores de todo el mundo, pero un directorio no bastaba. Los escaladores necesitaban encontrar vías en un mapa, mantener su perfil al día y llegar a la comunidad desde el móvil tanto como desde el ordenador.",
-        "approach": "Construí la plataforma web de principio a fin con React, Node.js y PostgreSQL: mapa interactivo de vías, registro y gestión de perfiles, y directorio de miembros. Después extendí el mismo producto a iOS y Android con React Native, de modo que una única base de código alimenta ambas apps.",
-        "outcome": "Los escaladores abren la app, encuentran una vía, ven quién está allí y comparten sus rutas, mientras el cliente mantiene una plataforma web y dos apps nativas."
-      },
-      "bluecode": {
-        "title": "Bluecode — web para una agencia de software",
-        "description": "Desarrollo frontend con React y TypeScript para la web de marketing de Bluecode, presentando los servicios y el trabajo previo de la agencia.",
-        "challenge": "Bluecode necesitaba una web de marketing que presentara sus servicios y trabajos anteriores con claridad a clientes potenciales, sin un CMS pesado ni una carga de mantenimiento importante.",
-        "approach": "Construí el frontend en React con TypeScript, traduciendo el diseño a componentes reutilizables y fuertemente tipados y estructurando el contenido para poder actualizarlo sin tocar el código.",
-        "outcome": "Una web de agencia rápida y mantenible que el equipo puede actualizar por sí mismo, presentando servicios y casos a las empresas que los evalúan."
-      },
-      "lifonet": {
-        "title": "Lifonet — seguimiento de recogidas de residuos en tiempo real",
-        "description": "Plataforma de gestión de residuos construida con React y Node.js: los usuarios abren contenedores y siguen sus recogidas en tiempo real.",
-        "challenge": "La recogida de residuos solo funciona si operadores y residentes ven el mismo estado: qué contenedor está abierto, qué recogida está en curso y qué ya se ha vaciado. Ese estado cambia constantemente, en la calle.",
-        "approach": "Como desarrollador full-stack construí la plataforma con React y Node.js, conectando los eventos en vivo del campo a la interfaz para que contenedores y recogidas se actualicen según ocurren y no según un calendario.",
-        "outcome": "Los residentes abren contenedores y siguen las recogidas en tiempo real, y el operador tiene una imagen fiable del servicio sin perseguir llamadas ni hojas de cálculo."
-      },
-      "laiabobe": {
-        "title": "Laia Bobe — web de marca personal",
-        "description": "Web de marca personal para una coach ontológica y especialista en bienestar, construida con React: una presencia online clara, sencilla y elegante.",
-        "challenge": "La web tenía que transmitir una marca personal construida sobre la escucha y la confianza. Tenía que resultar clara, tranquila y creíble, y lo bastante sencilla para poder actualizarla sin ayuda.",
-        "approach": "Construí una web limpia en React con una estructura simple —servicios, quién soy y contacto— y pasamos varias rondas de feedback hasta que el tono, los textos y el diseño encajaban con la marca.",
-        "outcome": "Una web con la que la cliente se siente representada: fácil de navegar, rápida en móvil y sencilla de ampliar según crece el proyecto."
-      },
-      "agrovolt": {
-        "title": "Agrovolt — app móvil para agricultura sostenible",
-        "description": "App móvil en React Native para la plataforma de energía solar y agri-tech de Agrovolt, llevando sus herramientas de agricultura sostenible a iOS y Android.",
-        "challenge": "La plataforma de Agrovolt combina energía solar y agri-tech, y sus usuarios necesitan esas funciones en el campo: en el móvil, a la intemperie y lejos de un escritorio.",
-        "approach": "Desarrollé la app móvil en React Native reutilizando las APIs existentes de la plataforma, de modo que la app y el producto web se mantienen sincronizados y las funciones se publican en las dos tiendas a la vez.",
-        "outcome": "Una app multiplataforma para iOS y Android que pone las herramientas de agricultura sostenible de Agrovolt en manos de los usuarios donde ocurre realmente el trabajo."
-      },
-      "legalpyme": {
-        "title": "LegalPyme — plataforma de servicios legales para pymes",
-        "description": "Plataforma web y móvil para pymes con gestión documental y registro de jornada, construida con React, Node.js y PostgreSQL.",
-        "challenge": "Las pymes tienen que gestionar documentos legales y el registro de jornada, normalmente en hojas de cálculo o en papel, sin forma fácil de demostrar qué pasó y cuándo.",
-        "approach": "Construí la plataforma full-stack con React, Node.js y PostgreSQL, cubriendo la gestión documental y el registro de jornada en web y móvil para que ambos usen la misma fuente de verdad.",
-        "outcome": "Las pymes gestionan documentos y jornada en un solo lugar, con un registro fiable al que pueden volver cuando lo necesitan."
       }
     }
   },

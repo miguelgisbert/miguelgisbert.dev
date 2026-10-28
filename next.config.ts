@@ -12,6 +12,16 @@ const nextConfig: NextConfig = {
         destination: 'https://miguelgisbert.dev/:path*',
         permanent: true,
       },
+      {
+        source: '/:locale/work/:slug',
+        destination: '/:locale#portfolio',
+        permanent: true,
+      },
+      {
+        source: '/work/:slug',
+        destination: '/en#portfolio',
+        permanent: true,
+      },
     ];
   },
 };
