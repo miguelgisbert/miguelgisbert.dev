@@ -7,10 +7,91 @@ export const runtime = 'nodejs';
 
 const SITE = process.env.PUBLIC_SITE_URL || 'https://miguelgisbert.dev';
 
-function page(title: string, message: string, ok: boolean) {
+type Lang = 'ca' | 'es' | 'en';
+
+type Copy = {
+  invalidTitle: string;
+  invalidMessage: string;
+  errorTitle: string;
+  errorMessage: string;
+  successTitle: string;
+  successMessage: (email: string) => string;
+  back: string;
+};
+
+const COPY: Record<Lang, Copy> = {
+  ca: {
+    invalidTitle: 'Enllaç no vàlid',
+    invalidMessage:
+      'Aquest enllaç de baixa no és vàlid o ha caducat. Si vols deixar de rebre missatges, respon «baixa» a qualsevol correu i et donaré de baixa manualment.',
+    errorTitle: 'No s’ha pogut processar la baixa',
+    errorMessage:
+      'No he pogut processar la baixa ara mateix. Torna-ho a provar d’aquí a uns minuts o respon «baixa» a aquest correu.',
+    successTitle: 'Ja està, no t’escriuré més',
+    successMessage: (email) =>
+      `Hem eliminat <strong style="color:#fafafa">${escapeHtml(email)}</strong> de la llista. Rebràs com a màxim un correu de confirmació que ja estiga en trànsit; res més.`,
+    back: 'Torna a miguelgisbert.dev',
+  },
+  es: {
+    invalidTitle: 'Enlace no válido',
+    invalidMessage:
+      'Este enlace de baja no es válido o ha caducado. Si quieres dejar de recibir mensajes, responde «baja» a cualquier correo y te daré de baja manualmente.',
+    errorTitle: 'No se ha podido procesar la baja',
+    errorMessage:
+      'No he podido procesar la baja ahora mismo. Vuelve a intentarlo dentro de unos minutos o responde «baja» a este correo.',
+    successTitle: 'Ya está, no te escribiré más',
+    successMessage: (email) =>
+      `Hemos eliminado <strong style="color:#fafafa">${escapeHtml(email)}</strong> de la lista. Como máximo recibirás un correo de confirmación que ya esté en tránsito; nada más.`,
+    back: 'Volver a miguelgisbert.dev',
+  },
+  en: {
+    invalidTitle: 'Invalid link',
+    invalidMessage:
+      'This unsubscribe link is invalid or has expired. To stop receiving messages, reply “unsubscribe” to any email and I’ll remove you manually.',
+    errorTitle: 'Couldn’t process your request',
+    errorMessage:
+      'I couldn’t process the unsubscribe request right now. Try again in a few minutes or reply “unsubscribe” to this email.',
+    successTitle: 'Done — I won’t email you again',
+    successMessage: (email) =>
+      `I’ve removed <strong style="color:#fafafa">${escapeHtml(email)}</strong> from the list. You may receive at most one confirmation email that’s already in transit; nothing else.`,
+    back: 'Back to miguelgisbert.dev',
+  },
+};
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function pickLang(header: string | null): Lang {
+  if (!header) return 'en';
+  const preferences = header
+    .split(',')
+    .map((part, index) => {
+      const [tag, ...params] = part.trim().split(';');
+      const q = params.find((param) => param.trim().startsWith('q='));
+      const quality = q ? Number(q.split('=')[1]) : 1;
+      return { tag: tag.toLowerCase(), quality: Number.isFinite(quality) ? quality : 0, index };
+    })
+    .filter(({ tag }) => tag)
+    .sort((a, b) => b.quality - a.quality || a.index - b.index);
+
+  for (const { tag, quality } of preferences) {
+    if (quality <= 0) continue;
+    const language = tag.split('-')[0];
+    if (language === 'ca' || language === 'es' || language === 'en') return language;
+  }
+  return 'en';
+}
+
+function page(lang: Lang, title: string, message: string, ok: boolean) {
   const accent = ok ? '#64ffda' : '#ff6b6b';
   const html = `<!doctype html>
-<html lang="es">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,13 +110,19 @@ function page(title: string, message: string, ok: boolean) {
   <div class="card">
     <h1>${title}</h1>
     <p>${message}</p>
-    <a href="${SITE}">← Tornar a miguelgisbert.dev</a>
+    <a href="${SITE}">← ${COPY[lang].back}</a>
   </div>
 </body>
 </html>`;
   return new NextResponse(html, {
     status: ok ? 200 : 400,
-    headers: { 'Content-Type': 'text/html; charset=utf-8', 'X-Robots-Tag': 'noindex' },
+    headers: {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Content-Language': lang,
+      'Cache-Control': 'no-store',
+      'Vary': 'Accept-Language',
+      'X-Robots-Tag': 'noindex',
+    },
   });
 }
 
@@ -56,27 +143,17 @@ async function unsubscribe(token: string): Promise<{ email: string } | { error: 
 }
 
 export async function GET(request: Request) {
+  const lang = pickLang(request.headers.get('accept-language'));
+  const copy = COPY[lang];
   const { searchParams } = new URL(request.url);
   const result = await unsubscribe(searchParams.get('token') || '');
   if ('error' in result) {
     if (result.error === 'invalid') {
-      return page(
-        'Enllaç no vàlid',
-        'Aquest enllaç de baixa no és vàlid o ha caducat. Si vols deixar de rebre missatges, respon "baixa" a qualsevol email i et trauré a mà.',
-        false,
-      );
+      return page(lang, copy.invalidTitle, copy.invalidMessage, false);
     }
-    return page(
-      'Error temporal',
-      'No puc processar la baixa ara mateix. Torna-ho a provar en uns minuts o respon "baixa" a l\'email.',
-      false,
-    );
+    return page(lang, copy.errorTitle, copy.errorMessage, false);
   }
-  return page(
-    'Ja està, no et escriuré més',
-    `Hem tret <strong style="color:#fafafa">${result.email}</strong> de la llista. Rebràs com a màxim un email de confirmació pendents de trànsit, res més.`,
-    true,
-  );
+  return page(lang, copy.successTitle, copy.successMessage(result.email), true);
 }
 
 // RFC 8058: els clients de correu poden fer POST directament (one-click).

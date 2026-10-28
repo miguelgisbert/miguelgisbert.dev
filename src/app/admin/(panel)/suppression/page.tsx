@@ -17,7 +17,7 @@ export default async function SuppressionPage() {
             <h1>Llista de supressió</h1>
             <p className="adm-sub">
               Adreces i dominis als quals no s’ha d’escriure mai. Les baixes, els errors d’enviament i els
-              bounces/complaints de Resend s’hi afegeixen automàticament; ací pots afegir a mà els dominis de
+              rebots i queixes de Resend s’hi afegeixen automàticament; ací pots afegir a mà els dominis de
               les teues empreses actuals i anteriors. Les adreces que ja han rebut un CV es guarden a
               l’historial d’enviats i tampoc no es repeteixen.
             </p>

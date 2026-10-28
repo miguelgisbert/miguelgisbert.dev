@@ -252,7 +252,7 @@ export default async function AdminHome() {
                 <h2 id="suppression-title" className="adm-card-title">
                   Últimes supressions
                 </h2>
-                <p className="adm-card-sub">Baixes, bounces i errors d’enviament de Resend.</p>
+                <p className="adm-card-sub">Baixes, rebots i errors d’enviament de Resend.</p>
               </div>
               <Link className="adm-quiet-link" href="/admin/suppression">
                 Gestionar <AdminIcon name="arrow" size={14} />
@@ -277,7 +277,7 @@ export default async function AdminHome() {
             ) : (
               <div className="adm-empty">
                 <strong>Cap adreça suprimida</strong>
-                Les baixes, els bounces i els errors d’enviament de Resend apareixeran ací automàticament.
+                Les baixes, els rebots i els errors d’enviament de Resend apareixeran ací automàticament.
               </div>
             )}
           </section>
